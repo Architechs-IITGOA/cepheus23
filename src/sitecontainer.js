@@ -11,7 +11,7 @@ const SiteContainer = () => {
     <div>
       <Navbar />
       <Home />
-      <About />
+      {/* <About /> */}
       <Events />
       <Sponsors />
       <Contact />
