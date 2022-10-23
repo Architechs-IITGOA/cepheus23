@@ -1,0 +1,28 @@
+.contact-card{
+    display: inline-flex;
+    margin: 15px 25px;
+}
+
+.contact-card-visible{
+    /* background-color: blueviolet; */
+    width: 96x;
+    height: 96px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    display: inline-block;
+    margin: 4px 0px 0px 0px;
+
+}
+
+.border-div{
+    width: 104px;
+    height: 104px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    background-color: #14EACFFF;
+}
+
+.contact-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
