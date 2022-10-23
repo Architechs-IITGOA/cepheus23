@@ -31,7 +31,7 @@ body {
 
 
 
-.glowing::before{
+.glowing::before,.glowing::after{
   border-radius: 2rem;
   content: '';
   position: absolute;
@@ -43,6 +43,10 @@ body {
   height: calc(100% + 10px);
   z-index: -1;
   animation: glower 20s linear infinite;
+  
+}
+.glowing::after{
+  filter:blur(12px);
 }
 
 @keyframes glower {
@@ -58,4 +62,6 @@ body {
     background-position: 0 0;
   }
 }
+
+
 
