@@ -1,28 +1,59 @@
 .contact-card{
     display: inline-flex;
     margin: 15px 25px;
+    max-width: 145px;
+    transition: all ease 1s;
+    overflow: hidden;
+}
+
+.border-wrap-outer {
+    filter: drop-shadow(0px 0px 5px #fc03b6);
+}
+
+.border-wrap {
+    filter: drop-shadow(7px 2px 0px #ffffff30);
 }
 
 .contact-card-visible{
     /* background-color: blueviolet; */
-    width: 96x;
-    height: 96px;
-    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    width: 130px;
+    height: 130px;
+    /* clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%); */
     display: inline-block;
-    margin: 4px 0px 0px 0px;
+    margin: 3px 0px 0px 0px;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
+}
 
+.contact-card:hover {
+    max-width: 300px;
 }
 
 .border-div{
-    width: 104px;
-    height: 104px;
-    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    background-color: #14EACFFF;
+    width: 136px;
+    height: 136px;
+    /* clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%); */
+    /* background-color: #14EACFFF; */
+    background-color: #F9fafb;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%);
 }
 
 .contact-image{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
 
+.contact-card-hover {
+    /* position: absolute; */
+    text-align: left;
+    /* margin: 20px 20px 20px 150px; */
+    margin: 20px 20px;
+
+    /* z-index: 1; */
+    background-color: #00000099;
+}
+
+.contact-card-hover > p{
+    margin: 0;
+    font-size: 14px;    
 }
