@@ -38,7 +38,7 @@ body {
   left: -4.5px;
   top: -4.5px;
   background: linear-gradient(45deg, #b604a4, #02a9ce,#F905E0, #03D2FF,#b604a4, #02a9ce,#F905E0, #03D2FF);
-  background-size: 400%;
+  background-size: 100%;
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   z-index: -1;
