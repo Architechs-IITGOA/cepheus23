@@ -1,52 +1,73 @@
 body {
   margin: 0;
+  /* padding: 0; */
+  /* font-family: 'Roboto', sans-serif; */
+  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
+  z-index: -9999;
+  /* background-size: cover; */
+}
+#container {
+  width: 100%;
+  /* height: 100vh; */
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-image: url("starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png");
-  /* overflow: hidden; */
-  margin-bottom: 100px;
-  
+  justify-content: center;
+  flex-direction: column;
+  z-index:1;
+  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
 }
-.box{
-  /* align-items: center; */
-  padding: 10px;
-  width: 58%;
-  margin-top: 100px;
-  margin-left: 21%;
-  /* position: relative; */
-  /* display: block; */
-  /* background-color: black; */
-  /* z-index: 1; */
-  margin-top: 100px;
+.GradientBorder {
   position: relative;
-  /* height:  400px; */
-  /* width: 380px; */
-  display: block;
-  border-radius: 2rem;
-  /* background: linear-gradient(0deg, black, #444444); */
-  background-image: url("starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png");
-
+  width: 58%;
+  
+  /* padding: 40px 0; */
+  font-size: 5em;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 5px;
+  /* background: #020117; */
+  z-index: 0;
+  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
 }
-
-
-
-.glowing::before,.glowing::after{
+.GradientBorder::after {
   border-radius: 2rem;
   content: '';
   position: absolute;
   left: -4.5px;
   top: -4.5px;
   background: linear-gradient(45deg, #b604a4, #02a9ce,#F905E0, #03D2FF,#b604a4, #02a9ce,#F905E0, #03D2FF);
-  background-size: 100%;
+  background-size: 400%;
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   z-index: -1;
   animation: glower 20s linear infinite;
-  
 }
-.glowing::after{
+.GradientBorder::before {
+  border-radius: 2rem;
+  content: '';
+  position: absolute;
+  left: -4.5px;
+  top: -4.5px;
+  background: linear-gradient(45deg, #b604a4, #02a9ce,#F905E0, #03D2FF,#b604a4, #02a9ce,#F905E0, #03D2FF);
+  background-size: 400%;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  
+  z-index: -1;
+  animation: glower 20s linear infinite;
+}
+
+.GradientBorder::after{
   filter:blur(12px);
+}
+.hide{
+  width: 100%;
+  height: 100%;
+  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
+  border-radius: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
 }
 
 @keyframes glower {
@@ -62,6 +83,3 @@ body {
     background-position: 0 0;
   }
 }
-
-
-
