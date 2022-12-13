@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Modal Styling Demo </title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Initializing style font for document - spaceboard.ttf */
+        @font-face {
+            font-family: headerFont;
+            src: url(spaceboard.ttf);
+        }
+
+        body {
+            font-family: Outfit;
+            color: white;
+            background-color: black;
+            
+        }
+
+        /* container for entire modal */
+        div.flex-container {
+            background-color: #003153;
+            border-radius: 14px;
+            opacity: 0.8;
+            
+        }
+        
+        /* flex-container contains 2 rows */
+        /* first row has 2 columns - first column being the credentials of the individual who has logged in,
+            second column has 2 subcolumns - first subcolumn: the events in which the individual has registered/participated in
+            and second subcolumn: rank list in that event.
+        */
+        .row {
+            display: flex;
+            background-color: #003153;
+            margin: 15px;
+        }
+
+        .column {
+            /* flex: 50%; */
+            padding: 10px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        div.column > div.subcolumns {
+            flex: 100%;
+            height: 50%;
+            border: 1px solid white;
+            border-radius: 15px;
+            /* text-align: center; */
+            margin: 5px;
+        }
+
+        div.column > div.column-content {
+            border: 1px solid white;
+            border-radius: 15px;
+            text-align: center;
+            vertical-align: middle;
+            margin: 10px;
+        }
+
+        div.column > div.column-content > img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%; 
+            height: 36%;
+        }
+
+        div.column > ol {
+            overflow: auto;
+            
+            
+        }
+
+        div.column > div.subcolumns > table {
+            width: 100%;
+        }
+
+        button.logout {
+            border: 1px solid #87CEEB;
+            background-color: #4682B4;
+            color: white;
+            font-family: Outfit;
+            padding: 5px 10px;
+            margin: 5px;
+            float: left;
+            border-radius: 15px;
+        }
+
+        button.edit-profile {
+            border: 1px solid #2AAA8A;
+            background-color: #2AAA8A;
+            color: white;
+            font-family: Outfit;
+            padding: 5px 10px;
+            margin: 5px;
+            float: left;
+            border-radius: 15px;
+        }
+
+        td {
+            padding: 10px 15px;
+        }
+
+        table {
+            padding: 5px;
+            margin: 5px;
+
+        }
+        .leaderboard{
+            position: relative;
+            top: -130px;
+            left: 125px;
+        }
+        #secimg{
+            position:absolute;
+            height:100px;
+            width:100px;
+            top: 205px;
+            left: 150px;
+        }
+        .txt{
+            position:absolute;
+            top:150px;
+            left: 96px;
+            font-family: headerFont; 
+            text-align: center; 
+            color: #D4AF37;
+            
+        }
+        .l1{
+            position: relative;
+            
+
+        }
+        .txt1{
+            position:absolute;
+            font-family: headerFont;
+            top:50px;
+            left: 135px;
+        }
+        
+
+        @media screen and (max-width: 800px) {
+            .row {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .column {
+                flex: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            div.column > div.subcolumns {
+                flex: 100%;
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="row">
+            <div class="column" style="background-color: #003153; color: white; flex: 45%;">
+                <div class="column-content">
+                    <img src="avatars/21616081_100-01.png">
+                    <!-- img src="Used Elements-20221127T203156Z-001/28509144_vector_badge_element_set_dd_badge_elements_collections-03.png" style="z-index: 1; position: absolute;width: 25%; height: 25%; "-->
+                    <div class="l1">
+                        <img src="./Used Elements-20221127T203156Z-001/28509144_vector_badge_element_set_dd_badge_elements_collections-03.png" style="height: 150px;width: 500px;">
+                        <p class="txt1">Raghavendra Singh</p>
+                
+                    </div>
+                    <p> Indian Institute of Technology (IIT), Goa </p>
+                    <p> gstechnical@iitgoa.ac.in </p>
+                    <p> 9785075997 </p>
+                    <div>
+                    <p style="position: relative;"> <span style="font-family: headerFont;"> Score </span> - 500 </p> <img style="position:absolute; left: 335px; height:80px; width:80px; top:800px" src="./Used Elements-20221127T203156Z-001/5585248_986daf-02.png" >
+                    </div>
+                </div>
+            </div>
+            <div class="column" style="background-color: #003153; flex: 60%; ">
+                <div class="subcolumns" style="flex:40%"> 
+                    <h2 style="font-family: headerFont; text-align: center;"> Participated Events </h2>
+                    <ol style="font-family: headerFont;">
+                        <li> TREASURE HUNT </li>
+                        <li> BEAT THE STREET </li>
+                        <li> PLAY WITH MICROBIT </li>
+                        <li> TREASURE HUNT </li>
+                        <li> BEAT THE STREET </li>
+                        <li> PLAY WITH MICROBIT </li>
+                        <li> TREASURE HUNT </li>
+                    </ol>
+                </div>
+                <div class="subcolumns"> 
+                    <!-- removed 60% height feature --> 
+                    
+                    <h2 style="font-family: headerFont; text-align: center; color: #D4AF37;"> Treasure Hunt </h2>
+                    <br>
+
+
+                    <!-- h2 style="font-family: headerFont; text-align: center; color: #D4AF37;"> Leaderboard </h2-->
+                    
+                    <!-- img src="Used Elements-20221127T203156Z-001/27668421_99z_graduation_podium_laurel_2022 [Converted]-01.png" style="width: 25%; height: 25%; z-index: 1; position: absolute;">
+                    < img src="Used Elements-20221127T203156Z-001/12009039_abstract1-06 [Converted]-01.png" style="width: 25%; height: 25%; z-index: 2;">
+                    -->
+                    
+                    <div class="leaderboard">
+                        <img src="./Used Elements-20221127T203156Z-001/27668421_99z_graduation_podium_laurel_2022 [Converted]-01.png">
+                        <img id="secimg" src="Used Elements-20221127T203156Z-001/12009039_abstract1-06 [Converted]-01.png">
+                        <h2 class="txt">Leaderboard</h2>
+                
+                    </div>                    
+                    
+                    <table style="position: relative; top: -150px;">
+                        <tr>
+                            <td style="font-family: headerFont; text-align: center;"> Rank </td>
+                            <td> </td>
+                            <td style="font-family: headerFont; text-align: center;"> Player's Name </td>
+                            <td style="font-family: headerFont; text-align: center;"> Score </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><img src="./Used Elements-20221127T203156Z-001/5585248_986-04.png" style="height: 100px; width: 100px;"></td>
+                            <td><img src="./avatars/21616081_100-01.png" style="height: 100px; width:100px"> </td>
+                            <td style="font-family: headerFont; text-align: center;"> Raghavendra Singh </td>
+                            <td style="text-align: center;"> 300 </td>
+                        </tr>
+                        <tr>
+                            <td align="center"> <img src="./Used Elements-20221127T203156Z-001/5585248_986-02.png" style="height: 100px; width: 100px;"></td>
+                            <td><img src="./avatars/24754139_28-01.png" style="height: 100px; width: 100px;"></td>
+                            <td style="font-family: headerFont; text-align: center;"> Raghavendra Singh </td>
+                            <td style="text-align: center;"> 200 </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><img src="./Used Elements-20221127T203156Z-001/5585248_986-03.png" style="height: 100px; width: 100px;"></td>
+                            <td> <img src="./avatars/27470336_7294743-01.png" style="height: 100px; width: 100px;"></td>
+                            <td style="font-family: headerFont; text-align: center;"> Raghavendra Singh </td>
+                            <td style="text-align: center;"> 100 </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column" style="background-color: #003153; color: white; flex: 40%;">
+                <div class="column-content" style="border: none;">
+                    <button class="logout"> LOG OUT </button>
+                    <button class="edit-profile"> EDIT PROFILE </button>
+                </div>
+            </div>
+            <div class="column" style="background-color: #003153; flex: 60%; ">
+                <div class="column-content" style="border: none;">
+                    <h4 style="color: orange; text-align: left;"> YOUR RANK : 10 </h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

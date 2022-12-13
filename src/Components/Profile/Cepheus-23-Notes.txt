@@ -1,0 +1,15 @@
+Just a few things to remember during development:
+
+1. You are free to use any npm package that can help in a good user experience and can make your work easy.
+
+2. Keep your section within 100vw and 100vh
+
+3. Font size for titles and paragraphs should be the same, so keep track of other sections.
+
+4. Do not target any specific tag to style in your CSS file. Use class names for these things and always try to give a unique class name to your section components so that it will not affect other elements.
+
+5.  If you are getting stuck somewhere then search that thing on google or youtube. Also, explore codepen before the development. You can also take code from there directly.
+
+6. Use flexbox or grid when required because it helps in making the website responsive. If you don't know about it then just search it on youtube, you will get any 10-minute video which will be more than enough.
+
+Let me know if you guys have any problems
