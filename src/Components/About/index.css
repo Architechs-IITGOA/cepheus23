@@ -6,68 +6,134 @@ body {
   z-index: -9999;
   /* background-size: cover; */
 }
-#container {
-  width: 100%;
-  /* height: 100vh; */
-  display: flex;
-  align-items: center;
+
+.aboutus{
+  height: 800px;
+  background-image: url(CepheusBackgroundsdamage.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   justify-content: center;
-  flex-direction: column;
-  z-index:1;
-  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
-}
-.GradientBorder {
-  position: relative;
-  width: 58%;
-  
-  /* padding: 40px 0; */
-  font-size: 5em;
-  color: #fff;
-  text-align: center;
-  letter-spacing: 5px;
-  /* background: #020117; */
-  z-index: 0;
-  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
-}
-.GradientBorder::after {
-  border-radius: 2rem;
-  content: '';
-  position: absolute;
-  left: -4.5px;
-  top: -4.5px;
-  background: linear-gradient(45deg, #b604a4, #02a9ce,#F905E0, #03D2FF,#b604a4, #02a9ce,#F905E0, #03D2FF);
-  background-size: 400%;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  z-index: -1;
-  animation: glower 20s linear infinite;
-}
-.GradientBorder::before {
-  border-radius: 2rem;
-  content: '';
-  position: absolute;
-  left: -4.5px;
-  top: -4.5px;
-  background: linear-gradient(45deg, #b604a4, #02a9ce,#F905E0, #03D2FF,#b604a4, #02a9ce,#F905E0, #03D2FF);
-  background-size: 400%;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  
-  z-index: -1;
-  animation: glower 20s linear infinite;
+  align-items: center;
+
 }
 
-.GradientBorder::after{
-  filter:blur(12px);
+.myStyleh1{
+  position: relative;
+  width: 435px;
+  height: 77px;
+  top: 56px;
+
+  font-family: 'Space Boards DEMO';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 77px;
+  /* identical to box height */
+
+
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
 }
-.hide{
-  width: 100%;
-  height: 100%;
-  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
-  border-radius: 1.5rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  
+
+.blur_background{
+  /* Rectangle 10 */
+box-sizing: border-box;
+position: relative;
+width: 65%;
+height: 551px;
+top: 80px;
+background: rgba(0, 0, 0, 0.4);
+mix-blend-mode: darken;
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 30px;
+  }
+
+.text
+{
+  position: relative;
+  width: 55%;
+  height: 505px;
+  top: -420px;
+
+  font-family: 'Outfit';
+  font-style: thin;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 34px;
+  color: #e2e2e2;
+
+}
+
+@media (max-width: 1480px){
+  .text{
+    font-size: 25px;
+  }
+}
+@media (max-width: 1380px){
+  .text{
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 1280px){
+  .text{
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+@media (max-width: 1180px){
+  .text{
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1080px){
+  .text{
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+@media (max-width: 980px){
+  .text{
+    font-size: 21px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 880px){
+  .text{
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 780px){
+  .text{
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 680px){
+  .text{
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+@media (max-width: 580px){
+  .text{
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480px){
+  .text{
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 @keyframes glower {
