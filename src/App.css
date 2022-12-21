@@ -2,9 +2,13 @@
 .App {
   text-align: center;
   color: #fff;
-   background-image: url("./../public/img/bg3.png");
+   /* background-image: url("./../public/img/bg3.png"); */
   /*background-size: 100% 500%; */
   background-color: #000;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 .App-logo {

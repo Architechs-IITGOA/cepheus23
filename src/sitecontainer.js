@@ -5,7 +5,7 @@ import About from "./Components/About/About";
 import Events from "./Components/Events/Events";
 import Schedule from "./Components/Schedule/Schedule";
 import Sponsors from "./Components/Sponsors/Sponsors";
-// import Contact from "./Components/Contact/Contact";
+import Contact from "./Components/Contact/Contact";
 
 const SiteContainer = () => {
   return (
@@ -16,7 +16,7 @@ const SiteContainer = () => {
       <Events />
       <Schedule />
       <Sponsors />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 };

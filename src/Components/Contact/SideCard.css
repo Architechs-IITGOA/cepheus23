@@ -1,0 +1,32 @@
+.contact-side-card{
+    display: flex;
+    margin: 15px;
+}
+
+.side-card-border {
+    width: 300px;
+}
+
+.side-card-content{
+    margin-left: -300px;
+    display: flex;
+    width: 300px;
+    align-items: center;
+}
+
+.side-card-content img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 3px;
+}
+
+.side-card-position {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
