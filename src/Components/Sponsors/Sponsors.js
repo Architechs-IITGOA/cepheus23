@@ -26,7 +26,7 @@ function App() {
 
 
 	return (
-		<div className="App">
+		<div className="Sponsors" id="Sponsors">
 			<div className="events-bg">
 				<br></br>
 				<br></br>
@@ -80,9 +80,7 @@ function App() {
 					{/* </center> */}
 				</div>
 
-				<div className="events-blur">
-					
-				</div>
+				
 			</div>
 		</div>
 	);
