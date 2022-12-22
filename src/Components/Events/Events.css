@@ -1,19 +1,20 @@
-.App {
+.events {
   text-align: center;
+  scroll-snap-align: start;
 }
 
-.App-logo {
+.events-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .events-logo {
+    animation: events-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.events-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,11 +25,11 @@
   color: white;
 }
 
-.App-link {
+.events-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes events-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -37,7 +38,7 @@
   }
 }
 
-.App .events-bg{
+.events .events-bg{
   background-image: url("./Events-Images/events_page.png");
   background-size: cover;
   background-repeat: repeat-y;

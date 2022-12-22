@@ -269,7 +269,7 @@ const myStyle = {
 
 // background: "rgba( 255, 255, 255, 0.3 )",width:"70%",height:"550px",background:"white",marginLeft:"15%",marginTop:"65px",borderRadius:"0.3rem",opacity:"0.5",backdropFilter:"blur(0px)"
 
-class App extends React.Component {
+class Events extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {clicked:false};
@@ -364,7 +364,7 @@ class App extends React.Component {
 		   
 		
 		return (
-			<div className="App">
+			<div className="events" id="Events">
 				
 				<div className="events-bg">
 					<br></br>
@@ -1406,4 +1406,4 @@ class App extends React.Component {
 
 
 
-export default App;
+export default Events;

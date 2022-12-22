@@ -6,7 +6,7 @@ import './index.css';
 function About() {
  
   return (
-    <div className="aboutus">
+    <div className="aboutus" id="About">
       <center>
         <div className="myStyleh1">About Us</div>
         <div className="blur_background"></div>

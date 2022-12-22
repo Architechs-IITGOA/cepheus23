@@ -1,6 +1,7 @@
 .contact-side-card{
     display: flex;
     margin: 15px;
+    cursor: pointer;
 }
 
 .side-card-border {
