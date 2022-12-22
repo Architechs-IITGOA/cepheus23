@@ -27,7 +27,7 @@ function App() {
 
 	return (
 		<div className="Sponsors" id="Sponsors">
-			<div className="events-bg">
+			<div className="events-bg1">
 				<br></br>
 				<br></br>
 				<br></br>
