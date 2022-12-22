@@ -58,10 +58,10 @@ const myStyle = {
     
     // backgroundColor:'black',
     // backgroundImage'url(./border.png)',
-    backgroundSize:'cover',
-    width:"230px",
-    height:"230px",
-    cursor:"pointer",
+    // backgroundSize:'cover',
+    // width:"230px",
+    // height:"230px",
+    // cursor:"pointer",
   }
   const elemStyle1 = {
     // hover:"scale(1.2)",
@@ -70,10 +70,10 @@ const myStyle = {
     
     // backgroundColor:'black',
     // backgroundImage'url(./border.png)',
-    backgroundSize:'cover',
-    width:"14vw",
-    height:"14vw",
-    cursor:"pointer",
+    // backgroundSize:'cover',
+    // width:"14vw",
+    // height:"14vw",
+    // cursor:"pointer",
   }
   const buttonStyle = {
     // backgroundColor:'black',
@@ -273,16 +273,88 @@ class App extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {clicked:false};
+		this.state = {clicked2:false};
+		this.state = {clicked3:false};
 		this.state = {clickedtwo:false};
+		this.state = {eventtwo:false};
+		this.state = {eventthree:false};
+		this.state = {eventfour:false};
+		this.state = {eventfive:false};
+		this.state = {eventsix:false};
+		this.state = {eventseven:false};
+		this.state = {eventeight:false};
+		this.state = {eventnine:false};
+
+		this.state = {clickedtwooff:false};
+		this.state = {eventtwooff:false};
+		this.state = {eventthreeoff:false};
+		this.state = {eventfouroff:false};
+		this.state = {eventfiveoff:false};
+		this.state = {eventsixoff:false};
+		this.state = {eventsevenoff:false};
+		this.state = {eventeightoff:false};
+		this.state = {eventnineoff:false};
+
+		this.state = {clickedtwotal:false};
+		this.state = {eventtwotal:false};
+		this.state = {eventthreetal:false};
+		this.state = {eventfourtal:false};
+		this.state = {eventfivetal:false};
+		this.state = {eventsixtal:false};
+		this.state = {eventsevental:false};
+		this.state = {eventeighttal:false};
+		this.state = {eventninetal:false};
 		
 	}
 	render(){
 		const clicked = this.state.clicked;
+		const clicked2 = this.state.clicked2;
+		const clicked3 = this.state.clicked3;
 		const clickedtwo = this.state.clickedtwo;
+		const eventtwo = this.state.eventtwo;
+		const eventthree = this.state.eventthree;
+		const eventfour = this.state.eventfour;
+		const eventfive = this.state.eventfive;
+		const eventsix = this.state.eventsix;
+		const eventseven = this.state.eventseven;
+		const eventeight = this.state.eventeight;
+		const eventnine = this.state.eventnine;
+
+		const clickedtwooff = this.state.clickedtwooff;
+		const eventtwooff = this.state.eventtwooff;
+		const eventthreeoff = this.state.eventthreeoff;
+		const eventfouroff = this.state.eventfouroff;
+		const eventfiveoff = this.state.eventfiveoff;
+		const eventsixoff = this.state.eventsixoff;
+		const eventsevenoff = this.state.eventsevenoff;
+		const eventeightoff = this.state.eventeightoff;
+		const eventnineoff = this.state.eventnineoff;
+
+		const clickedtwotal = this.state.clickedtwotal;
+		const eventtwotal = this.state.eventtwotal;
+		const eventthreetal = this.state.eventthreetal;
+		const eventfourtal = this.state.eventfourtal;
+		const eventfivetal = this.state.eventfivetal;
+		const eventsixtal = this.state.eventsixtal;
+		const eventsevental = this.state.eventsevental;
+		const eventeighttal = this.state.eventeighttal;
+		const eventninetal = this.state.eventninetal;
 		
 		new Slider({
 			section: '#js-section',
 			dots: '#js-dots',
+			
+	
+		  });
+		new Slider({
+			section: '#js-section2',
+			dots: '#js-dots2',
+			
+	
+		  });
+		new Slider({
+			section: '#js-section3',
+			dots: '#js-dots3',
 			
 	
 		  });
@@ -293,15 +365,15 @@ class App extends React.Component {
 		
 		return (
 			<div className="App">
-				<MediaQuery minWidth={1000}>
+				
 				<div className="events-bg">
 					<br></br>
 					<br></br>
 					<br></br>
 					{/* <br></br> */}
-					<h1 style={{ color: "white", fontSize: "50px",}}>EVENTS</h1>
+					<h1  id="main-heading">EVENTS</h1>
 	
-					<div className={clicked?'firstoff':'firston'}>
+					<div className={clicked||clicked2||clicked3?'firstoff':'firston'}>
 					<div  >
 						{/* <div className="events-flexin" onClick={()=> this.setState({clicked:true})} >
 							<img src={im1}></img>
@@ -312,43 +384,46 @@ class App extends React.Component {
 						<div className="events-flexin first" onClick={()=> this.setState({clicked:true})}>
 							<img src={im3}></img>
 						</div> */}
-						<ul style={listStyle}>
+						<center>
+						<ul  className="firstpagelist">
 							<li ><div style={elemStyle} id = "online" onClick={()=> this.setState({clicked:true})} >
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-								<center><h1 style={{color:"white",fontSize:"34px"}}>ONLINE</h1></center>
+								<center><h1  id="text">ONLINE</h1></center>
 							</div>
 							</div></li>
-							<li><div style={elemStyle} id = 'offline' onClick={()=> this.setState({clicked:true})}>
+							<li><div style={elemStyle} id = 'offline' onClick={()=> this.setState({clicked2:true})}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-								<center><h1 style={{color:"white",fontSize:"34px"}}>OFFLINE</h1></center>
+								<center><h1  id="text">OFFLINE</h1></center>
 							</div>
 							</div></li>
-							<li><div style={elemStyle} id = 'talks' onClick={()=> this.setState({clicked:true})}>
+							<li><div style={elemStyle} id = 'talks' onClick={()=> this.setState({clicked3:true})}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-								<center><h1 style={{color:"white",fontSize:"34px"}}>TALKS</h1></center>
+								<center><h1  id="text">TALKS</h1></center>
 							</div>
 							</div></li>
 						</ul>
+						</center>
 						<br></br>
 						<br></br>
 						<center>
 						{/* <img src={im4}  className="events-rb first"></img>  */}
-						<div className='buttondiv' style={{width:'280px'}}>
+						<div className='buttondiv' >
 							<img src={im4}  className="buttonimg"></img> 
 						</div>
 						</center>
 					</div>
 					</div>
-					<div className={clickedtwo?'secondoff':'secondon'}>
+					<div  className={clicked?'secondon':'secondoff'}>
+					<div className={clickedtwo||eventtwo||eventthree||eventfour||eventfive||eventsix||eventseven||eventeight||eventnine?'secondoff':'secondon'}>
 					<div className={clicked?'secondon':'secondoff'}>
 						<center>
-							<div style={{width:'70%',background: "rgba(255, 255, 255, 0.15)",height:'33vw',marginTop:'-1.3%',backdropFilter:"blur(10px)",borderRadius:'15px',boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}}>
+							<div id='blur'>
 								<br></br>
-								<img id='close' src='./exit.png' style={{width:'40px',marginLeft:'88%',marginTop:'2%',cursor:'pointer'}}  onClick={()=> this.setState({clicked:false})}></img>
-									<h1 style={{color:'white',fontSize:'3.2vw',marginTop:'-3%'}}>ONLINE EVENTS</h1>
+								<img id='close' src='./exit.png'   onClick={()=> this.setState({clicked:false})}></img>
+									<h1 id='online-heading'>ONLINE EVENTS</h1>
 									
 								<ul className="nav-dots" id="js-dots" style={{marginTop:'0.8%'}}>
 								<li className="nav-dot is-active" ></li>
@@ -360,69 +435,69 @@ class App extends React.Component {
 								<main className="main" id = 'js-section'>
 								<section className="section is-active"id="section1">
 								
-									<ul id="list" style={listStyle2}>
+									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})}  >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event1</h1></center>
+										<center><h1 id='text'>Event1</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventtwo:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event2</h1></center>
+										<center><h1 id='text'>Event2</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventthree:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event3</h1></center>
+										<center><h1 id='text'>Event3</h1></center>
 									</div>
 									</div></li>
 								</ul>
 								</section>
 								<section className="section"id="section2">
 								
-									<ul id="list1" style={listStyle2}>
-									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<ul id="list1" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventfour:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event 4</h1></center>
+										<center><h1 id='text'>Event 4</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventfive:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event 5</h1></center>
+										<center><h1 id='text'>Event 5</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventsix:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event 6</h1></center>
+										<center><h1 id='text'>Event 6</h1></center>
 									</div>
 									</div></li>
 								</ul>
 								</section>
 								<section className="section"id="section3">
 								
-									<ul id="list2" style={listStyle2}>
-									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})}  >
+									<ul id="list2" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventseven:true})}  >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event 7</h1></center>
+										<center><h1 id='text'>Event 7</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventeight:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event 8</h1></center>
+										<center><h1 id='text'>Event 8</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventnine:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2vw"}}>Event 9</h1></center>
+										<center><h1 id='text'>Event 9</h1></center>
 									</div>
 									</div></li>
 								</ul>
@@ -439,169 +514,314 @@ class App extends React.Component {
 					<div >
 					<div className={clickedtwo?'secondon':'secondoff'}>
 						<center>
-						<div style={{width:'70%',background: "rgba(255, 255, 255, 0.15)",height:'480px',marginTop:'-1.3%',backdropFilter:"blur(10px)",borderRadius:'15px',boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}}>
-							<div style={{display:'flex',alignItems:'center',justifyContent:'space-evenly'}}>
-							<div style={{width:'50%',height:'500px'}}>
-								<center><img src="./poster.png" style={{width:'55%',height:'55%',marginTop:'5.8vw',marginLeft:'-3%'}}></img>
-								<h3 style={{marginLeft:'-3%',marginTop:'-1%',color:'#FFC200'}}>Contact:Event Coheads</h3>
-								<h4 style={{marginLeft:'-3.5%',color:'white',marginTop:'-2%'}}>1.Abcd Xyz (9884736273)</h4>
-								<h4 style={{marginLeft:'-3.5%',color:'white',marginTop:'-2%'}}>2.Abcd Xyz (9884736273)</h4>
+						<div id='outer' >
+							<div id='inner' >
+							<div id='inner-left'>
+								<div id='fake'></div>
+							<img id='close2' src='./exit.png'   onClick={()=> this.setState({clickedtwo:false})}></img>
+								<center><img id='left-post' src="./poster.png"></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head' >1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
 								</center>
 							</div>
-							<div style={{width:'50%',height:'500px'}}>
-								<img id='close' src='./exit.png' style={{width:'40px',marginLeft:'80%',marginTop:'5%',cursor:'pointer'}}  onClick={()=> this.setState({clickedtwo:false})}></img>
-								<center><h1 style={{color:'#FFC200',marginTop:'0%',fontSize:'45px',marginLeft:'-25%'}}>LOREM IPSUM</h1>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({clickedtwo:false})}></img>
+								<center><h1 id='sub-head'>EVENT 1</h1>
 								
 								</center>
-								<div style={{color:'white',width:'77%',marginLeft:'-20%',fontSize:'17px',textAlign:'justify'}}>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
-								<center><button style={{width:"40%",backgroundColor:'white',borderRadius:'5px',height:'48px',borderColor:'white',marginTop:'8%',marginLeft:'-25%',fontSize:'25px',fontWeight:'550',cursor:'pointer'}}>Register</button></center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventtwo?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventtwo:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventtwo:false})}></img>
+								<center><h1 id='sub-head'>Event 2</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventthree?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventthree:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventthree:false})}></img>
+								<center><h1 id='sub-head'>Event 3</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventfour?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id="fake"></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventfour:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventfour:false})}></img>
+								<center><h1 id='sub-head'>Event 4</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventfive?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventfive:false})}></img>
+
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventfive:false})}></img>
+								<center><h1 id='sub-head'>Event 5</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventsix?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventsix:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventsix:false})}></img>
+								<center><h1 id='sub-head'>Event 6</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventseven?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventseven:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventseven:false})}></img>
+								<center><h1 id='sub-head'>Event 7</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventeight?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventeight:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventeight:false})}></img>
+								<center><h1 id='sub-head'>Event 8</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventnine?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventnine:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventnine:false})}></img>
+								<center><h1 id='sub-head'>Event 9</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
 							</div>
 							</div>
 						</div>
 						</center>
 					</div>
 					</div>
-				</div>
-				</MediaQuery>
-
-				{/*second media query */}
-
-
-				<MediaQuery minWidth={700} maxWidth={1000}>
-				<div className="events-bg">
-					<br></br>
-					<br></br>
-					<br></br>
-					{/* <br></br> */}
-					{/* <br></br> */}
-					{/* <br></br> */}
-					<br></br>
-					<h1 style={{ color: "white", fontSize: "50px"}}>EVENTS</h1>
-	
-					<div className={clicked?'firstoff':'firston'}>
-					<div  >
-						{/* <div className="events-flexin" onClick={()=> this.setState({clicked:true})} >
-							<img src={im1}></img>
-						</div>
-						<div className="events-flexin first" onClick={()=> this.setState({clicked:true})}>
-							<img src={im2}></img>
-						</div>
-						<div className="events-flexin first" onClick={()=> this.setState({clicked:true})}>
-							<img src={im3}></img>
-						</div> */}
-						{/* <br></br> */}
-						{/* <br></br> */}
-						<ul style={listStyle} >
-							<li ><div style={elemstyle700} id = "online" onClick={()=> this.setState({clicked:true})} >
-							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-								<center><h1 style={{color:"white",fontSize:"27px"}}>ONLINE</h1></center>
-							</div>
-							</div></li>
-							<li><div style={elemstyle700} id = 'offline' onClick={()=> this.setState({clicked:true})}>
-							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-								<center><h1 style={{color:"white",fontSize:"27px"}}>OFFLINE</h1></center>
-							</div>
-							</div></li>
-							<li><div style={elemstyle700} id = 'talks' onClick={()=> this.setState({clicked:true})}>
-							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-								<center><h1 style={{color:"white",fontSize:"27px"}}>TALKS</h1></center>
-							</div>
-							</div></li>
-						</ul>
-						<br></br>
-						<br></br>
-						<center>
-						{/* <img src={im4}  className="events-rb first"></img>  */}
-						<div className='buttondiv' style={{width:'280px'}}>
-							<img src={im4}  className="buttonimg"></img> 
-						</div>
-						</center>
 					</div>
-					</div>
-					<div className={clickedtwo?'secondoff':'secondon'}>
-					<div className={clicked?'secondon':'secondoff'}>
+					<div  className={clicked2?'secondon':'secondoff'}>
+					<div className={clickedtwooff||eventtwooff||eventthreeoff||eventfouroff||eventfiveoff||eventsixoff||eventsevenoff||eventeightoff||eventnineoff?'secondoff':'secondon'}>
+					<div className={clicked2?'secondon':'secondoff'}>
 						<center>
-							<div style={{width:'70%',background: "rgba(255, 255, 255, 0.15)",height:'300px',marginTop:'4%',backdropFilter:"blur(10px)",borderRadius:'15px',boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}}>
+							<div id='blur' >
 								<br></br>
-								<img id='close' src='./exit.png' style={{width:'30px',marginLeft:'86%',marginTop:'10px',cursor:'pointer'}}  onClick={()=> this.setState({clicked:false})}></img>
-									<h1 style={{color:'white',fontSize:'25px',marginTop:'-3%'}}>ONLINE EVENTS</h1>
+								<img id='close' src='./exit.png'   onClick={()=> this.setState({clicked2:false})}></img>
+									<h1 id='online-heading'>OFFLINE EVENTS</h1>
 									
-								<ul className="nav-dots1" id="js-dots" style={{}} >
+								<ul className="nav-dots" id="js-dots2" style={{marginTop:'0.8%'}}>
 								<li className="nav-dot is-active" ></li>
 								<li className="nav-dot" ></li>
 								<li className="nav-dot" ></li>
 								
 								</ul>
 	
-								<main className="main" id = 'js-section'>
+								<main className="main" id = 'js-section2'>
 								<section className="section is-active"id="section1">
 								
-									<ul id="list" style={listStyle2}>
-									<li ><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})}  >
+									<ul id="list" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwooff:true})}  >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event1</h1></center>
+										<center><h1 id="text">Event1</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventtwooff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event2</h1></center>
+										<center><h1 id="text">Event2</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventthreeoff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event3</h1></center>
+										<center><h1 id="text">Event3</h1></center>
 									</div>
 									</div></li>
 								</ul>
 								</section>
 								<section className="section"id="section2">
 								
-									<ul id="list1" style={listStyle2}>
-									<li ><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<ul id="list1" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventfouroff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event 4</h1></center>
+										<center><h1 id="text">Event 4</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventfiveoff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event 5</h1></center>
+										<center><h1 id="text">Event 5</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventsixoff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event 6</h1></center>
+										<center><h1 id="text">Event 6</h1></center>
 									</div>
 									</div></li>
 								</ul>
 								</section>
 								<section className="section"id="section3">
 								
-									<ul id="list2" style={listStyle2}>
-									<li ><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})}  >
+									<ul id="list2" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventsevenoff:true})}  >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event 7</h1></center>
+										<center><h1 id="text">Event 7</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventeightoff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event 8</h1></center>
+										<center><h1 id="text">Event 8</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemstyle1700} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventnineoff:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.4vw"}}>Event 9</h1></center>
+										<center><h1 id="text">Event 9</h1></center>
 									</div>
 									</div></li>
 								</ul>
@@ -616,177 +836,315 @@ class App extends React.Component {
 	
 	
 					<div >
-					<div className={clickedtwo?'secondon':'secondoff'}>
+					<div className={clickedtwooff?'secondon':'secondoff'}>
 						<center>
-						<div style={{width:'70%',background: "rgba(255, 255, 255, 0.15)",height:'420px',marginTop:'-1.3%',backdropFilter:"blur(10px)",borderRadius:'15px',boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}}>
-							<div style={{display:'flex',alignItems:'center',justifyContent:'space-evenly'}}>
-							<div style={{width:'50%',height:'500px'}}>
-								<center><img src="./poster.png" style={{width:'200px',height:'200px',marginTop:'50px',marginLeft:'-3%'}}></img>
-								<h4 style={{marginLeft:'-3%',marginTop:'-1%',color:'#FFC200'}}>Contact:Event Coheads</h4>
-								<h5 style={{marginLeft:'-3.5%',color:'white',marginTop:'-2%'}}>1.Abcd Xyz (9884736273)</h5>
-								<h5 style={{marginLeft:'-3.5%',color:'white',marginTop:'-2%'}}>2.Abcd Xyz (9884736273)</h5>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({clickedtwooff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
 								</center>
 							</div>
-							<div style={{width:'50%',height:'500px'}}>
-								<img id='close' src='./exit.png' style={{width:'30px',marginLeft:'78%',marginTop:'6%',cursor:'pointer'}}  onClick={()=> this.setState({clickedtwo:false})}></img>
-								<center><h1 style={{color:'#FFC200',marginTop:'0%',fontSize:'25px',marginLeft:'-25%'}}>LOREM IPSUM</h1>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({clickedtwooff:false})}></img>
+								<center><h1 id='sub-head'>EVENT 1 OFFLINE</h1>
 								
 								</center>
-								<div style={{color:'white',width:'77%',marginLeft:'-20%',fontSize:'15px',textAlign:'justify'}}>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
-								<center><button style={{width:"40%",backgroundColor:'white',borderRadius:'5px',height:'48px',borderColor:'white',marginTop:'8%',marginLeft:'-25%',fontSize:'25px',fontWeight:'550',cursor:'pointer'}}>Register</button></center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventtwooff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventtwooff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventtwooff:false})}></img>
+								<center><h1 id='sub-head'>Event 2 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventthreeoff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventthreeoff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventthreeoff:false})}></img>
+								<center><h1 id='sub-head'>Event 3 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventfouroff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventfouroff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventfouroff:false})}></img>
+								<center><h1 id='sub-head'>Event 4 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventfiveoff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventfiveoff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventfiveoff:false})}></img>
+								<center><h1 id='sub-head'>Event 5 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventsixoff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventsixoff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventsixoff:false})}></img>
+								<center><h1 id='sub-head'>Event 6 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventsevenoff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventsevenoff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventsevenoff:false})}></img>
+								<center><h1 id='sub-head'>Event 7 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventeightoff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventeightoff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventeightoff:false})}></img>
+								<center><h1 id='sub-head'>Event 8 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventnineoff?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventnineoff:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventnineoff:false})}></img>
+								<center><h1 id='sub-head'>Event 9 OFFLINE</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
 							</div>
 							</div>
 						</div>
 						</center>
 					</div>
 					</div>
-				</div>
-				</MediaQuery>
-
-
-				{/*Third media query */}
-
-
-				<MediaQuery  maxWidth={700}>
-				<div className="events-bg1">
-					<br></br>
-					{/* <br></br> */}
-					{/* <br></br> */}
-					{/* <br></br> */}
-					{/* <br></br> */}
-					{/* <br></br> */}
-					{/* <br></br> */}
-					<div style={{width:'85%',marginLeft:'0'}}>
-						<h1 style={{ color: "white", fontSize: "50px",paddingLeft:'50px',paddingBottom:'9px'}}>EVENTS</h1>
-						{/* <br></br> */}
-						<div className={clicked?'firstoff':'firston'}>
-						<div  >
-							{/* <div className="events-flexin" onClick={()=> this.setState({clicked:true})} >
-								<img src={im1}></img>
-							</div>
-							<div className="events-flexin first" onClick={()=> this.setState({clicked:true})}>
-								<img src={im2}></img>
-							</div>
-							<div className="events-flexin first" onClick={()=> this.setState({clicked:true})}>
-								<img src={im3}></img>
-							</div> */}
-							{/* <br></br> */}
-							{/* <br></br> */}
-							<center>
-							<ul style={listStylemob} >
-								<li ><div style={elemstyle700mob} id = "online" onClick={()=> this.setState({clicked:true})} >
-								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-								<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-									<center><h1 style={{color:"white",fontSize:"2.5vh"}}>ONLINE</h1></center>
-								</div>
-								</div></li>
-								<li><div style={elemstyle700mob} id = 'offline' onClick={()=> this.setState({clicked:true})}>
-								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-								<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-									<center><h1 style={{color:"white",fontSize:"2.5vh"}}>OFFLINE</h1></center>
-								</div>
-								</div></li>
-								<li><div style={elemstyle700mob} id = 'talks' onClick={()=> this.setState({clicked:true})}>
-								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-								<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-									<center><h1 style={{color:"white",fontSize:"2.5vh"}}>TALKS</h1></center>
-								</div>
-								</div></li>
-							</ul>
-							</center>
-							<br></br>
-							{/* <br></br> */}
-							<center>
-							{/* <img src={im4}  className="events-rb first"></img>  */}
-							<div className='buttondiv' style={{width:'280px',marginLeft:'46px'}}>
-								<img src={im4}  className="buttonimg"></img> 
-							</div>
-							</center>
-						</div>
-						</div>
 					</div>
-					<div className={clickedtwo?'secondoff':'secondon'}>
-					<div className={clicked?'secondon':'secondoff'}>
+					<div  className={clicked3?'secondon':'secondoff'}>
+					<div className={clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'secondoff':'secondon'}>
+					<div className={clicked3?'secondon':'secondoff'}>
 						<center>
-							<div style={{width:'70%',marginLeft:'-3%',background: "rgba(255, 255, 255, 0.15)",height:'80vh',marginTop:'4%',backdropFilter:"blur(10px)",borderRadius:'15px',boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}}>
+							<div id='blur' >
 								<br></br>
-								<img id='close' src='./exit.png' style={{width:'20px',marginLeft:'86%',marginTop:'5px',cursor:'pointer'}}  onClick={()=> this.setState({clicked:false})}></img>
-									<h1 style={{color:'white',fontSize:'28px',marginTop:'1%'}}>ONLINE EVENTS</h1>
-									<br></br>
+								<img id='close' src='./exit.png'   onClick={()=> this.setState({clicked3:false})}></img>
+									<h1 id='online-heading'>TALKS</h1>
 									
-								<ul className="nav-dots2" id="js-dots"  >
+								<ul className="nav-dots" id="js-dots3" style={{marginTop:'0.8%'}}>
 								<li className="nav-dot is-active" ></li>
 								<li className="nav-dot" ></li>
 								<li className="nav-dot" ></li>
 								
 								</ul>
 	
-								<main className="main" id = 'js-section'>
+								<main className="main" id = 'js-section3'>
 								<section className="section is-active"id="section1">
 								
-									<ul id="list" style={listStyle2mob}>
-									<li ><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})}  >
+									<ul id="list" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwotal:true})}  >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event1</h1></center>
+										<center><h1 id="text">Event1</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventtwotal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event2</h1></center>
+										<center><h1 id="text">Event2</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventthreetal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event3</h1></center>
+										<center><h1 id="text">Event3</h1></center>
 									</div>
 									</div></li>
 								</ul>
 								</section>
 								<section className="section"id="section2">
 								
-									<ul id="list1" style={listStyle2mob}>
-									<li ><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<ul id="list1" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventfourtal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event 4</h1></center>
+										<center><h1 id="text">Event 4</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventfivetal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event 5</h1></center>
+										<center><h1 id="text">Event 5</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventsixtal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event 6</h1></center>
+										<center><h1 id="text">Event 6</h1></center>
 									</div>
 									</div></li>
 								</ul>
 								</section>
 								<section className="section"id="section3">
 								
-									<ul id="list2" style={listStyle2mob}>
-									<li ><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})}  >
+									<ul id="list2" >
+									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventsevental:true})}  >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event 7</h1></center>
+										<center><h1 id="text">Event 7</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventeighttal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event 8</h1></center>
+										<center><h1 id="text">Event 8</h1></center>
 									</div>
 									</div></li>
-									<li><div className='event'  style={elemmobst} onClick={()=> this.setState({clickedtwo:true})} >
+									<li><div className='event'  style={elemStyle1} onClick={()=> this.setState({eventninetal:true})} >
 									<img src="./border1.png" style={{width:'161%',marginLeft:"-25%",marginTop:'-19%'}}></img>
 									<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
-										<center><h1 style={{color:"white",fontSize:"2.1vh"}}>Event 9</h1></center>
+										<center><h1 id="text">Event 9</h1></center>
 									</div>
 									</div></li>
 								</ul>
@@ -801,38 +1159,240 @@ class App extends React.Component {
 	
 	
 					<div >
-					<div className={clickedtwo?'secondon':'secondoff'}>
+					<div className={clickedtwotal?'secondon':'secondoff'}>
 						<center>
-						<div style={{width:'70%',background: "rgba(255, 255, 255, 0.15)",height:'80vh',marginTop:'-1.3%',backdropFilter:"blur(10px)",borderRadius:'15px',boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}}>
-							<div style={{display:'block',alignItems:'center',justifyContent:'space-evenly'}}>
-							<div style={{width:'90%',height:'500px',marginLeft:'5%'}}>
-							<img id='close' src='./exit.png' style={{width:'30px',marginLeft:'78%',marginTop:'8%',cursor:'pointer'}}  onClick={()=> this.setState({clickedtwo:false})}></img>
-								<center><img src="./poster.png" style={{width:'200px',height:'200px',marginTop:'20px',marginLeft:'-3%'}}></img>
-								{/* <img id='close' src='./exit.png' style={{width:'30px',marginLeft:'78%',marginTop:'6%',cursor:'pointer'}}  onClick={()=> this.setState({clickedtwo:false})}></img> */}
-								<center><h1 style={{color:'#FFC200',marginTop:'20px',fontSize:'22px'}}>LOREM IPSUM</h1>
-								
-								</center>
-								<center>
-								<div style={{color:'white',width:'200px',fontSize:'11px',textAlign:'justify'}}>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
-								</center>
-								<center><button style={{width:"40%",backgroundColor:'white',borderRadius:'5px',height:'3%',borderColor:'white',marginTop:'8%',fontSize:'4.5vw',fontWeight:'550',cursor:'pointer'}}>Register</button></center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({clickedtwotal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
 								</center>
 							</div>
-							{/* <div style={{width:'50%',height:'500px'}}>
-								<img id='close' src='./exit.png' style={{width:'30px',marginLeft:'78%',marginTop:'6%',cursor:'pointer'}}  onClick={()=> this.setState({clickedtwo:false})}></img>
-								<center><h1 style={{color:'#FFC200',marginTop:'0%',fontSize:'25px',marginLeft:'-25%'}}>LOREM IPSUM</h1>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png' style={{width:'40px',marginLeft:'80%',marginTop:'5%',cursor:'pointer'}}  onClick={()=> this.setState({clickedtwotal:false})}></img>
+								<center><h1 id='sub-head'>EVENT 1 TALK</h1>
 								
 								</center>
-								<div style={{color:'white',width:'77%',marginLeft:'-20%',fontSize:'15px',textAlign:'justify'}}>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
-								<center><button style={{width:"40%",backgroundColor:'white',borderRadius:'5px',height:'48px',borderColor:'white',marginTop:'8%',marginLeft:'-25%',fontSize:'25px',fontWeight:'550',cursor:'pointer'}}>Register</button></center>
-							</div> */}
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventtwotal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventtwotal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png' style={{width:'40px',marginLeft:'80%',marginTop:'5%',cursor:'pointer'}}  onClick={()=> this.setState({eventtwotal:false})}></img>
+								<center><h1 id='sub-head'>Event 2 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventthreetal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventthreetal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png' style={{width:'40px',marginLeft:'80%',marginTop:'5%',cursor:'pointer'}}  onClick={()=> this.setState({eventthreetal:false})}></img>
+								<center><h1 id='sub-head'>Event 3 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventfourtal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventfourtal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventfourtal:false})}></img>
+								<center><h1 id='sub-head'>Event 4 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventfivetal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventfivetal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventfivetal:false})}></img>
+								<center><h1 id='sub-head'>Event 5 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventsixtal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+								<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventsixtal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventsixtal:false})}></img>
+								<center><h1 id='sub-head'>Event 6 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventsevental?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventsevental:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventsevental:false})}></img>
+								<center><h1 id='sub-head'>Event 7 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventeighttal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventeighttal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventeighttal:false})}></img>
+								<center><h1 id='sub-head'>Event 8 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
+							</div>
+						</div>
+						</center>
+					</div>
+					<div className={eventninetal?'secondon':'secondoff'}>
+						<center>
+						<div id='outer'>
+							<div id='inner'>
+							<div id='inner-left'>
+							<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({eventninetal:false})}></img>
+								<center><img src="./poster.png" id='left-post'></img>
+								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+								<h4 id='sub-sub-left-head'>1.Abcd Xyz (9884736273)</h4>
+								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+								</center>
+							</div>
+							<div id='inner-right'>
+								<img id='close1' src='./exit.png'   onClick={()=> this.setState({eventninetal:false})}></img>
+								<center><h1 id='sub-head'>Event 9 TALK</h1>
+								
+								</center>
+								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+								<center><button id='button-right'>Register</button></center>
+							</div>
 							</div>
 						</div>
 						</center>
 					</div>
 					</div>
+					</div>
 				</div>
-				</MediaQuery>
+				
+
+				
+
+
+				
 			 
 				
 				
