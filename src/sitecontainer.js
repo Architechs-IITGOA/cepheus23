@@ -16,7 +16,7 @@ const SiteContainer = () => {
     setProfileClicked(!isProfileClicked);
   }
   return (
-    <div>
+    <div >
       <Navbar handleProfileClick = {handleProfileClick}/>
       <Profile isProfileClicked = {isProfileClicked}/>
       <Home />

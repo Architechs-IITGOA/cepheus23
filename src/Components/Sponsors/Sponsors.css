@@ -1,6 +1,272 @@
-.sponsors {
-    scroll-snap-align: start;
-    height: 100vh;
-    overflow: scroll;
+.Sponsors {
+  text-align: center;
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow: scroll;
+}
 
+.Sponsors-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Sponsors-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Sponsors-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Sponsors-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Sponsors .events-bg1{
+  background-image: url("./Events-Images/sponsors.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden
+}
+
+
+
+
+#box{
+  position: absolute;
+  width: 80vw;
+  height: 520px;
+  overflow-y: scroll;
+  /* overflow-x: hidden; */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  /* left: 95px; */
+  /* top: 272px; */
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(13.5px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 35px;
+}
+#center{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100vw;
+}
+#mob_2{
+  display: none;
+}
+
+
+#container1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -40px;
+  justify-content: space-around;
+}
+#container2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  width: 90%;
+  margin-left: 5%;
+  justify-content: space-around;
+}
+#box_spon{
+  width: 260px;
+}
+#box_spon_sec{
+  width: 290px;
+}
+#box::-webkit-scrollbar {
+  display: none;
+}
+#box_spon_title{
+  width: 355px;
+  height: 355px;
+  margin-top: -80px;
+  
+}
+#container_main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  width: 90%;
+  /* height:200px; */
+  margin-left: 5%;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+#container_main_2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  width: 90%;
+  /* height:200px; */
+  margin-left: 5%;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+#container_main_3{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  width: 90%;
+  /* height:200px; */
+  margin-left: 5%;
+  margin-top: -30px;
+  justify-content: space-around;
+}
+
+@media screen and (max-width:1215px){
+      #mob_2{
+        display: block;
+        margin-top: 20px;
+      }
+      #container_main{
+        display: none;
+      }
+      #box{
+        position: absolute;
+        width: 80vw;
+        height: 500px;
+        overflow-y: scroll;
+        /* overflow-x: hidden; */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        /* left: 95px; */
+        /* top: 272px; */
+      
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(13.5px);
+      
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 35px;
+      }
+
+}
+
+
+#main_head{
+  color: white;
+  font-size: 50px;
+}
+
+@media screen and (max-width:725px){
+      #mob_2{
+        display: block;
+        margin-top: 20px;
+      }
+      #container_main{
+        display: none;
+      }
+      #box{
+        position: absolute;
+        width: 80vw;
+        height: 70vh;
+        overflow-y: scroll;
+        /* overflow-x: hidden; */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        /* left: 95px; */
+        /* top: 272px; */
+      
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(13.5px);
+      
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 35px;
+      }
+      #main_head{
+        font-size:5vh
+      }
+
+}
+@media screen and (max-width:470px){
+      #mob_2{
+        display: block;
+        margin-top: 20px;
+      }
+      #container_main{
+        display: none;
+      }
+      #box{
+        position: absolute;
+        width: 80vw;
+        height: 70vh;
+        overflow-y: scroll;
+        /* overflow-x: hidden; */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        /* left: 95px; */
+        /* top: 272px; */
+      
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(13.5px);
+      
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 35px;
+      }
+      #main_head{
+        font-size:5vh
+      }
+      #box_spon_title{
+        width: 270px;
+        height: 270px;
+        margin-top: -50px;
+      }
+      #box_spon_sec{
+        width: 240px;
+        margin-top: -20px;
+      }
+      #box_spon{
+        width: 230px;
+      }
+      
+
+}
+
+
+#heading_box{
+  margin-top: -255px;
+  margin-bottom: 50px;
+  margin-left: -6%;
+  color: white;
+  font-size: 120%;
+}
+#img_spon{
+  width: 38%;
+  margin-left: 20px;
+  margin-bottom: 100px;
 }
