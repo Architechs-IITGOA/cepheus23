@@ -8,7 +8,7 @@ body {
 }
 
 .aboutus{
-  height: 800px;
+  height: 100vh;
   background-image: url(CepheusBackgroundsdamage.png);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .myStyleh1{

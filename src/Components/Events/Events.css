@@ -1,6 +1,8 @@
 .events {
   text-align: center;
   scroll-snap-align: start;
+  overflow: scroll;
+
 }
 
 .events-logo {

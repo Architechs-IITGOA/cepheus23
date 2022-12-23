@@ -1,0 +1,27 @@
+.profile {
+    height: 80vh;
+    top: 15vh;
+    right: -200vh;
+    backdrop-filter: blur(5px);
+    /* background-color: #ffffff99; */
+    position: fixed;
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    border-radius: 30px;
+    transition: all 0.4s;
+}
+
+.profile-active {
+    right: 8vh;
+}
+
+.profile-left {
+    flex: 1;
+}
+
+.profile-left .name, .score{
+    font-family: SpaceBoards;
+}

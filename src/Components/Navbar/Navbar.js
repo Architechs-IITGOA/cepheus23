@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css"
 
-export default function Navbar() {
+export default function Navbar({handleProfileClick}) {
     return (
         <div className="navbar">
             <div class="navbar-logo">
@@ -16,7 +16,7 @@ export default function Navbar() {
                 <a href="#Schedule">Schedule</a>
                 <a href="#Sponsors">Sponsors</a>
                 <a href="#Contact">Contact</a>
-                <img src="img/user_placeholder.png" alt="avatar"></img>
+                <img src="img/user_placeholder.png" alt="avatar" onClick={() => handleProfileClick()}></img>
             </div>
         </div>
     )
