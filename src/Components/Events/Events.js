@@ -194,20 +194,61 @@ const myStyle = {
         if (dot == e.target) {
            
            dots[index].classList.add('is-active');
+        //    dots[index].classList.add('transition');
            
         }
       });
+	 
 
       const is_active_sects = sects.querySelector('.is-active');
+      const is_active_sects1 = sects.querySelector('.is-active1');
+      const is_active_sects2 = sects.querySelector('.is-active2');
+    //   const is_active_sects1 = sects.querySelector('.transition');
       if (is_active_sects !=null){
         is_active_sects.classList.remove('is-active');
+		// if (is_active_sects1 !=null){
+		// 	is_active_sects1.classList.remove('transition');
+		// }
+        
+		// setTimeout(is_active_sects1.classList.remove('transition'),2000);
+      }
+      if (is_active_sects1 !=null){
+        is_active_sects1.classList.remove('is-active1');
+		// if (is_active_sects1 !=null){
+		// 	is_active_sects1.classList.remove('transition');
+		// }
+        
+		// setTimeout(is_active_sects1.classList.remove('transition'),2000);
+      }
+      if (is_active_sects2 !=null){
+        is_active_sects2.classList.remove('is-active2');
+		// if (is_active_sects1 !=null){
+		// 	is_active_sects1.classList.remove('transition');
+		// }
+        
+		// setTimeout(is_active_sects1.classList.remove('transition'),2000);
       }
       const sectsarr = Array.from(sects.children);
       dots.forEach((dot, index) => {
         if (dot == e.target) {
            
            dots[index].classList.add('is-active');
-           sectsarr[index].classList.add('is-active');
+		   if (index==0){
+			sectsarr[index].classList.add('is-active');
+		   }
+		   if (index==1){
+			sectsarr[index].classList.add('is-active1');
+		   }
+		   if (index==2){
+			sectsarr[index].classList.add('is-active2');
+		   }
+           
+           
+		//    function greet(){
+		// 	sectsarr[index].classList.add('transition');
+		// 	// is_active_sects1.classList.remove('transition');
+		//   }
+        //    setTimeout(greet(),2000);
            
         }
       });
@@ -373,8 +414,10 @@ class Events extends React.Component {
 					{/* <br></br> */}
 					<h1  id="main-heading">EVENTS</h1>
 	
+					{/* <div className={clicked||clicked2||clicked3?'secondoff1':'firston1'}> */}
 					<div className={clicked||clicked2||clicked3?'firstoff':'firston'}>
-					<div  >
+					<div className={clicked||clicked2||clicked3?'secondoff':'secondon'}>
+					<div className='setting' >
 						{/* <div className="events-flexin" onClick={()=> this.setState({clicked:true})} >
 							<img src={im1}></img>
 						</div>
@@ -416,7 +459,9 @@ class Events extends React.Component {
 						</center>
 					</div>
 					</div>
-					<div  className={clicked?'secondon':'secondoff'}>
+					</div>
+					<div  className={clicked?'secondon1':'secondoff1'}>
+					<div className={clickedtwo||eventtwo||eventthree||eventfour||eventfive||eventsix||eventseven||eventeight||eventnine?'secondoff1':'secondon'}>
 					<div className={clickedtwo||eventtwo||eventthree||eventfour||eventfive||eventsix||eventseven||eventeight||eventnine?'secondoff':'secondon'}>
 					<div className={clicked?'secondon':'secondoff'}>
 						<center>
@@ -433,7 +478,7 @@ class Events extends React.Component {
 								</ul>
 	
 								<main className="main" id = 'js-section'>
-								<section className="section is-active"id="section1">
+								<section className="section is-active transition"id="section1">
 								
 									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwo:true})}  >
@@ -509,34 +554,38 @@ class Events extends React.Component {
 							</center>
 					</div>
 					</div>
+					</div>
 	
 	
 					<div >
-					<div className={clickedtwo?'secondon':'secondoff'}>
-						<center>
-						<div id='outer' >
-							<div id='inner' >
-							<div id='inner-left'>
-								<div id='fake'></div>
-							<img id='close2' src='./exit.png'   onClick={()=> this.setState({clickedtwo:false})}></img>
-								<center><img id='left-post' src="./poster.png"></img>
-								<h3 id='sub-left-head'>Contact:Event Coheads</h3>
-								<h4 id='sub-sub-left-head' >1.Abcd Xyz (9884736273)</h4>
-								<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
-								</center>
+					<div className={clickedtwo?'secondon1':'secondoff1'}>
+						<div className={clickedtwo?'secondon':'secondoff'}>
+							<center>
+							<div id='outer' >
+								<div id='inner' >
+								<div id='inner-left'>
+									<div id='fake'></div>
+								<img id='close2' src='./exit.png'   onClick={()=> this.setState({clickedtwo:false})}></img>
+									<center><img id='left-post' src="./poster.png"></img>
+									<h3 id='sub-left-head'>Contact:Event Coheads</h3>
+									<h4 id='sub-sub-left-head' >1.Abcd Xyz (9884736273)</h4>
+									<h4 id='sub-sub-left-head'>2.Abcd Xyz (9884736273)</h4>
+									</center>
+								</div>
+								<div id='inner-right'>
+									<img id='close1' src='./exit.png'   onClick={()=> this.setState({clickedtwo:false})}></img>
+									<center><h1 id='sub-head'>EVENT 1</h1>
+									
+									</center>
+									<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
+									<center><button id='button-right'>Register</button></center>
+								</div>
+								</div>
 							</div>
-							<div id='inner-right'>
-								<img id='close1' src='./exit.png'   onClick={()=> this.setState({clickedtwo:false})}></img>
-								<center><h1 id='sub-head'>EVENT 1</h1>
-								
-								</center>
-								<div id='para'>Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!</div>
-								<center><button id='button-right'>Register</button></center>
-							</div>
-							</div>
+							</center>
 						</div>
-						</center>
 					</div>
+					<div className={eventtwo?'secondon1':'secondoff1'}>
 					<div className={eventtwo?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -562,6 +611,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventthree?'secondon1':'secondoff1'}>
 					<div className={eventthree?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -587,6 +638,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventfour?'secondon1':'secondoff1'}>
 					<div className={eventfour?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -612,6 +665,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventfive?'secondon1':'secondoff1'}>
 					<div className={eventfive?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -638,6 +693,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventsix?'secondon1':'secondoff1'}>
 					<div className={eventsix?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -663,6 +720,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventseven?'secondon1':'secondoff1'}>
 					<div className={eventseven?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -688,6 +747,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventeight?'secondon1':'secondoff1'}>
 					<div className={eventeight?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -713,6 +774,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventnine?'secondon1':'secondoff1'}>
 					<div className={eventnine?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -740,7 +803,9 @@ class Events extends React.Component {
 					</div>
 					</div>
 					</div>
-					<div  className={clicked2?'secondon':'secondoff'}>
+					</div>
+					<div  className={clicked2?'secondon2':'secondoff2'}>
+					<div className={clickedtwooff||eventtwooff||eventthreeoff||eventfouroff||eventfiveoff||eventsixoff||eventsevenoff||eventeightoff||eventnineoff?'secondoff1':'secondon'}>
 					<div className={clickedtwooff||eventtwooff||eventthreeoff||eventfouroff||eventfiveoff||eventsixoff||eventsevenoff||eventeightoff||eventnineoff?'secondoff':'secondon'}>
 					<div className={clicked2?'secondon':'secondoff'}>
 						<center>
@@ -757,7 +822,7 @@ class Events extends React.Component {
 								</ul>
 	
 								<main className="main" id = 'js-section2'>
-								<section className="section is-active"id="section1">
+								<section className="section is-active transition"id="section1">
 								
 									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwooff:true})}  >
@@ -833,9 +898,11 @@ class Events extends React.Component {
 							</center>
 					</div>
 					</div>
+					</div>
 	
 	
 					<div >
+					<div className={clickedtwooff?'secondon1':'secondoff1'}>
 					<div className={clickedtwooff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -861,6 +928,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventtwooff?'secondon1':'secondoff1'}>
 					<div className={eventtwooff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -886,6 +955,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventthreeoff?'secondon1':'secondoff1'}>
 					<div className={eventthreeoff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -911,6 +982,9 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+
+					<div className={eventfouroff?'secondon1':'secondoff1'}>
 					<div className={eventfouroff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -936,6 +1010,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventfiveoff?'secondon1':'secondoff1'}>
 					<div className={eventfiveoff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -961,6 +1037,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventsixoff?'secondon1':'secondoff1'}>
 					<div className={eventsixoff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -986,6 +1064,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventsevenoff?'secondon1':'secondoff1'}>
 					<div className={eventsevenoff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1011,6 +1091,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventeightoff?'secondon1':'secondoff1'}>
 					<div className={eventeightoff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1036,6 +1118,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventnineoff?'secondon1':'secondoff1'}>
 					<div className={eventnineoff?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1063,7 +1147,9 @@ class Events extends React.Component {
 					</div>
 					</div>
 					</div>
-					<div  className={clicked3?'secondon':'secondoff'}>
+					</div>
+					<div  className={clicked3?'secondon3':'secondoff3'}>
+					<div className={clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'secondoff1':'secondon'}>
 					<div className={clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'secondoff':'secondon'}>
 					<div className={clicked3?'secondon':'secondoff'}>
 						<center>
@@ -1080,7 +1166,7 @@ class Events extends React.Component {
 								</ul>
 	
 								<main className="main" id = 'js-section3'>
-								<section className="section is-active"id="section1">
+								<section className="section is-active transition"id="section1">
 								
 									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> this.setState({clickedtwotal:true})}  >
@@ -1156,9 +1242,11 @@ class Events extends React.Component {
 							</center>
 					</div>
 					</div>
+					</div>
 	
 	
 					<div >
+					<div className={clickedtwotal?'secondon1':'secondoff1'}>
 					<div className={clickedtwotal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1184,6 +1272,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventtwotal?'secondon1':'secondoff1'}>
 					<div className={eventtwotal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1209,6 +1299,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventthreetal?'secondon1':'secondoff1'}>
 					<div className={eventthreetal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1234,6 +1326,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventfourtal?'secondon1':'secondoff1'}>
 					<div className={eventfourtal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1259,6 +1353,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventfivetal?'secondon1':'secondoff1'}>
 					<div className={eventfivetal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1284,6 +1380,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventsixtal?'secondon1':'secondoff1'}>
 					<div className={eventsixtal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1309,6 +1407,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventsevental?'secondon1':'secondoff1'}>
 					<div className={eventsevental?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1334,6 +1434,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventeighttal?'secondon1':'secondoff1'}>
 					<div className={eventeighttal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1359,6 +1461,8 @@ class Events extends React.Component {
 						</div>
 						</center>
 					</div>
+					</div>
+					<div className={eventninetal?'secondon1':'secondoff1'}>
 					<div className={eventninetal?'secondon':'secondoff'}>
 						<center>
 						<div id='outer'>
@@ -1383,6 +1487,7 @@ class Events extends React.Component {
 							</div>
 						</div>
 						</center>
+					</div>
 					</div>
 					</div>
 					</div>
