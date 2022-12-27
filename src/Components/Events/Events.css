@@ -530,10 +530,12 @@ font-style: normal;
 }
 #text{
   color: white;
+  font-family: SpaceBoards;
   font-size: 34px;
 }
 #main-heading{
   color:white;
+  font-family: SpaceBoards;
   font-size: 50px;
 }
 .buttonimg{
@@ -575,6 +577,7 @@ font-style: normal;
 }
 #online-heading{
   color: white;
+  font-family: SpaceBoards;
   font-size: 30px;
   margin-top: -2%;
 }
@@ -618,10 +621,12 @@ font-style: normal;
   margin-left:-3%;
   margin-top:-1%;
   color:#FFC200;
+  /* font-family: SpaceBoards; */
   
 }
 #sub-sub-left-head{
   margin-left:-3.5%;
+  /* font-family: SpaceBoards; */
   color:white;
   margin-top:-2%;
 }
@@ -631,12 +636,14 @@ font-style: normal;
 }
 #sub-head{
   color:#FFC200;
+  font-family: SpaceBoards;
   margin-top:0%;
   font-size:45px;
   margin-left:-25%;
 }
 #para{
   color:white;
+  /* font-family: SpaceBoards; */
   width:77%;
   margin-left:-20%;
   font-size:17px;
