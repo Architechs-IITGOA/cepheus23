@@ -1,7 +1,44 @@
-import React from "react";
+// import React from "react";
+import React, { Component,useEffect,useState } from 'react'
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import "./Profile.css"
+import { gapi } from 'gapi-script';
+// import GoogleBtn from './GoogleBtn'
+// import { useGoogleLogin } from '@react-oauth/google';
 
 export default function Profile({isProfileClicked}) {
+
+
+    const clientId = '433800136317-usopqpji8k1tu6u1pq1r2t689j091p65.apps.googleusercontent.com';
+    const [success,setsuccess] = useState(false);
+    const responseGoogle = (response) => {
+        console.log(response);
+        setsuccess(true);
+    }
+    const responseGoogle1 = (response) => {
+        console.log(response);
+        setsuccess(false);
+    }
+    useEffect(() => {
+        const initClient = () => {
+            gapi.client.init({
+            clientId: clientId,
+            scope: ''
+            });
+        };
+        gapi.load('client:auth2', initClient);
+    });
+
+    const onSuccess = (res) => {
+        console.log('success:', res);
+    };
+    const onFailure = (err) => {
+        console.log('failed:', err);
+    };
+    function setter(){
+        setsuccess(true);
+    }
+    // 
     return (
         <div class={isProfileClicked ? "profile profile-active" : "profile"}>
             <img src="" alt=""></img>
@@ -29,8 +66,40 @@ export default function Profile({isProfileClicked}) {
                     </ol>
                 </div>
                 <div className="profile-buttons">
-                    <a class="edit">Edit Profile</a>
-                    <a class="log-out">Log Out</a>
+                    {/* <a class="edit">Edit Profile</a> */}
+                    {/* <a class="log-out" onClick={login()}>Log In</a> */}
+                    <div>
+                        <div className={success?'hide':'show'}>
+                            
+                            
+                        
+                        <GoogleLogin 
+                            render={renderProps => (
+                                <a class="log-out" onClick={renderProps.onClick} disabled={renderProps.disabled}>Log In/Sign Up</a>
+                            )}
+                            clientId={clientId}
+                            buttonText="Sign in with Google"
+                            onSuccess={responseGoogle}
+                            
+                            onFailure={responseGoogle1}
+                            cookiePolicy={'single_host_origin'}
+                            isSignedIn={true}
+                        />
+                        </div>
+                        <div className={success?'show':'hide'}>
+                        <a class="edit">Edit Profile</a>
+                        <GoogleLogout
+                        render={renderProps => (
+                            <a class="log-out" onClick={renderProps.onClick} disabled={renderProps.disabled}>Log Out</a>
+                        )}
+                            clientId={clientId}
+                            buttonText="Logout"
+                            onLogoutSuccess={() => {console.log('loggedout successfully');setsuccess(false)}}
+                            onLogoutFailure={(err) => {console.log(err);setsuccess(true)}}
+                        />
+                        
+                        </div>
+                        </div>
                 </div>
             </div>
         </div>
