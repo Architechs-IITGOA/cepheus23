@@ -21,6 +21,12 @@
   display: none;
 }
 
+body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+}
+
 html {
   scroll-snap-type: y mandatory;
 }
