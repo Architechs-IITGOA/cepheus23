@@ -16,16 +16,30 @@ const SiteContainer = () => {
   const handleProfileClick = () => {
     setProfileClicked(!isProfileClicked);
   }
+  const [success,setsuccess] = useState(false);
 
   const handleBodyClick = () => {
     setProfileClicked(false);
   }
+  const authorisation_reset = ()=>{
+    setProfileClicked(false);
+    setsuccess(false);
+}
+const authorisation_continue = ()=>{
+    setsuccess(true);
+}
+const authorisation_start = () =>{
+  setsuccess(true);
+}
+const authorisation_failure = () =>{
+  setsuccess(false);
+}
 
   return (
     <div>
       <div>
-        <Navbar handleProfileClick = {handleProfileClick}/>
-        <Profile isProfileClicked = {isProfileClicked}/>
+        <Navbar handleProfileClick = {handleProfileClick} successor={success} auth_start={authorisation_start} auth_failure={authorisation_failure}/>
+        <Profile isProfileClicked = {isProfileClicked} auth_continue={authorisation_continue} auth_reset={authorisation_reset} />
       </div>
       <div onClick={() => handleBodyClick()} class={isProfileClicked? "blur noblur" : "noblur"}>
         <Home />
