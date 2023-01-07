@@ -12,7 +12,7 @@
 .eventzon{
 
   transform: perspective(500px) translateZ(0px);
-  transition: 0.3s;
+  transition: 0.6s;
   /* margin-top: 3vh; */
 }
 .eventzoff{
@@ -20,7 +20,7 @@
   transform: perspective(500px) translateZ(-18500px);
   margin-top: -100vh;
   visibility: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
   
 }
 .eventzon1{
@@ -38,7 +38,7 @@
 .eventzon10{
 
   transform: perspective(500px) translateZ(0px);
-  transition: 0.5s;
+  transition: 0.7s;
   margin-top: 0;
 }
 .eventzoff10{
@@ -47,14 +47,14 @@
   height: 0;
   visibility: hidden;
   /* margin-top: 100%; */
-  transition: 0.5s;
+  transition: 0.7s;
   
 }
  
 .eventzon100{
 
   transform: perspective(500px) translateZ(0px);
-  transition: 0.4s;
+  transition: 0.8s;
   
   /* margin-top: 3vh; */
 }
@@ -62,7 +62,7 @@
 
   transform: perspective(500px) translateZ(+18500px);
   /* margin-top:'-200vh'; */
-  transition: 0.6s;
+  transition: 0.8s;
   
 }
 
@@ -97,7 +97,7 @@
 }
 
 .events .events-bg{
-  background-image: url("./Events-Images/events_page.png");
+  background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083349/cepheus23/events_page_fxkfcz.webp");
   background-size: cover;
   background-repeat: repeat-y;
   margin: 0px;
@@ -285,7 +285,7 @@ justify-content: center;
 align-content: center;
 /* height: 100%; */
 /* transition-duration: 1s; */
-transition-duration: 0.2s;
+transition-duration: 0.3s;
 margin-top: 1200px;
 visibility: hidden;
 height: 0;
@@ -471,34 +471,34 @@ transition: ease-in-out 0.2s;
 display: block;
 visibility: visible;
 margin-left: 0%;
-transition: 0.4s;
+transition: 0.6s;
 
 }
 .firstoff{
 /* display: none; */
 margin-left: -100%;
 /* margin-top: 0; */
-transition: 0.3s;
+transition: 0.6s;
 visibility: hidden;
 }
 .secondon{
 display: block;
-transition-duration: 0.5s;
+transition-duration: 0.8s;
 }
 .secondontry{
 display: none;
-transition-duration: 0.5s;
+transition-duration: 0.8s;
 }
 .secondoff{
 display: none;
-transition-duration: 0.5s;
+transition-duration: 0.8s;
 }
 .secondofffirst{
 /* display: none; */
 /* width: 0; */
 height: 0;
 visibility: hidden;
-transition-duration: 0.5s;
+transition-duration: 0.8s;
 }
 .secondofflast{
 /* display: none; */
@@ -506,51 +506,51 @@ width: 0;
 height: 0;
 visibility: none;
 margin-top: -50vh;
-transition-duration: 0.5s;
+transition-duration: 0.8s;
 }
 
 .secondoff1000{
 /* display: none; */
-transition-duration: 0.5s;
+transition-duration: 0.8s;
 }
 .secondon1{
 /* display: block; */
 margin-right: 0px;
 /* margin-top: -80vh; */
 visibility: visible;
-transition-duration: 0.4s;
+transition-duration: 0.8s;
 }
 .secondoff1{
 /* display: none; */
 margin-right: -2000px;
 visibility: hidden;
-transition-duration: 0.4s;
+transition-duration: 0.8s;
 }
 .secondon2{
 /* display: block; */
 margin-right: 0px;
 /* margin-top: -80vh; */
 visibility: visible;
-transition-duration: 0.4s;
+transition-duration: 0.8s;
 }
 .secondoff2{
 /* display: none; */
 margin-right: -2000px;
 visibility: hidden;
-transition-duration: 0.4s;
+transition-duration: 0.8s;
 }
 .secondon3{
 /* display: block; */
 margin-right: 0px;
 /* margin-top: -80vh; */
 visibility: visible;
-transition-duration: 0.4s;
+transition-duration: 0.8s;
 }
 .secondoff3{
 /* display: none; */
 margin-right: -2000px;
 visibility: hidden;
-transition-duration: 0.4s;
+transition-duration: 0.8s;
 }
 
 
@@ -568,7 +568,7 @@ transition:0.2s;
 }
 
 .events-bg1{
-background-image: url("./Events-Images/bg-mob.png");
+background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083334/cepheus23/bg-mob_r6jnsf.webp");
   background-size: cover;
   background-repeat: repeat-y;
   margin: 0px;
@@ -644,7 +644,7 @@ font-style: normal;
   width:950px;
   background: rgba(255, 255, 255, 0.15);
   height:500px;
-  margin-top:-1.3%;
+  margin-top:-4.3%;
   backdrop-filter:blur(10px);
   border-radius:15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -749,6 +749,12 @@ font-style: normal;
 
 
 @media screen and (max-width:1000px){
+  #online-heading{
+    color: white;
+    font-family: SpaceBoards;
+    font-size: 30px;
+    margin-top: 2%;
+  }
   #online,#offline,#talks{
   
     background-size: cover;
@@ -807,7 +813,7 @@ font-style: normal;
   #blur{
     width:650px;
     background: rgba(255, 255, 255, 0.15);
-    height:350px;
+    height:400px;
     margin-top:4%;
     backdrop-filter:blur(10px);
     border-radius:15px;
@@ -885,8 +891,8 @@ font-style: normal;
   }
   #close{
     width:35px;
-    margin-left:77%;
-    margin-top:8%;
+    margin-left:85%;
+    margin-top:2%;
     cursor:pointer;
   }
   #close1{
@@ -938,7 +944,7 @@ font-style: normal;
     width:300px;
     background: rgba(255, 255, 255, 0.15);
     height:72vh;
-    margin-top:-5%;
+    margin-top:-3%;
     backdrop-filter:blur(10px);
     border-radius:15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1108,3 +1114,15 @@ font-style: normal;
     }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
