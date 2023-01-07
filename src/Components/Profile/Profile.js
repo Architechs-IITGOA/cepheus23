@@ -5,7 +5,7 @@ import "./Profile.css"
 import { gapi } from 'gapi-script';
 
 
-export default function Profile({isProfileClicked,auth_reset,auth_continue}) {
+export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata}) {
 
 
     const clientId = '433800136317-usopqpji8k1tu6u1pq1r2t689j091p65.apps.googleusercontent.com';
@@ -17,11 +17,11 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue}) {
                 <img src="img/avatar1.png" alt="avatar" class="profile-image"></img>
                 <img src="img/profile_name_border.png" alt="" class="name-border"></img>
                 
-                <p class="name"> Raghavendra Singh </p>
+                <p class="name">{userdata.firstName}</p>
                 <p> Indian Institute of Technology (IIT), Goa </p>
-                <p> gstechnical@iitgoa.ac.in </p>
+                <p>{userdata.email}</p>
                 <p> 9785075997 </p>
-                <p class="score"> <span> Score </span> - 500 </p>
+                {/* <p class="score"> <span> Score </span> - 500 </p> */}
                 
             </div>
             <div className="profile-right">
