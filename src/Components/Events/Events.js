@@ -7,6 +7,7 @@ import im3 from './Events-Images/talks.png'
 import im4 from './Events-Images/rulebook.png'
 import background from "./events_page.png"
 import MediaQuery from 'react-responsive';
+import { useState, useEffect, useRef } from 'react';
 // import './style.css';
 import React from "react";
 // import { render } from '@testing-library/react';
@@ -112,85 +113,10 @@ const myStyle = {
     marginLeft:'-4%',
     marginTop:'6%',
   }
+
   
 
-  class Slider {
-    constructor(options) {
-      this.sections = document.querySelector(options.section);
-      this.navigation = document.querySelector(options.dots);
-	  if (this.navigation==null){
-		setTimeout(() => {
-			{
-				new Slider({
-					section: '#js-section',
-					dots: '#js-dots',
-				  });
-			}
-		  }, 3000);
-		
-	  }else{
-		this.navigation.addEventListener('click', this.scrollToSection.bind(this));
-	  }
-	  
-      
-      
-      
-    }
-    scrollToSection(e) {
-       
-       const dotsone = this.navigation;
-             const sects = this.sections;
-            const is_active = dotsone.querySelector('.is-active');
-            if (is_active != null) {
-              is_active.classList.remove('is-active');
-               
-            }
-      const dots = Array.from(this.navigation.children);
-      dots.forEach((dot, index) => {
-        if (dot == e.target) {
-           
-           dots[index].classList.add('is-active');
-           
-        }
-      });
-	 
 
-      const is_active_sects = sects.querySelector('.is-active');
-      const is_active_sects1 = sects.querySelector('.is-active1');
-      const is_active_sects2 = sects.querySelector('.is-active2');
-      if (is_active_sects !=null){
-        is_active_sects.classList.remove('is-active');
-      }
-      if (is_active_sects1 !=null){
-        is_active_sects1.classList.remove('is-active1');
-      }
-      if (is_active_sects2 !=null){
-        is_active_sects2.classList.remove('is-active2');
-      }
-      const sectsarr = Array.from(sects.children);
-      dots.forEach((dot, index) => {
-        if (dot == e.target) {
-           
-           dots[index].classList.add('is-active');
-		   if (index==0){
-			sectsarr[index].classList.add('is-active');
-		   }
-		   if (index==1){
-			sectsarr[index].classList.add('is-active1');
-		   }
-		   if (index==2){
-			sectsarr[index].classList.add('is-active2');
-		   }
-        }
-      });
-
-    }
-	
-	
-
-
-     
-  }
 
   
 
@@ -230,6 +156,10 @@ class Events extends React.Component {
 		this.state = {eventsevental:false};
 		this.state = {eventeighttal:false};
 		this.state = {eventninetal:false};
+		this.state = {reset:false};
+		this.state = {eventcarou:0};
+		this.state = {eventcaroone:0};
+		this.state = {eventcartwo:0};
 		this.state = {
 			left1 : 'ABX2',
 			left2 : 'ABX',
@@ -240,8 +170,72 @@ class Events extends React.Component {
 			para: 'hello world',
 		}
 		this.state = {eveno:0};
+
+		
+			function useInterval(callback, delay) {
+				const savedCallback = useRef();
+			  
+				// Remember the latest callback.
+				useEffect(() => {
+				  savedCallback.current = callback;
+				}, [callback]);
+			  
+				// Set up the interval.
+				useEffect(() => {
+				  function tick() {
+					savedCallback.current();
+				  }
+				  if (delay !== null) {
+					let id = setInterval(tick, delay);
+					return () => clearInterval(id);
+				  }
+				}, [delay]);
+			  }
+		
+		
 		
 	}
+	state = {
+		eventcarou: 0,
+		eventcaroone: 0,
+		eventcartwo: 0,
+	  }
+	
+	  intervalId = 0;
+	
+	  incrementCount = () => {
+		this.setState(prevState => {
+		  let nextCount = prevState.eventcarou + 1;
+		  if (nextCount > 2) {
+			nextCount = 0;
+		  }
+		  return { eventcarou: nextCount};
+		});
+		this.setState(prevState => {
+		  let nextCountone = prevState.eventcaroone + 1;
+		  if (nextCountone > 2) {
+			nextCountone = 0;
+		  }
+		  return { eventcaroone: nextCountone };
+		});
+		this.setState(prevState => {
+		  let nextCounttwo = prevState.eventcartwo + 1;
+		  if (nextCounttwo > 2) {
+			nextCounttwo = 0;
+		  }
+		  return { eventcartwo: nextCounttwo };
+		});
+	  }
+	
+	  componentDidMount() {
+		this.intervalId = setInterval(this.incrementCount, 6000);
+	  }
+	
+	  componentWillUnmount() {
+		clearInterval(this.intervalId);
+	  }
+	
+	
 	render(){
 		const eveno = this.state.eveno;
 		const clicked = this.state.clicked;
@@ -276,7 +270,11 @@ class Events extends React.Component {
 		const eventsevental = this.state.eventsevental;
 		const eventeighttal = this.state.eventeighttal;
 		const eventninetal = this.state.eventninetal;
-
+		const eventcarou = this.state.eventcarou;
+		const eventcaroone = this.state.eventcaroone;
+		const eventcartwo = this.state.eventcartwo;
+		const reset = this.state.reset;
+		
 		
 
 
@@ -687,24 +685,9 @@ class Events extends React.Component {
 		},
 		];
 		
-		new Slider({
-			section: '#js-section',
-			dots: '#js-dots',
-			
-	
-		  });
-		new Slider({
-			section: '#js-section2',
-			dots: '#js-dots2',
-			
-	
-		  });
-		new Slider({
-			section: '#js-section3',
-			dots: '#js-dots3',
-			
-	
-		  });
+		
+		
+		
 
 		  
 		  
@@ -729,19 +712,19 @@ class Events extends React.Component {
 						
 						<center>
 						<ul  className="firstpagelist">
-							<li ><div style={elemStyle} id = "online" onClick={()=> this.setState({clicked:true})} >
+							<li ><div style={elemStyle} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0})}} >
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text">ONLINE</h1></center>
 							</div>
 							</div></li>
-							<li><div style={elemStyle} id = 'offline' onClick={()=> this.setState({clicked2:true})}>
+							<li><div style={elemStyle} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text">OFFLINE</h1></center>
 							</div>
 							</div></li>
-							<li><div style={elemStyle} id = 'talks' onClick={()=> this.setState({clicked3:true})}>
+							<li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text">TALKS</h1></center>
@@ -775,14 +758,14 @@ class Events extends React.Component {
 									<h1 id='online-heading'>ONLINE EVENTS</h1>
 									
 								<ul className="nav-dots" id="js-dots" style={{marginTop:'0.8%'}}>
-								<li className="nav-dot is-active" ></li>
-								<li className="nav-dot" ></li>
-								<li className="nav-dot" ></li>
+								<li className={eventcarou==0?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcarou:0,reset:true})} }></li>
+								<li className={eventcarou==1?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcarou:1,reset:true})} ></li>
+								<li className={eventcarou==2?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcarou:2,reset:true})} ></li>
 								
 								</ul>
 	
 								<main className="main" id = 'js-section'>
-								<section className="section is-active transition"id="section1">
+								<section className={eventcarou==0?"section is-active transition":"section transition"}   id="section1">
 								
 									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=>{ this.setState({clickedtwo:true});this.setState({eveno:0})}}  >
@@ -805,7 +788,7 @@ class Events extends React.Component {
 									</div></li>
 								</ul>
 								</section>
-								<section className="section"id="section2">
+								<section className={eventcarou==1?"section is-active1 transition":"section transition"} id="section2">
 								
 									<ul id="list1" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({eventfour:true});this.setState({eveno:3})}} >
@@ -828,7 +811,7 @@ class Events extends React.Component {
 									</div></li>
 								</ul>
 								</section>
-								<section className="section"id="section3">
+								<section className={eventcarou==2?"section is-active2 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({eventseven:true});this.setState({eveno:6})}}  >
@@ -880,14 +863,14 @@ class Events extends React.Component {
 									<h1 id='online-heading'>OFFLINE EVENTS</h1>
 									
 								<ul className="nav-dots" id="js-dots2" style={{marginTop:'0.8%'}}>
-								<li className="nav-dot is-active" ></li>
-								<li className="nav-dot" ></li>
-								<li className="nav-dot" ></li>
+								<li className={eventcaroone==0?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:0,reset:true})}} ></li>
+								<li className={eventcaroone==1?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcaroone:1,reset:true})} ></li>
+								<li className={eventcaroone==2?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcaroone:2,reset:true})} ></li>
 								
 								</ul>
 	
 								<main className="main" id = 'js-section2'>
-								<section className="section is-active transition"id="section1">
+								<section className={eventcaroone==0?"section is-active transition":"section transition"} id="section1">
 								
 									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({clickedtwooff:true});this.setState({eveno:9})}}  >
@@ -910,7 +893,7 @@ class Events extends React.Component {
 									</div></li>
 								</ul>
 								</section>
-								<section className="section"id="section2">
+								<section className={eventcaroone==1?"section is-active1 transition":"section transition"} id="section2">
 								
 									<ul id="list1" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({eventfouroff:true});this.setState({eveno:12})}} >
@@ -933,7 +916,7 @@ class Events extends React.Component {
 									</div></li>
 								</ul>
 								</section>
-								<section className="section"id="section3">
+								<section className={eventcaroone==2?"section is-active2 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:15})}}  >
@@ -988,14 +971,14 @@ class Events extends React.Component {
 									<h1 id='online-heading'>TALKS</h1>
 									
 								<ul className="nav-dots" id="js-dots3" style={{marginTop:'0.8%'}}>
-								<li className="nav-dot is-active" ></li>
-								<li className="nav-dot" ></li>
-								<li className="nav-dot" ></li>
+								<li className={eventcartwo==0?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcartwo:0,reset:true})} ></li>
+								<li className={eventcartwo==1?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcartwo:1,reset:true})} ></li>
+								<li className={eventcartwo==2?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcartwo:2,reset:true})} ></li>
 								
 								</ul>
 	
 								<main className="main" id = 'js-section3'>
-								<section className="section is-active transition"id="section1">
+								<section className={eventcartwo==0?"section is-active transition":"section transition"} id="section1">
 								
 									<ul id="list" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({clickedtwotal:true});this.setState({eveno:18})}} >
@@ -1018,7 +1001,7 @@ class Events extends React.Component {
 									</div></li>
 								</ul>
 								</section>
-								<section className="section"id="section2">
+								<section className={eventcartwo==1?"section is-active1 transition":"section transition"} id="section2">
 								
 									<ul id="list1" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({eventfourtal:true});this.setState({eveno:21})}} >
@@ -1041,7 +1024,7 @@ class Events extends React.Component {
 									</div></li>
 								</ul>
 								</section>
-								<section className="section"id="section3">
+								<section className={eventcartwo==2?"section is-active2 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
 									<li ><div className='event'  style={elemStyle1} onClick={()=> {this.setState({eventsevental:true});this.setState({eveno:24})}}  >
