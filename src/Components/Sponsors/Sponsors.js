@@ -37,18 +37,16 @@ function App() {
 					{/* <center> */}
 					<div id='box'>
 						{/* <h1>sponsors</h1> */}
-						<div id='container_main'>
+						<div id='container_main' >
+							<a href='https://x0pa.com/' target="_blank">
 							<img src='./box_sponsors.png' id='box_spon'></img>
 							<div>
 							<img src='./box_sponsors.png' id='box_spon_title'></img>
 							<h2 id='heading_box'>TITLE SPONSOR</h2>
 							<img src='./xopa.png' id='img_spon'></img>
 							</div>
-							
 							<img src='./box_sponsors.png' id='box_spon'></img>
-							
-							
-							
+							</a>
 						</div>
 						<div id='mob_2'>
 							<div id='container_main_2'>

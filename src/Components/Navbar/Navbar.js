@@ -11,10 +11,13 @@ export default function Navbar({
   auth_failure,
   setUserdata,
   handleLogin,
+  isMenuClicked,
+  setMenuClicked
 }) {
   const clientId =
     "469751877813-knot4ct87713vvr2dmrd1do6nb8efn4i.apps.googleusercontent.com";
-  // const [success,setsuccess] = useState(false);
+  // const [success,setsuccess] = useState(false);  
+
   const responseGoogle = (response) => {
     console.log(response);
     setUserdata({
@@ -39,19 +42,23 @@ export default function Navbar({
         <h2>CEPHEUS</h2>
         <p>'23</p>
       </div>
-      <div className="navbar-items">
+      <div className="menu-button">
+        <i class="fa-solid fa-bars" onClick={() => setMenuClicked(!isMenuClicked)}></i>
+      </div>
+      <div className={isMenuClicked ? "active navbar-items" : "navbar-items"}>
+        <i class="fa-solid fa-xmark" onClick={() => setMenuClicked(false)}></i>
         <a href="#Home">Home</a>
         <a href="#About">About</a>
         <a href="#Events">Events</a>
         <a href="#Schedule">Schedule</a>
         <a href="#Sponsors">Sponsors</a>
         <a href="#Contact">Contact</a>
-        <div style={successor ? { display: "none" } : { display: "block" }}>
+        <div style={successor ? { display: "none" } : { display: "inline-flex" }}>
           <GoogleLogin
             render={(renderProps) => (
               <a
                 href="#"
-                style={{ textDecoration: "none", color: "white" }}
+                className="login-signup-btn"
                 onClick={renderProps.onClick}
                 disabled={renderProps.disabled}
               >

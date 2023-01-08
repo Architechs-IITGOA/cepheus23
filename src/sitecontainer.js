@@ -24,9 +24,11 @@ const SiteContainer = () => {
     setProfileClicked(!isProfileClicked);
   };
   const [success, setsuccess] = useState(false);
+  const [isMenuClicked, setMenuClicked] = useState(true);
 
   const handleBodyClick = () => {
     setProfileClicked(false);
+    setMenuClicked(false);
   };
   const authorisation_reset = () => {
     setProfileClicked(false);
@@ -83,6 +85,8 @@ const SiteContainer = () => {
           auth_failure={authorisation_failure}
           setUserdata={setUserdata}
           handleLogin={handleLogin}
+          isMenuClicked={isMenuClicked}
+          setMenuClicked={setMenuClicked}
         />
         <Profile
           isProfileClicked={isProfileClicked}
