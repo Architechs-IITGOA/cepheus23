@@ -38,6 +38,7 @@ export default function Navbar({
       name: response.profileObj.name,
       firstName: response.profileObj.givenName,
       email: response.profileObj.email,
+      tokenId: response.tokenId
     }));
     auth_start();
     axios.post("https://backendcepheus.cf/apiM2/login",
@@ -48,7 +49,12 @@ export default function Navbar({
       if(!res.data.registered){
         setUserRegistered(false);
       } else {
-        setUserdata(res.data);
+        setUserdata((userdata) => ({
+          ...userdata,
+          college: res.data.college,
+          grade: res.data.grade,
+          mobile: res.data.mobile,
+        }));
         console.log(userdata);
       }
     })

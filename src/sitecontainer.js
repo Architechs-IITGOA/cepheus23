@@ -64,7 +64,7 @@ const SiteContainer = () => {
           userdata={userdata}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
-        {isUserRegistered ? null: <RegistrationPage userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata}/>}
+        {isUserRegistered ? null: <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata}/>}
       </div>
       <div
         onClick={() => handleBodyClick()}

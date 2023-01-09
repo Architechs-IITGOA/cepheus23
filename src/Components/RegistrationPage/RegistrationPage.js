@@ -1,13 +1,15 @@
 import React from "react";
 import { useEffect } from "react";
 import "./RegistrationPage.css"
+import axios from "axios";
+axios.defaults.withCredentials = true;
 
-export default function RegistrationPage({userdata, setUserRegistered, setUserdata}){
-    const handleRegistrationData = async(e) => {
+export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata}){
+    const HandleRegistrationData = (e) => {
         setUserRegistered(true);
         e.preventDefault();
         console.log(e.target[0].value);
-        await setUserdata((userdata) => ({
+        setUserdata((userdata) => ({
             ...userdata,
             gender: e.target[2].value,
             age: e.target[3].value,
@@ -15,13 +17,28 @@ export default function RegistrationPage({userdata, setUserRegistered, setUserda
             grade: e.target[5].value,
             mobile: e.target[6].value
         }));        
-        // console.log(userdata);
+        console.log(userdata);
+        axios.post("https://backendcepheus.cf/apiM2/register",
+        {  
+            // token: userdata.tokenId,
+            user_name: userdata.name,
+            college: e.target[4].value,
+            mobile: e.target[6].value,
+            grade: e.target[5].value
+        },
+        {withCredentials: true})
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     }
 
     return (
         <div className="registration">
             <h2>Please fill out this form to participate.</h2>
-            <form action="post" onSubmit={(e) => handleRegistrationData(e)}>
+            <form action="post" onSubmit={(e) => HandleRegistrationData(e)}>
                 <label>Full Name</label><br></br>
                 <input type="text" name="name" id="name" value={userdata.name} disabled/><br></br>
                 <label>Email</label><br></br>
@@ -33,7 +50,7 @@ export default function RegistrationPage({userdata, setUserRegistered, setUserda
                 <label>College/School Name</label><br></br>
                 <input type="text" name="college-school-name" id="clgsklname" placeholder="Enter your college/achool name here" required/><br></br>
                 <label>Grade</label><br />
-                <input type="text" name="grade" id="grade" placeholder="Enter your grade or program name here, e.g., BTech or 10th" required/><br />
+                <input type="number" name="grade" id="grade" placeholder="Enter your grade or program name here, e.g., BTech or 10th" required/><br />
                 <label>Contact Number</label><br></br>
                 <input type="text" name="contact" id="contact" placeholder="Enter your contact number here" required/><br></br>
                 <button type="submit">Submit</button>
