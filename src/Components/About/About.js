@@ -9,7 +9,6 @@ function About() {
     <div className="aboutus" id="About">
       <center>
         <div className="myStyleh1">About Us</div>
-        {/* <div className="blur_background"></div> */}
 
         <div className="text">
           &nbsp;&nbsp;&nbsp;&nbsp;

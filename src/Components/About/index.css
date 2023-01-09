@@ -21,7 +21,7 @@ body {
 
 .myStyleh1{
   position: relative;
-  width: 435px;
+  /* width: 435px; */
   height: 77px;
   top: 120px;
 
@@ -157,16 +157,19 @@ border-radius: 30px;
   .text{
     font-size: 16px;
     line-height: 21px;
+    width: 75%;
+    padding: 25px;
+    margin-top: 85px;
   }
   .myStyleh1{
     font-size: 220%;
+    top: 85px;
   }
 }
 @media (max-width: 550px){
   .text{
     font-size: 15px;
     line-height: 19px;
-    width: 50%;
   }
 }
 @media (max-width: 510px){
