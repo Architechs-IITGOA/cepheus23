@@ -22,6 +22,7 @@
     margin-right: 25px;
     margin-left: 25px;
     margin-top: 3px;
+    object-fit: cover;
 }
 
 .side-card-position {

@@ -6,7 +6,7 @@ export default function MainCard({data}) {
     <div class="contact-main-card">
       <img class="main-card-border" src="img/Main_card_border.png" alt="Border"></img>
       <div class="main-card-content">
-        <img src="img/user_placeholder.png" alt="Avatar"></img>
+        <img src={data.photo} alt="Avatar"></img>
         <div class="main-card-contact-detail">
             <p class="name-role">{data.role}</p>
             <p class="name-role">{data.name}</p>

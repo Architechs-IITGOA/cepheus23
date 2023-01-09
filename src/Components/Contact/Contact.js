@@ -16,67 +16,92 @@ const contactDetails = [
     name: "Srajan Chourasia",
     role: "Overall Coordinator",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "6263498532",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263732/chepheus/Srajan_Chourasia-Overall_Coordinator-6263498532_kmulj1.webp"
   },
   {
     name: "Atharva Bhanage",
     role: "Coordinator1",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "8074292759",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263710/chepheus/Atharva-Coordinator-8074292759_di3mex.webp"
   },
   {
     name: "Yuvraj Nagar",
     role: "Coordinator2",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "9770594125",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673264740/chepheus/Yuvraj_ckifao.webp"
   },
   {
     name: "Aniket Chaudhri",
     role: "Overall Event Manager",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "7087363393",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263711/chepheus/AniketChaudhri-OverallEventManager-7087363393_wutmtw.webp"
   },
   {
     name: "Mulayam",
     role: "Online Event Manager",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "9817568174",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263746/chepheus/Mulayam-Online_Junior_Event_Manager-9817568174_wdseyh.webp"
   },
   {
     name: "Atharva Bhawasar",
     role: "Offline Event Manager",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "9643204258",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263715/chepheus/Atharva_Bhawsar-Offline_junior_eventmanager-9643204258_i9uav7.webp"
   },
   {
     name: "Kushagra Srivastava",
     role: "Development Head",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "7007432254",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263711/chepheus/KushagraSrivastava_DevelopmentHead_7007432254_zdgupy.webp"
   },
   {
     name: "Neetu",
     role: "Marketing Head",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "6280789636",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263714/chepheus/Neetu-Marketing-6280789636_osaymj.webp"
   },
   {
     name: "Prateek Singhal",
     role: "Sponsorship Head",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "8529530095",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263714/chepheus/PrateekSinghal_SponsorshipHead_8529530095_h3en9q.webp"
   },
   {
     name: "Ritik Tiwari",
     role: "Social Media Head",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "1234567890",
+    photo: ""
   },
   {
-    name: "Srajan Chourasia",
-    role: "Overall Coordinator",
+    name: "Shreya yadav",
+    role: "Desgin Head",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "9431011303",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673264431/chepheus/ShreyaYadav-DesignHead-9431011303_sllh5l.webp"
+  },
+  {
+    name: "Shivam Sinoliya",
+    role: "Finance Head",
+    email: "gstechnical@iitgoa.ac.in",
+    phone: "9098819578",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263731/chepheus/ShivamSinoliya_FinanceHead_9098819578_dvsh3l.webp"
+  },
+  {
+    name: "Diya Bhagat",
+    role: "Decoration Head",
+    email: "gstechnical@iitgoa.ac.in",
+    phone: "8102115698",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263710/chepheus/DiyaBhagat-DecorationHead-8102115698_fi0ybz.webp"
   }
 ];
 
@@ -86,7 +111,8 @@ export default function Contact() {
     name: "Srajan Chourasia",
     role: "Overall Coordinator",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890"
+    phone: "1234567890",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263732/chepheus/Srajan_Chourasia-Overall_Coordinator-6263498532_kmulj1.webp"
   });
 
   const handleClick = (i) => {
@@ -95,7 +121,8 @@ export default function Contact() {
       name: contactDetails[i].name,
       role: contactDetails[i].role,
       email: contactDetails[i].email,
-      phone: contactDetails[i].phone
+      phone: contactDetails[i].phone,
+      photo : contactDetails[i].photo,
     })
   }
   return(
@@ -108,7 +135,7 @@ export default function Contact() {
         <div class="contact-carousal">
           {contactDetails.map((item, i) => {
             return (
-              <SideCard key={i} id={i} role={item.role} handleClick={handleClick}/>
+              <SideCard key={i} id={i} role={item.role} handleClick={handleClick} photo ={item.photo}/>
             )
           })}
         </div>

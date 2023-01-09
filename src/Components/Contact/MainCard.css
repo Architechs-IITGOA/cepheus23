@@ -22,6 +22,7 @@
     height: 60px;
     border-radius: 100px;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .main-card-content p {
