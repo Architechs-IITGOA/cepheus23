@@ -27,6 +27,7 @@
 
 .main-card-content p {
     margin: 5px;
+
 }
 
 .main-card-contact-detail {
@@ -46,5 +47,6 @@
 
 .main-card-contact-detail .contact {
     font-size: 14px;
+    word-break: break-all;
 }
 
