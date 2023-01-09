@@ -131,9 +131,11 @@
 }
 @media screen and (max-width: 420px) {
     .profile {
-        right: -50px;
-        top:50px;
+        /*right: -50px;*/
+        top:70px;
         flex-direction: column;
+        margin-left: 10%;
+        margin-right: 5%;
     }
     .profile-active {
         right: 25px;
