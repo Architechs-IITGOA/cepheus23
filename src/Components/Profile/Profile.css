@@ -46,7 +46,6 @@
 }
 
 .profile-left img.name-border {
-    display: block;
     width: 30%;
     margin: auto;
     position: absolute;
@@ -157,6 +156,7 @@
         width: 25%;
         margin: auto;
         left: ;
+        position: relative;
     }
     .profile-left .name {
         width: 80%;
