@@ -18,9 +18,9 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
                 <img src="img/profile_name_border.png" alt="" class="name-border"></img>
                 
                 <p class="name">{userdata.firstName}</p>
-                <p> Indian Institute of Technology (IIT), Goa </p>
+                <p>{userdata.college}</p>
                 <p>{userdata.email}</p>
-                <p> 9785075997 </p>
+                <p>{userdata.mobile}</p>
                 {/* <p class="score"> <span> Score </span> - 500 </p> */}
                 
             </div>
