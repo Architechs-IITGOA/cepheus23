@@ -1,6 +1,8 @@
 .profile {
     top: 120px;
-    right: -100px;
+    /*right: 20px;*/
+    margin-left: 10%;
+    margin-right: 10%;
     backdrop-filter: blur(20px);
     /* background-color: #ffffff99; */
     position: fixed;
@@ -43,13 +45,12 @@
     margin-bottom: 44px;
 }
 
-.profile-left .name-border {
-    display: block;
-    width: 400px;
+.profile-left img.name-border {
+    width: 30%;
     margin: auto;
     position: absolute;
-    /* left: 3.5%; */
-    top: 218px;
+    left: 9%;
+    top: 60%;
 }
 
 .profile-left .name, .score{
@@ -127,4 +128,54 @@
 }
 .show{
     display: block;
+}
+@media screen and (max-width: 420px) {
+    .profile {
+        right: -50px;
+        top:50px;
+        flex-direction: column;
+    }
+    .profile-active {
+        right: 25px;
+        width: 85%;
+        height: auto;
+        flex-direction: column;
+    }
+    .profile-left{
+        flex: 5;
+        padding-bottom: 1%;
+        height: auto;
+
+    }
+    .profile-left .profile-image {
+        width: 70px;
+        margin: 30px;
+    }
+    .profile-left .name-border {
+        top: 200px;
+        width: 25%;
+        margin: auto;
+        left: ;
+        position: relative;
+    }
+    .profile-left .name {
+        width: 80%;
+    }
+    .profile-left p {
+        margin-bottom: 0;
+    }
+	.profile-right {
+		flex: 4;
+        margin: 5%;
+        
+	}
+    .profile-buttons {
+        position: absolute;
+        right: 4.5%;
+        bottom: 40px;
+    }
+    .profile-buttons a{
+        width: 100%;
+    }
+
 }
