@@ -3,8 +3,11 @@ import "./Home.css"
 
 export default function Home() {
     return (
-        <div className="home" id="Home">
-            <h1>Home</h1>
+        <div className="home">
+            <div className="cepheusTitle">
+                CEPHEUS'23 <br/>
+                Technical Fest Of IIT Goa
+            </div>
         </div>
     )
 }
