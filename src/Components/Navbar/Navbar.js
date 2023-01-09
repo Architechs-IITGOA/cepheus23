@@ -3,6 +3,8 @@ import React, { Component, useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import "./Navbar.css";
+import axios from "axios";
+axios.defaults.withCredentials = true;
 
 export default function Navbar({
   handleProfileClick,
@@ -10,24 +12,50 @@ export default function Navbar({
   auth_start,
   auth_failure,
   setUserdata,
-  handleLogin,
+  userdata,
   isMenuClicked,
-  setMenuClicked
+  setMenuClicked,
+  setUserRegistered
 }) {
-  const clientId =
-    "469751877813-knot4ct87713vvr2dmrd1do6nb8efn4i.apps.googleusercontent.com";
-  // const [success,setsuccess] = useState(false);  
+  const clientId = "469751877813-knot4ct87713vvr2dmrd1do6nb8efn4i.apps.googleusercontent.com";
+
+
+  useEffect(() => {
+    const initClient = () => {
+        gapi.client.init({
+            clientId: clientId,
+            scope: 'openid'
+        });
+    };
+    gapi.load('client:auth2', initClient);
+});
 
   const responseGoogle = (response) => {
     console.log(response);
-    setUserdata({
+
+    setUserdata((userdata) => ({
+      ...userdata,
       name: response.profileObj.name,
       firstName: response.profileObj.givenName,
       email: response.profileObj.email,
-      tokenId: response.tokenId,
-    });
+    }));
     auth_start();
-    handleLogin();
+    axios.post("https://backendcepheus.cf/apiM2/login",
+    {idToken: response.tokenId},
+    {withCredentials: true})
+    .then((res) => {
+      console.log(res.data);
+      if(!res.data.registered){
+        setUserRegistered(false);
+      } else {
+        setUserdata(res.data);
+        console.log(userdata);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+    // handleLogin();
     // setsuccess(true);
   };
   const responseGoogle1 = (response) => {

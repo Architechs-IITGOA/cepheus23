@@ -1,0 +1,55 @@
+.registration {
+    position: fixed;
+    width: 30%;
+    height: 80%;
+    top: 15%;
+    left: 35%;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    display: flex;
+    justify-content: left;
+    padding: 10px 40px 40px;
+    text-align: left;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.registration h2 {
+    text-align: center;
+    font-size: 21px;
+}
+
+.registration input{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.registration input:focus {
+    border: none;
+    box-shadow: 1px 1px 3px #fff;
+}
+
+.registration label {
+    font-size: 20px;
+}
+
+.registration button{
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s;
+    background-color: red;
+    color: #fff;
+    width: 100%;
+
+}
+
+.registration button:hover{
+    border: none;
+    background-color: rgb(191, 35, 35);
+
+}
