@@ -59,4 +59,193 @@ font-size: clamp(1rem, .5rem + 3vw, 1.5rem);
   font-size: clamp(.5rem, .5rem + 2vw, 1.3rem);
   font-family: Outfit;
   
-} 
+}
+@media screen and (max-width: 1460px) {
+  .Image{
+    width: 410px;
+    height: 250px;
+  }
+  
+  .SideImage {
+    width: 395px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .Image{
+    width: 410px;
+    height: 240px;
+  }
+  
+  .SideImage {
+    width: 380px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .Image{
+    width: 390px;
+    height: 230px;
+  }
+  
+  .SideImage {
+    width: 375px;
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .Image{
+    width: 380px;
+    height: 220px;
+  }
+  
+  .SideImage {
+    width: 360px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .Image{
+    width: 380px;
+    height: 220px;
+  }
+  
+  .SideImage {
+    width: 340px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .SideImage {
+    width: 320px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .Image{
+    width: 370px;
+    height: 215px;
+  }
+  
+  .SideImage {
+    width: 310px;
+    height: 215px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .SideImage {
+    width: 300px;
+    height: 215px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .Image{
+    width: 360px;
+    height: 200px;
+  }
+  
+  .SideImage {
+    width: 270px;
+    height: 200px;
+  }
+
+  .Feb {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .Image{
+    width: 375px;
+    height: 200px;
+  }
+  
+  .SideImage {
+    width: 260px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .Image{
+    width: 360px;
+    height: 190px;
+  }
+  
+  .SideImage {
+    width: 250px;
+    height: 190px;
+  }
+
+  .Feb {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .Image{
+    width: 360px;
+    height: 175px;
+  }
+  
+  .SideImage {
+    width: 240px;
+    height: 175px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Image{
+    width: 360px;
+    height: 170px;
+  }
+  
+  .SideImage {
+    width: 225px;
+    height: 170px;
+  }
+
+  .Feb {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .Image{
+    width: 360px;
+    height: 150px;
+  }
+  
+  .SideImage {
+    width: 200px;
+    height: 150px;
+  }
+
+  .Feb {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .Image{
+    width: 350px;
+    height: 145px;
+  }
+  
+  .SideImage {
+    width: 180px;
+    height: 145px;
+  }
+
+  .Feb {
+    font-size: 15px;
+  }
+}

@@ -23,7 +23,7 @@ export default function Schedule() {
   {console.log(leftPolygon, rightPolygon, centrePolygon)}
   return (
     <>
-    <div style={{position:"relative"}}>
+    <div style={{position:"relative"}} id="Schedule">
       <div className="dates"></div>
       <div className="schedule">
         <div className="scheduleHead">SCHEDULE</div>
@@ -38,7 +38,7 @@ export default function Schedule() {
               setRightStyle("rightAfter");
             }}
           >
-            <img src={polygon} alt="" />
+            <img src={polygon} alt="" className="Image"/>
             <div className="Feb">
               {leftPolygon && (
                 <div >
@@ -48,7 +48,7 @@ export default function Schedule() {
                       top: "50%",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
-                      zIndex: "2",
+                      zIndex: "2"
                     }}
                     src={bigpolygon}
                     alt=""
@@ -107,7 +107,7 @@ export default function Schedule() {
               setRightStyle("rightAfter");
             }}
           >
-            <img src={polygon} alt="" />
+            <img src={polygon} alt="" className="SideImage"/>
             <div className="Feb">8 February</div>
           </div>
           <div
@@ -120,7 +120,7 @@ export default function Schedule() {
               setRightStyle("rightAfter");
             }}
           >
-            <img src={polygon} alt="" />
+            <img src={polygon} alt="" className="SideImage"/>
             <div className="Feb">10 February</div>
           </div>
         </div>
