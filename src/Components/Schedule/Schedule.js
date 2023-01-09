@@ -1,9 +1,6 @@
 import React from "react";
 import "./Schedule.css";
 import polygon from "../Schedule/Polygon 2.png";
-import bigpolygon from "../Schedule/Polygon 6.png";
-import { useState } from "react";
-import { useEffect } from "react";
 
 export default function Schedule() {
   return (
@@ -13,10 +10,17 @@ export default function Schedule() {
         <div style={{ position: "relative" }}>
           <div className="scheduleDates">
             <div className="feb8">
-              <img className="polygon" src={polygon} alt="" />
+              <img className="polygon" src={polygon} alt="" width="10px" />
               <div
                 className="feb"
-                data-hover="kldsjfadjbfasmdfbasjdfakjbdfajkdbfaabfjsaddbfaksdjbfjsdnbfaskjdbf"
+                data-hover={
+                    <ul>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                  </ul>
+                }
                 data-before="February 8"
               ></div>
             </div>
