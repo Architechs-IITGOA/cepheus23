@@ -13,7 +13,14 @@ export default function Schedule() {
               <img className="polygon" src={polygon} alt="" width="10px" />
               <div
                 className="feb"
-                data-hover="kldsjfadjbfasmdfbasjdfakjbdfajkdbfaabfjsaddbfaksdjbfjsdnbfaskjdbf"
+                data-hover={
+                    <ul>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                    <li>ABC</li>
+                  </ul>
+                }
                 data-before="February 8"
               ></div>
             </div>

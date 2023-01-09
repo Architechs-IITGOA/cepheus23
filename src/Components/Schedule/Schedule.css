@@ -45,6 +45,7 @@
 }
 .feb9 {
   left: 18.5vw;
+  /* background-color: #00000099; */
 }
 .feb10 {
   left: 37vw;
@@ -73,7 +74,7 @@
   /* border: 1px solid red; */
 }
 
-.polygon:hover {
+.polygon:hover  {
   transform: scale(2);
   opacity: .65;
 }
@@ -84,14 +85,21 @@
   font-size: .5rem;
 } */
 
+.feb {
+  width: 15vw;
+  font-size: 19px;
+}
+
 .feb::before{
   content: attr(data-before);
 }
 
-.feb:hover::after {
-  width: 10px;
-  content: attr(data-hover)
+.polygon:hover + .feb::after {
+  content: attr(data-hover);
+  /* border: 1px solid red; */
 }
+
+
 
 @media screen and (max-width: 1110px) {
 
