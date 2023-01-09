@@ -1,10 +1,11 @@
+
 import React from "react";
 import { useEffect } from "react";
 import "./RegistrationPage.css"
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata}){
+export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata,success, reg_failed, wrong_mail, error}){
     const HandleRegistrationData = (e) => {
         setUserRegistered(true);
         e.preventDefault();
@@ -29,9 +30,11 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
         {withCredentials: true})
         .then((res) => {
             console.log(res.data);
+            success();
         })
         .catch((err) => {
             console.log(err);
+            error();
         })
     }
 

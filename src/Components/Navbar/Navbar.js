@@ -3,6 +3,8 @@ import React, { Component, useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import "./Navbar.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
@@ -15,7 +17,8 @@ export default function Navbar({
   userdata,
   isMenuClicked,
   setMenuClicked,
-  setUserRegistered
+  setUserRegistered,
+  success, reg_failed, wrong_mail, error
 }) {
   const clientId = "469751877813-knot4ct87713vvr2dmrd1do6nb8efn4i.apps.googleusercontent.com";
 
@@ -116,6 +119,18 @@ export default function Navbar({
         ></img>
         {/* </div> */}
       </div>
+      <ToastContainer 
+                className="toastbar"
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={true}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover={true}
+            />
     </div>
   );
 }

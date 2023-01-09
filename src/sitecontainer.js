@@ -8,6 +8,8 @@ import Sponsors from "./Components/Sponsors/Sponsors";
 import Contact from "./Components/Contact/Contact";
 import Profile from "./Components/Profile/Profile";
 import RegistrationPage from "./Components/RegistrationPage/RegistrationPage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./sitecontainer.css";
 
 const SiteContainer = () => {
@@ -42,7 +44,10 @@ const SiteContainer = () => {
   const authorisation_failure = () => {
     setsuccess(false);
   };
-
+  const success_toast = () => toast.success("Registration Successful! Please check your mail for further process");
+  const reg_failed = () => toast.error("Registration Failed! Please try again");
+  const wrong_mail = () => toast.warning("Please enter a valid email");
+  const error = () => toast.error("Error occurred! Please try again.");
   return (
     <div>
       <div>
@@ -56,6 +61,10 @@ const SiteContainer = () => {
           isMenuClicked={isMenuClicked}
           setMenuClicked={setMenuClicked}
           setUserRegistered={setUserRegistered}
+          success={success}
+          reg_failed={reg_failed}
+          wrong_mail={wrong_mail}
+          error={error}
         />
         <Profile
           isProfileClicked={isProfileClicked}
@@ -64,7 +73,14 @@ const SiteContainer = () => {
           userdata={userdata}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
-        {isUserRegistered ? null: <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata}/>}
+        {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast}
+          reg_failed={reg_failed}
+          wrong_mail={wrong_mail}
+          error={error}/> */}
+        {isUserRegistered ? null: <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast}
+          reg_failed={reg_failed}
+          wrong_mail={wrong_mail}
+          error={error}/>}
       </div>
       <div
         onClick={() => handleBodyClick()}
