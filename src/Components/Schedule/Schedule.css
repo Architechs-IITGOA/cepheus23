@@ -3,60 +3,81 @@
   background-size: cover;
   width: 100%;
   background-position: center;
-  height: 100vh;
+  height: 110vh;
   background-repeat: no-repeat;
-  scroll-snap-align: start;
-  overflow: scroll;
-
+  position: relative;
 }
-.scheduleHead{
+.scheduleHead {
   color: white;
   font-family: SpaceBoard;
   position: absolute;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 90px;
   text-align: center;
   font-size: clamp(2.5rem, 1rem + 15vh, 4.5rem);
 }
-.dates{
+.scheduleDates {
   position: absolute;
-    display: flex;
-    top: 65%;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+  margin-top: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
-.dates div{
+.scheduleDates img {
+  opacity: 0.8;
+  width: 380px;
+  /* position: absolute; */
+}
+.feb8,
+.feb9,
+.feb10,
+.feb11,
+.feb12 {
   position: absolute;
+  top: 0;
+}
+.feb8 {
+  left: 0;
+}
+.feb9 {
+  left: 280px;
+}
+.feb10 {
+  left: 560px;
+}
+.feb11 {
+  left: 840px;
+}
+.feb12 {
+  left: 1120px;
+}
+.feb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: cyan;
+  font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
 }
 
-.leftBefore{
-  left: 18%;
+
+
+.polygon {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
 }
-.leftAfter{
-  left: 4.5%
+
+.polygon:hover {
+  transform: scale(2);
+  opacity: .65;
 }
-.rightBefore{
-  right: 18%;
-}
-.rightAfter{
-  right: 13%;
-}
-.Feb{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-color: cyan;
-font-size: clamp(1rem, .5rem + 3vw, 1.5rem);
-}
-.Feb8Schedule, .Feb9Schedule, .Feb10Schedule{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+/* .feb:hover:after{
+  content: attr(data-hover);
   color: white;
-  font-size: clamp(.5rem, .5rem + 2vw, 1.3rem);
-  font-family: Outfit;
-  
-} 
+  font-size: .5rem;
+} */
+.feb::before{
+  content: attr(data-before);
+}
