@@ -821,10 +821,12 @@ font-style: normal;
 #para{
   color:white;
   /* font-family: SpaceBoards; */
-  width:77%;
+  width:85%;
   margin-left:-20%;
   font-size:13px;
   text-align:justify;
+  height: 170px;
+  overflow-x: scroll;
 }
 #button-right{
   width:40%;
