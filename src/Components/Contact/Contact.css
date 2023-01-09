@@ -52,3 +52,15 @@
 .contact-carousal::-webkit-scrollbar{
     display: contents;
 }
+
+@media (max-width : 1110px){
+    .contact-content{
+        display: block;
+    }
+    .contact-carousal{
+        flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 150px;
+    }
+}
