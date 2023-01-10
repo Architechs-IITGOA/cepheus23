@@ -1,5 +1,6 @@
 import './Events.css';
 import React, {useState} from "react";
+import MediaQuery from 'react-responsive';
 
 
 export default function Eventcard({data,exiting}) {
@@ -23,7 +24,9 @@ export default function Eventcard({data,exiting}) {
 								<div id='inner-left'>
 									<div id='fake'></div>
 								<img draggable='false' id='close2' src={data.exitsrc} onClick={()=>{exiting()}}   ></img>
-									<center><img draggable='false' id='left-post' src="./poster.png"></img>
+									<center><img draggable='false' style={{borderRadius:'15px'}} id='left-post' src={data.source}></img>
+									<br></br>
+									<br></br>
 									<h3 id='sub-left-head'>Contact:Event Coheads</h3>
 									<h4 id='sub-sub-left-head' >{data.left1}</h4>
 									<h4 id='sub-sub-left-head'>{data.left2}</h4>
@@ -34,7 +37,11 @@ export default function Eventcard({data,exiting}) {
 									<center><h1 id='sub-head'>{data.name}</h1>
 									
 									</center>
-									<div id='para'>{data.para}</div>
+									<div id='para'>{data.para}<center><MediaQuery maxWidth={700}>
+									<br></br>
+									<h3 style={{color:'#FCC200'}}>Contact:Event Coheads</h3>
+									<h4  >{data.left1}</h4>
+									<h4 >{data.left2}</h4></MediaQuery></center></div>
 									<center><button id='button-right' >Register</button></center>
 								</div>
 								</div>
