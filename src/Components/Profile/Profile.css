@@ -1,6 +1,6 @@
 .profile {
-    top: 120px;
-    /*right: 20px;*/
+    top: 95px;
+    right: 20px;
     margin-left: 10%;
     margin-right: 10%;
     backdrop-filter: blur(20px);
@@ -52,6 +52,7 @@
     position: absolute;
     left: 9%;
     top: 60%;
+    visibility: hidden;
 }
 
 .profile-left .name, .score{
@@ -119,6 +120,7 @@
 .profile-buttons .edit:hover {
     background-color: #fff;
     color: #000;
+
 }
 
 .log-out {
@@ -130,20 +132,24 @@
 .show{
     display: block;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 420px){
     .profile {
         /*right: -50px;*/
         top:80px;
         flex-direction: column;
         margin-left: 10%;
         margin-right: 0%;
-        overflow: scroll;
+        overflow: auto;
+        height:80vh;
+        bottom:0;
+       
     }
     .profile-active {
         right: 25px;
         width: 85%;
         height: auto;
         flex-direction: column;
+        display: block;
     
     }
     .profile-left{
@@ -177,9 +183,12 @@
         
 	}
     .profile-buttons {
-        position: absolute;
-        right: 4.5%;
-        bottom: 40px;
+        position: relative;
+        /*right: 4.5%;
+        bottom: 40px;*/
+        margin-top:25%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
     .profile-buttons a{
         width: 100%;
