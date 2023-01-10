@@ -43,7 +43,7 @@ function App() {
 							<div>
 							<img src='./box_sponsors.png' id='box_spon_title'></img>
 							<h2 id='heading_box'>TITLE SPONSOR</h2>
-							<img src='./xopa.png' id='img_spon'></img>
+							<img src='https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673372636/Cepheus/Sponsors_gvjzaa.webp' id='img_spon'></img>
 							</div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
 							</a>
