@@ -278,8 +278,8 @@ class Events extends React.Component {
 
 		const listData =[ {
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Utsav Bansal (+91 62671 84086)',
+			left2 : '2.Arya Gawde (+91 99695 26850)',
 			name : 'Design Challenge',
 			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Design_Challange_omrs0o.webp',
 			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Design_Challange_omrs0o.webp',
@@ -326,8 +326,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Ananya Alekar (+91 84249 42069)',
+			left2 : '2.Abhinav Reddy (+91 93925 34843)',
 			name : 'Data Science Hackathon',
 			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Data_Science_Hackathon_p6wklq.webp',
 			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Data_Science_Hackathon_p6wklq.webp',
@@ -358,11 +358,11 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Khushi Chaudhary (+91 83189 21233)',
+			left2 : '2.Harshvardhan Gupta (+91 99935 57806)',
 			name : 'CTF',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290942/Cepheus/Capture_the_flag_i2qdlx.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290942/Cepheus/Capture_the_flag_i2qdlx.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Capture The Flag is a 3-day event in which teams will be given challenges involving cybersecurity. The essence of a CTF is puzzle-solving. The challenges are created by and for people who like solving puzzles. The goal of each challenge will be to find the hidden flag. The difficulty of the challenge determines the points awarded to the team. The team that gets the most points in the shortest amount of time wins.',
@@ -390,8 +390,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Nidamanuri Sai Adarsh (+91 93925 34843)',
+			left2 : '2.Abhinav Reddy (+91 93925 34843)',
 			name : 'Online Treasure Hunt',
 			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290948/Cepheus/Online_Treasure_hunt_slarbk.webp',
 			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290948/Cepheus/Online_Treasure_hunt_slarbk.webp',
@@ -406,8 +406,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Vaidehi Chougule (+91 80805 86791)',
+			left2 : '2.Aditya Muppavarapu (+91 95848 48383)',
 			name : 'Bridge Building Competition',
 			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Bridge_Building_gqvsiy.webp',
 			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Bridge_Building_gqvsiy.webp',
@@ -425,8 +425,8 @@ class Events extends React.Component {
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Front End Challenge',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Front_End_Challange_yg62nj.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Front_End_Challange_yg62nj.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'We’re sure everyone has experienced how frustrating it gets while browsing a government website, at least once in their life. The reason? Simple! Poor functionality and counter-intuitive UI design. After all, websites are the first impressions that we have on our clients. Step up for this challenge that we present to you. Use your CSS and JS skills and explore your creativity to style a webpage and make it functional. Keep an eye out for the constraints - you can’t modify the HTML file that will be provided. ',
@@ -441,8 +441,8 @@ class Events extends React.Component {
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Pitching event',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290949/Cepheus/Pitching_eveent_bpoypi.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290949/Cepheus/Pitching_eveent_bpoypi.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'The hype that Shark Tank India created, a few months back, was real! It had all of us glued to our seats, and sparked our minds with curiosity and awe. We’re planning to give you a similar experience this year. Except, that you’ll not be watching this time. You’ll be the one pitching your ideas to the panel of investors in front of you. Pitch your startup ideas, specifically in the domain of FinTech in under 7 minutes. Stand a chance to be noticed by the investors and get their help in financing your ideas.',
@@ -457,8 +457,8 @@ class Events extends React.Component {
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'KBC Quiz Competition',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/KBC_lvatlo.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/KBC_lvatlo.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Watching KBC on TV is by far one of our favorite memories. Our excitement is at its peak when a question is presented to the participant, and the stakes are high. Join us for a fun KBC quiz event this year. In teams of 3, you will have 30 seconds to answer the question given to you. But, here’s the catch. A wrong answer will fetch you negative marks, so be confident about your answers. Put your speed and knowledge to the test!',
@@ -473,8 +473,8 @@ class Events extends React.Component {
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Line Follower Bot competition',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Line_follower_bot_y1pjyu.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Line_follower_bot_y1pjyu.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Ever been fascinated by remote-controlled cars or F1 racing events? Then this event is perfect for you. Dive right into this race, where we present to you an obstacle-ridden track. Bring in your line follower bots, and start racing them across the line tracks. Needless to say, the fastest bot wins the race!',
@@ -486,11 +486,11 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Hetarth Bhatt ( +91 87806 32021)',
+			left2 : '',
 			name : 'Line Maze Fun game',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290952/Cepheus/Line_Maze_msgsxv.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290952/Cepheus/Line_Maze_msgsxv.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Ever solved those fun mazes at the back of your notebooks? This event is all about maze solving but the catch is that you will have to solve it using a ROBOT!! All participants will be given an RC car which they have to maneuver through the maze.  The car will be equipped with IR sensors in every direction. If the car touches the line, the sensors will pick up the signal, a buzzer will go off and the player will fall out of the game. This is a fun event so be ready to put your RC driving skills to the test!',
@@ -502,8 +502,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Swasti Jain (+91 94254 07984)',
+			left2 : '',
 			name : 'Scratch for school students',
 			source: './poster.png',
 			source1: './poster.png',
@@ -534,8 +534,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Arnav Kamat (+91 82370 63638)',
+			left2 : '2.Aniket Chaudhary (+91 70873 63393)',
 			name : 'Trading',
 			source: './poster.png',
 			source1: './poster.png',
@@ -710,11 +710,11 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Nikhil Kumar (+91 77396 25907)',
+			left2 : '2.Tarun Vasupally (+91 63046 14040)',
 			name : 'Copy the nature',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Copy_the_nature_dir8d1.webp',
+			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Copy_the_nature_dir8d1.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Showcase your passion for 3D modeling with this competition. Participants in this challenge must create a 3D model of a living creature with no restrictions on creativity. The species can be extinct or even fictitious, so let your imagination take the wheel and start designing!',
@@ -726,9 +726,9 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Dive the bOAt (Fun Event)',
+			left1 : '1.Tarun Vasupally (+91 63046 14040)',
+			left2 : '',
+			name : 'Drive the boat (Fun Event)',
 			source: './poster.png',
 			source1: './poster.png',
 			border: './border1.png',
@@ -759,8 +759,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.B. Nandini (+91 90943 57472)',
+			left2 : '2.Vaidehi Chougule (+91 80805 86791))',
 			name : 'Game Theory event',
 			source: './poster.png',
 			source1: './poster.png',
@@ -775,8 +775,8 @@ class Events extends React.Component {
 		},
 		{
 			
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Varun Singh (+91 99583 57706)',
+			left2 : '2.Yash Bhansali (+91 73048 93913)',
 			name : 'Arduino Workshop',
 			source: './poster.png',
 			source1: './poster.png',
