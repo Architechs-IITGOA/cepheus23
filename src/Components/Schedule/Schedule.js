@@ -7,7 +7,70 @@ export default function Schedule() {
     <>
       <div className="schedule">
         <div className="scheduleHead">SCHEDULE</div>
-        <div style={{ position: "relative" }}>
+        <div className="scheduleCards">
+          <div className="scheduleCard feb8">
+            <p className="schedule-date">8 February</p>
+            <div className="schedule-list">
+                <ul>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                </ul>
+            </div>
+          </div>
+          <div className="scheduleCard feb9">
+            <p className="schedule-date">9 February</p>
+            <div className="schedule-list">
+                <ul>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                </ul>
+            </div>
+          </div>
+          <div className="scheduleCard feb10">
+            <p className="schedule-date">10 February</p>
+            <div className="schedule-list">
+                <ul>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                </ul>
+            </div>
+          </div>
+          <div className="scheduleCard feb11">
+            <p className="schedule-date">11 February</p>
+            <div className="schedule-list">
+                <ul>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                </ul>
+            </div>
+          </div>
+          <div className="scheduleCard feb12">
+            <p className="schedule-date">12 February</p>
+            <div className="schedule-list">
+                <ul>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                  <li>Bridge Builder</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        
+        {/* <div style={{ position: "relative" }}>
           <div className="scheduleDates">
             <div className="feb8">
               <img className="polygon" src={polygon} alt="" width="10px" />
@@ -55,9 +118,9 @@ export default function Schedule() {
                 data-hover="kldsjfadjbfasmdfbasjdfakjbdfajkdbfaabfjsaddbfaksdjbfjsdnbfaskjdbf"
                 data-before="February 12"
               ></div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+          {/* </div>
+        </div> */}
       </div>
     </>
   );
