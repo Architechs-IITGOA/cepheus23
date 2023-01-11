@@ -6,6 +6,8 @@
     background-position: center;
     height: 110vh;
     background-repeat: no-repeat;
+    scroll-snap-align: start;
+
 }
 .cepheusTitle{
     margin: 0;
