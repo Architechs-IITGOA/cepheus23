@@ -3,20 +3,22 @@
   background-size: cover;
   width: 100%;
   background-position: center;
-  height: 110vh;
+  height: 100vh;
   background-repeat: no-repeat;
   position: relative;
   scroll-snap-align: start;
-
+  align-items: center;
+  padding-top: 100px;
 }
+
 .scheduleHead {
   color: white;
   font-family: SpaceBoard;
-  position: absolute;
-  width: 100%;
-  margin-top: 90px;
-  text-align: center;
+  /* position: absolute; */
+  /* width: 100%; */
+  /* text-align: center; */
   font-size: clamp(2.5rem, 1rem + 15vh, 4.5rem);
+  font-family: 'SpaceBoards';
 }
 .scheduleDates {
   position: absolute;
@@ -45,6 +47,7 @@
 }
 .feb9 {
   left: 18.5vw;
+  /* background-color: #00000099; */
 }
 .feb10 {
   left: 37vw;
@@ -73,7 +76,7 @@
   /* border: 1px solid red; */
 }
 
-.polygon:hover {
+.polygon:hover  {
   transform: scale(2);
   opacity: .65;
 }
@@ -84,14 +87,21 @@
   font-size: .5rem;
 } */
 
+.feb {
+  width: 15vw;
+  font-size: 19px;
+}
+
 .feb::before{
   content: attr(data-before);
 }
 
-.feb:hover::after {
-  width: 10px;
-  content: attr(data-hover)
+.polygon:hover + .feb::after {
+  content: attr(data-hover);
+  /* border: 1px solid red; */
 }
+
+
 
 @media screen and (max-width: 1110px) {
 
@@ -236,4 +246,107 @@
   .scheduleHead {
     font-size: 48px;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scheduleCard {
+  width: 20vw;
+  height: 15vw;
+  background-color: #00000099;
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+  clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%);
+  position: absolute;
+  top: 40%;
+  transition: all 0.4s;
+  flex-direction:column;
+}
+
+.scheduleCard .schedule-list {
+  margin-top: 400px;
+  opacity: 0;
+  transition: all 0.6s;
+  list-style: none;
+}
+
+.feb8 {
+  left: 8%;
+}
+
+.feb9 {
+  left: 24%;
+}
+
+.feb10 {
+  left: 40%;
+}
+
+.feb11 {
+  left: 56%;
+}
+
+.feb12 {
+  left: 72%;
+}
+
+/* .scheduleCard:nth-child(0){
+  left: 10%;
+} */
+/* .scheduleCard:nth-child(1){
+  left: 15%;
+}
+.scheduleCard:nth-child(2){
+  left: 25%;
+}
+.scheduleCard:nth-child(3){
+  left: 35%;
+}
+.scheduleCard:nth-child(4){
+  left: 45%;
+} */
+
+.scheduleCard:hover {
+  transform: scale(2);
+  background-color: none;
+  backdrop-filter: blur(15px);
+  border: 0.5px solid #fff;
+}
+
+.schedule-date{ 
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scheduleCard:hover .schedule-date{
+  transition: all 0.4s;
+  top: 0;
+  left: 60%;
+}
+
+.scheduleCard:hover .schedule-list {
+  margin-top: 40px;
+  opacity: 1;
 }
