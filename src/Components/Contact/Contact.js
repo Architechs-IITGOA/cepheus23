@@ -79,8 +79,8 @@ const contactDetails = [
     name: "Ritik Tiwari",
     role: "Social Media Head",
     email: "ritik.tiwari.20042@iitgoa.ac.in",
-    phone: "1234567890",
-    photo: ""
+    phone: "6307907724",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673285384/chepheus/Ritik_Tiwari_Social_Media_Head_6307907724_hxfqyc.webp"
   },
   {
     name: "Shreya yadav",
@@ -101,7 +101,7 @@ const contactDetails = [
     role: "Decoration Head",
     email: "diya.bhagat.20063@iitgoa.ac.in",
     phone: "8102115698",
-    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263710/chepheus/DiyaBhagat-DecorationHead-8102115698_fi0ybz.webp"
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673284871/chepheus/DiyaBhagat-DecorationHead-8102115698_1_r80vhu.webp"
   }
 ];
 
@@ -111,7 +111,7 @@ export default function Contact() {
     name: "Srajan Chourasia",
     role: "Overall Coordinator",
     email: "gstechnical@iitgoa.ac.in",
-    phone: "1234567890",
+    phone: "6263498532",
     photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263732/chepheus/Srajan_Chourasia-Overall_Coordinator-6263498532_kmulj1.webp"
   });
 

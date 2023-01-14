@@ -2,21 +2,21 @@ body {
   margin: 0;
   /* padding: 0; */
   /* font-family: 'Roboto', sans-serif; */
-  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
+  /* background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png); */
   z-index: -9999;
   /* background-size: cover; */
 }
 
 .aboutus{
   height: 100vh;
-  background-image: url(CepheusBackgroundsdamage.png);
+  background-image: url(CepheusBackgroundsdamage.jpg);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-  overflow: scroll;
+  
 }
 
 .myStyleh1{
@@ -59,6 +59,7 @@ border-radius: 30px;
 {
   position: relative;
   width: 60%;
+  height: 520px;
   margin-top: 150px;
   margin-bottom: 20px;
   /* top: -365px; */
@@ -73,7 +74,7 @@ border-radius: 30px;
   line-height: 34px;
   text-align: justify;
   color: #e2e2e2;
-
+  overflow: scroll;
 }
 
 @media (max-width: 1700px){
@@ -165,6 +166,9 @@ border-radius: 30px;
     font-size: 220%;
     top: 85px;
   }
+  .aboutus{
+    background-image: url(Cepheus Backgrounds Mobile_damage-06.png);
+  }
 }
 @media (max-width: 550px){
   .text{
@@ -182,6 +186,48 @@ border-radius: 30px;
     line-height: 18px;
   }
   .blur_background{
+    width: 70%;
+  }
+}
+@media (max-height: 760px){
+  .text{
+    height: 470px;
+    width: 65%;
+  }
+}
+@media (max-height: 720px){
+  .text{
+    height: 430px;
+    width: 65%;
+  }
+}
+@media (max-height: 680px){
+  .text{
+    height: 410px;
+    width: 65%;
+  }
+}
+@media (max-height: 640px){
+  .text{
+    height: 380px;
+    width: 65%;
+  }
+}
+@media (max-height: 600px){
+  .text{
+    height: 350px;
+    width: 65%;
+  }
+}
+@media (max-height: 550px){
+  .text{
+    height: 270px;
+    width: 65%;
+  }
+}
+@media (max-height: 500px){
+  .text{
+    height: 200px;
     width: 70%;
   }
 }

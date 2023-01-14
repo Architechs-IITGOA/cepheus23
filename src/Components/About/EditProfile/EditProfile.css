@@ -1,4 +1,4 @@
-.registration {
+.editprofile {
     position: fixed;
     width: 500px;
     height: 80%;
@@ -15,13 +15,13 @@
     overflow: scroll;
 }
 
-.registration h2 {
+.editprofile h2 {
     text-align: center;
     font-size: 21px;
     font-family: 'SpaceBoards';
 }
 
-.registration input{
+.editprofile input{
     margin-bottom: 20px;
     margin-top: 10px;
     width: 100%;
@@ -32,7 +32,7 @@
     font-family: 'Outfit';
 }
 
-.registration select {
+.editprofile select {
     width: 100%;
     padding: 8px 10px;
     border-radius: 5px;
@@ -40,7 +40,7 @@
     margin-bottom: 20px;
 }
 
-.registration option {
+.editprofile option {
     width: 100%;
 }
 
@@ -50,12 +50,12 @@ input:active {
     /* box-shadow: 1px 1px 3px #fff; */
 }
 
-.registration label {
+.editprofile label {
     font-size: 20px;
     font-family: 'Outfit';
 }
 
-.registration button{
+.editprofile button{
     padding: 10px 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -69,7 +69,7 @@ input:active {
 
 }
 
-.registration button:hover{
+.editprofile button:hover{
     border: none;
     background-color: rgb(191, 35, 35);
 

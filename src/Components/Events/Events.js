@@ -277,7 +277,7 @@ class Events extends React.Component {
 
 
 		const listData =[ {
-			
+			teamsize: 2,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Design Challenge',
@@ -293,7 +293,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Full Stack Hackathon',
@@ -309,7 +309,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Circuital Dilemma',
@@ -325,7 +325,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Data Science Hackathon',
@@ -341,7 +341,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'OpenCV Emotion detection',
@@ -357,7 +357,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'CTF',
@@ -373,7 +373,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'FizzBuzz',
@@ -389,7 +389,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Online Treasure Hunt',
@@ -405,7 +405,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Bridge Building Competition',
@@ -421,7 +421,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Front End Challenge',
@@ -437,7 +437,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Pitching event',
@@ -453,7 +453,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'KBC Quiz Competition',
@@ -469,7 +469,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Line Follower Bot competition',
@@ -485,7 +485,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Line Maze Fun game',
@@ -501,7 +501,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Scratch for school students',
@@ -517,7 +517,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Treasure hunt',
@@ -533,7 +533,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Trading',
@@ -549,7 +549,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Toil and Trouble',
@@ -565,7 +565,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event1',
@@ -581,7 +581,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event2',
@@ -597,7 +597,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event3',
@@ -613,7 +613,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event4',
@@ -629,7 +629,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event5',
@@ -645,7 +645,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event6',
@@ -661,7 +661,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event7',
@@ -677,7 +677,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event8',
@@ -693,7 +693,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Event9',
@@ -709,7 +709,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Copy the nature',
@@ -725,7 +725,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Dive the bOAt (Fun Event)',
@@ -742,7 +742,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Climbing Up the challenge',
@@ -758,7 +758,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Game Theory event',
@@ -774,7 +774,7 @@ class Events extends React.Component {
 
 		},
 		{
-			
+			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
 			name : 'Arduino Workshop',
@@ -880,17 +880,17 @@ class Events extends React.Component {
 									<ul id="list" >
 									<li ><div className='event'   onClick={()=>{ this.setState({clickedtwo:true});this.setState({eveno:0})}}  >
 									<img draggable='false'  src={listData[0].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventtwo:true});this.setState({eveno:1})}} >
 									<img draggable='false'  src={listData[1].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventthree:true});this.setState({eveno:2})}} >
 									<img draggable='false'  src={listData[2].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -900,17 +900,17 @@ class Events extends React.Component {
 									<ul id="list1" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventfour:true});this.setState({eveno:3})}} >
 									<img draggable='false'  src={listData[3].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventfive:true});this.setState({eveno:4})}} >
 									<img draggable='false'  src={listData[4].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventsix:true});this.setState({eveno:5})}} >
 									<img draggable='false'  src={listData[5].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -920,17 +920,17 @@ class Events extends React.Component {
 									<ul id="list2" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventseven:true});this.setState({eveno:6})}}  >
 									<img draggable='false'  src={listData[6].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventeight:true});this.setState({eveno:7})}} >
 									<img draggable='false'  src={listData[7].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventnine:true});this.setState({eveno:8})}} >
 									<img draggable='false'  src={listData[8].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -940,7 +940,7 @@ class Events extends React.Component {
 									<ul id="list2" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventseven:true});this.setState({eveno:27})}}  >
 									<img draggable='false'  src={listData[27].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									
@@ -989,17 +989,17 @@ class Events extends React.Component {
 									<ul id="list" >
 									<li ><div className='event'   onClick={()=> {this.setState({clickedtwooff:true});this.setState({eveno:9})}}  >
 									<img draggable='false'  src={listData[9].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventtwooff:true});this.setState({eveno:10})}} >
 									<img draggable='false'  src={listData[10].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventthreeoff:true});this.setState({eveno:11})}} >
 									<img draggable='false'  src={listData[11].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -1009,17 +1009,17 @@ class Events extends React.Component {
 									<ul id="list1" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventfouroff:true});this.setState({eveno:12})}} >
 									<img draggable='false'  src={listData[12].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventfiveoff:true});this.setState({eveno:13})}} >
 									<img draggable='false'  src={listData[13].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventsixoff:true});this.setState({eveno:14})}} >
 									<img draggable='false'  src={listData[14].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -1029,17 +1029,17 @@ class Events extends React.Component {
 									<ul id="list2" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:15})}}  >
 									<img draggable='false'  src={listData[15].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:16})}} >
 									<img draggable='false'  src={listData[16].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventnineoff:true});this.setState({eveno:17})}} >
 									<img draggable='false'  src={listData[17].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -1049,17 +1049,17 @@ class Events extends React.Component {
 									<ul id="list2" >
 									<li ><div className='event'  onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:28})}}  >
 									<img draggable='false'  src={listData[28].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:29})}} >
 									<img draggable='false'  src={listData[29].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventnineoff:true});this.setState({eveno:30})}} >
 									<img draggable='false'  src={listData[30].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -1069,7 +1069,7 @@ class Events extends React.Component {
 									<ul id="list2" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:31})}}  >
 									<img draggable='false'  src={listData[31].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									
@@ -1119,17 +1119,17 @@ class Events extends React.Component {
 									<ul id="list" >
 									<li ><div className='event'   onClick={()=> {this.setState({clickedtwotal:true});this.setState({eveno:18})}} >
 									<img draggable='false'  src={listData[18].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventtwotal:true});this.setState({eveno:19})}} >
 									<img draggable='false'  src={listData[19].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'  onClick={()=> {this.setState({eventthreetal:true});this.setState({eveno:20})}} >
 									<img draggable='false'  src={listData[20].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -1139,17 +1139,17 @@ class Events extends React.Component {
 									<ul id="list1" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventfourtal:true});this.setState({eveno:21})}} >
 									<img draggable='false'  src={listData[21].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventfivetal:true});this.setState({eveno:22})}} >
 									<img draggable='false'  src={listData[22].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventsixtal:true});this.setState({eveno:23})}} >
 									<img draggable='false'  src={listData[23].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
@@ -1159,17 +1159,17 @@ class Events extends React.Component {
 									<ul id="list2" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventsevental:true});this.setState({eveno:24})}}  >
 									<img draggable='false'  src={listData[24].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventeighttal:true});this.setState({eveno:25})}} >
 									<img draggable='false'  src={listData[25].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 									<li><div className='event'   onClick={()=> {this.setState({eventninetal:true});this.setState({eveno:26})}} >
 									<img draggable='false'  src={listData[26].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-126%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
 								</ul>
