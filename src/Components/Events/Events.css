@@ -4,6 +4,9 @@
   overflow: scroll;
 
 }
+#landpage{
+  margin-top: -6.2%;
+}
  
 
 .events-logo {
@@ -104,7 +107,8 @@
 }
 
 .events .events-bg{
-  background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083349/cepheus23/events_page_fxkfcz.webp");
+  background-image: url("./Events-Images/evebg.jpeg");
+  /* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083349/cepheus23/events_page_fxkfcz.webp"); */
   background-size: cover;
   background-repeat: repeat-y;
   margin: 0px;
@@ -669,7 +673,8 @@ transition:0.2s;
 }
 
 .events-bg1{
-background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083334/cepheus23/bg-mob_r6jnsf.webp");
+background-image: url("./Events-Images/evemobbg.jpeg");
+/* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083334/cepheus23/bg-mob_r6jnsf.webp"); */
   background-size: cover;
   background-repeat: repeat-y;
   margin: 0px;
@@ -702,6 +707,7 @@ font-style: normal;
   width: 80vw;
   margin-left: -3%;
 }
+
 #online,#offline,#talks{
   
   background-size: cover;
@@ -747,7 +753,7 @@ font-style: normal;
   width:950px;
   background: rgba(255, 255, 255, 0.15);
   height:500px;
-  margin-top:-2.3vh;
+  margin-top:-2.4%;
   backdrop-filter:blur(10px);
   border-radius:15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1033,6 +1039,22 @@ font-style: normal;
   }
 }
 @media screen and (max-width:700px){
+  #landpage{
+    margin-top: -21vh;
+  }
+  
+  .events .events-bg{
+    background-image: url("./Events-Images/evemobbg.jpeg");
+  }
+  .events-bg1{
+    background-image: url("./Events-Images/evemobbg.jpeg");
+  }
+  .firstpagelist{
+    margin-top: 15vh;
+  }
+  .firstpagelist>li{
+    margin-top: 10vh;
+  }
   #online,#offline,#talks{
   
     background-size: cover;
@@ -1071,7 +1093,7 @@ font-style: normal;
     width:300px;
     background: rgba(255, 255, 255, 0.15);
     height:72vh;
-    margin-top:-3%;
+    margin-top:-21%;
     backdrop-filter:blur(10px);
     border-radius:15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
