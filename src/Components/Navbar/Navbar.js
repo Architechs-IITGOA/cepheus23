@@ -18,7 +18,7 @@ export default function Navbar({
   isMenuClicked,
   setMenuClicked,
   setUserRegistered,
-  success, reg_failed, wrong_mail, error
+  success, reg_failed, error
 }) {
   const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
@@ -110,14 +110,14 @@ export default function Navbar({
             isSignedIn={true}
           />
         </div>
-        {/* <div style={success?{display:'block'}:{display:'none'}}> */}
+        <div style={success?{display:'block'}:{display:'none'}}>
         <img
           style={successor ? { display: "block" } : { display: "none" }}
           src="img/user_placeholder.png"
           alt="avatar"
           onClick={() => handleProfileClick()}
         ></img>
-        {/* </div> */}
+        </div>
       </div>
       <ToastContainer 
                 className="toastbar"

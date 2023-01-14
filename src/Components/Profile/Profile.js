@@ -5,8 +5,7 @@ import "./Profile.css"
 import { gapi } from 'gapi-script';
 
 
-export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata}) {
-
+export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked}) {
 
     const clientId = '218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com';
     
@@ -41,7 +40,10 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
                     <div>
                         
                         <div >
-                        <a class="edit">Edit Profile</a>
+                        <a class="edit" onClick={() => {
+                            setEditProfile(true);
+                            setProfileClicked(false);
+                        }}>Edit Profile</a>
                         <GoogleLogout
                         render={renderProps => (
                             <a class="log-out" onClick={renderProps.onClick} disabled={renderProps.disabled}>Log Out</a>
