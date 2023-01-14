@@ -812,7 +812,7 @@ class Events extends React.Component {
 					<br></br>
 					<br></br>
 					{/* <br></br> */}
-					<h1  id="main-heading">EVENTS</h1>
+					<h1 id="main-heading">EVENTS</h1>
 	
 					{/* <div className={clicked||clicked2||clicked3?'secondoff1':'firston1'}> */}
 					<div  className={clicked||clicked2||clicked3?'eventzoff100':'eventzon100'}>

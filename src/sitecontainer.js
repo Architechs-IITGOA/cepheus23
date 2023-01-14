@@ -9,50 +9,52 @@ import Contact from "./Components/Contact/Contact";
 import Profile from "./Components/Profile/Profile";
 import RegistrationPage from "./Components/RegistrationPage/RegistrationPage";
 import EditProfile from "./Components/About/EditProfile/EditProfile";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
+
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
 
 const avatar_male = [
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677256/chepheus/1_rbtjby.webp"
+    link: "56/chepheus/1_rbtjby.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677256/chepheus/2_vg5lak.webp"
+    link: "56/chepheus/2_vg5lak.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677255/chepheus/3_i0qt4w.webp"
+    link: "55/chepheus/3_i0qt4w.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677269/chepheus/4_dhsyqx.webp"
+    link: "69/chepheus/4_dhsyqx.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677260/chepheus/5_j5gsa6.webp"
+    link: "60/chepheus/5_j5gsa6.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677254/chepheus/6_qbnzbw.webp"
+    link: "54/chepheus/6_qbnzbw.webp",
   },
-]
+];
 const avatar_female = [
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677263/chepheus/7_vtxwjn.webp"
+    link: "63/chepheus/7_vtxwjn.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677257/chepheus/8_ng6pcu.webp"
+    link: "57/chepheus/8_ng6pcu.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677257/chepheus/9_ci9c7p.webp"
+    link: "57/chepheus/9_ci9c7p.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677259/chepheus/10_q1oypc.webp"
+    link: "59/chepheus/10_q1oypc.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677264/chepheus/11_lvx5xc.webp"
+    link: "64/chepheus/11_lvx5xc.webp",
   },
   {
-    link : "https://res.cloudinary.com/dhtb16f8u/image/c_scale,q_auto:eco,w_30/upload/v1673677267/chepheus/12_zz8wuo.webp"
+    link: "67/chepheus/12_zz8wuo.webp",
   },
-]
+];
 
 const SiteContainer = () => {
   const [isProfileClicked, setProfileClicked] = useState(false);
@@ -62,6 +64,7 @@ const SiteContainer = () => {
     name: "",
     firstName: "",
     email: "",
+    imgurl: ""
   });
 
   const handleProfileClick = () => {
@@ -113,19 +116,39 @@ const SiteContainer = () => {
           auth_continue={authorisation_continue}
           auth_reset={authorisation_reset}
           userdata={userdata}
-          setEditProfile = {setEditProfile}
-          setProfileClicked = {setProfileClicked}
+          setEditProfile={setEditProfile}
+          setProfileClicked={setProfileClicked}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
-        {isEditProfile ? <EditProfile isEditProfile={isEditProfile} userdata={userdata} setEditProfile={setEditProfile} setUserdata={setUserdata} success=  {success_toast} 
-          reg_failed={reg_failed}
-          error={error}/> : null } 
+        {isEditProfile ? (
+          <EditProfile
+            isEditProfile={isEditProfile}
+            userdata={userdata}
+            setEditProfile={setEditProfile}
+            setUserdata={setUserdata}
+            success={success_toast}
+            reg_failed={reg_failed}
+            error={error}
+          />
+        ) : null}
         {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
           reg_failed={reg_failed}
-          error={error}/> */}
-        {isUserRegistered ? null: <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast}
-          reg_failed={reg_failed}
-          error={error}/>}
+          error={error}
+          avatar_female = {avatar_female}
+            avatar_male = {avatar_male}/> */}
+        {isUserRegistered ? null : (
+          <RegistrationPage
+            isUserRegistered={isUserRegistered}
+            userdata={userdata}
+            setUserRegistered={setUserRegistered}
+            setUserdata={setUserdata}
+            success={success_toast}
+            reg_failed={reg_failed}
+            error={error}
+            avatar_female = {avatar_female}
+            avatar_male = {avatar_male}
+          />
+        )}
       </div>
       <div
         onClick={() => handleBodyClick()}

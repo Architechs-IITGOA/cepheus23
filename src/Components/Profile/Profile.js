@@ -13,7 +13,7 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
         <div class={isProfileClicked ? "profile profile-active" : "profile"}>
             <img src="" alt=""></img>
             <div class="profile-left">
-                <img src="img/avatar1.png" alt="avatar" class="profile-image"></img>
+                <img src={userdata.imgurl} alt="avatar" class="profile-image"></img>
                 <img src="img/profile_name_border.png" alt="" class="name-border"></img>
                 
                 <p class="name">{userdata.firstName}</p>
