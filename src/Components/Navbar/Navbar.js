@@ -20,7 +20,7 @@ export default function Navbar({
   setUserRegistered,
   success, reg_failed, wrong_mail, error
 }) {
-  const clientId = "469751877813-knot4ct87713vvr2dmrd1do6nb8efn4i.apps.googleusercontent.com";
+  const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
 
   useEffect(() => {

@@ -2,14 +2,14 @@ body {
   margin: 0;
   /* padding: 0; */
   /* font-family: 'Roboto', sans-serif; */
-  background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png);
+  /* background: url(starry-sky-purple-sky-astronomical-stars-5k-6000x4000-1022\ 2.png); */
   z-index: -9999;
   /* background-size: cover; */
 }
 
 .aboutus{
   height: 100vh;
-  background-image: url(CepheusBackgroundsdamage.png);
+  background-image: url(CepheusBackgroundsdamage.jpg);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
