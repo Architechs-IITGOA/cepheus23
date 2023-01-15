@@ -34,7 +34,7 @@ const event_names = [
 
 const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
-export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked, setUserdata}) {
+export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked, setUserdata,success_logout}) {
 
     const clientId = '218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com';
     useEffect(() => {
@@ -98,7 +98,7 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
                         )}
                             clientId={clientId}
                             buttonText="Logout"
-                            onLogoutSuccess={() => {console.log('loggedout successfully');auth_reset()}}
+                            onLogoutSuccess={() => {console.log('loggedout successfully');success_logout();auth_reset()}}
                             onLogoutFailure={(err) => {console.log(err);auth_continue()}}
                         />
                         
