@@ -22,7 +22,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .post(
         "https://backendcepheus.cf/apiM2/createteam",
         {
-          event_id: "1",
+          event_id: data.id,
           team_name: createTeamName,
         },
         { withCredentials: true }
@@ -35,7 +35,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
-          event_id: "1",
+          event_id: data.id,
           team_code: teamcode,
         },
         { withCredentials: true }
@@ -64,7 +64,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .post(
         "https://backendcepheus.cf/apiM2/createteam",
         {
-          event_id: "19",
+          event_id: data.id,
           team_name: userdata.email,
         },
         { withCredentials: true }
@@ -77,7 +77,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
-          event_id: 19,
+          event_id: data.id,
           team_code: teamcodeind,
         },
         { withCredentials: true }
@@ -107,7 +107,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
-          event_id: "1",
+          event_id: data.id,
           team_code: joinTeamCode,
         },
         { withCredentials: true }
