@@ -84,3 +84,8 @@ input:active {
     background-color: white;
     color: #000;
 }
+
+
+input:disabled {
+    color: #fff;
+}

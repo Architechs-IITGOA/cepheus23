@@ -147,6 +147,9 @@
 }
 
 @media screen and (max-width: 900px) {
+    .profile {
+        height: 60vh;
+    }
     .profile-left {
         height: 350px;
     }
@@ -157,10 +160,11 @@
 
     .profile-left .profile-image {
         width: 150px;
+        margin-bottom: 3%;
     }
 
     .profile-left .name-border {
-        top: 165px;
+        top: 195px;
     }
 
     .profile-left .name {
@@ -185,6 +189,12 @@
 
 }
 
+@media screen and (max-width: 850px) {
+    .profile-left {
+        min-height: 450px;
+    }
+}
+
 @media screen and (max-width: 740px) {
     .profile-left {
         flex: 1;
@@ -192,10 +202,11 @@
     }
     .profile-right{
         flex: 1;
+        height: 500px;
     }
 
     .profile-left .name-border {
-        top: 172px;
+        top: 203px;
         left: 4.2%;
         width: 45%;
     }
@@ -226,7 +237,7 @@
 
     .profile-left .name-border {
         width: 90%;
-        top: 165px;
+        top: 195px;
     }
 
     .profile-buttons {
