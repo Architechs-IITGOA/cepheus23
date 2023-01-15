@@ -535,23 +535,7 @@ class Events extends React.Component {
 
 
 		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			id : 22,
-			name : 'Line Maze Fun game',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Ever solved those fun mazes at the back of your notebooks? This event is all about maze solving but the catch is that you will have to solve it using a ROBOT!! All participants will be given an RC car which they have to maneuver through the maze.  The car will be equipped with IR sensors in every direction. If the car touches the line, the sensors will pick up the signal, a buzzer will go off and the player will fall out of the game. This is a fun event so be ready to put your RC driving skills to the test!',
-			
-			
-			
-
-
-		},
+		
 		{
 			teamsize: 1,
 			left1 : '1.Swamini Shirsat (7875722003)',
@@ -671,17 +655,18 @@ class Events extends React.Component {
 
 
 		},
+		
 		{
-			teamsize: 18,
-			left1 : '1.Runal Palkar (9137884831)',
-			left2 : '',
-			id : 21,
-			name : 'E-Bike Competition',
-			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
-			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
+			teamsize: 1,
+			left1 : '1.Abcd Xyz (9884736273)',
+			left2 : '2.Abcd Xyz (9884736273)',
+			id : 22,
+			name : 'Line Maze Fun game',
+			source: './poster.png',
+			source1: './poster.png',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			para: 'Ever solved those fun mazes at the back of your notebooks? This event is all about maze solving but the catch is that you will have to solve it using a ROBOT!! All participants will be given an RC car which they have to maneuver through the maze.  The car will be equipped with IR sensors in every direction. If the car touches the line, the sensors will pick up the signal, a buzzer will go off and the player will fall out of the game. This is a fun event so be ready to put your RC driving skills to the test!',
 			
 			
 			
@@ -699,6 +684,23 @@ class Events extends React.Component {
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Have you ever played with Legos? If yes: you have an edge! If not: your time has arrived! Get ready to build a boat and wade through uncertain waters without losing your hold. You will be given lego building bars, a motor, and a battery to create your own boat. You must configure the boat in such a way that it reaches a certain distance or person within the stipulated time.',
+			
+			
+			
+
+
+		},
+		{
+			teamsize: 18,
+			left1 : '1.Runal Palkar (9137884831)',
+			left2 : '',
+			id : 21,
+			name : 'E-Bike Competition',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
+			border: './border1.png',
+			exitsrc: './exit.png',
+			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
 			
 			
 			
@@ -1148,7 +1150,7 @@ class Events extends React.Component {
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:20})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									{/* <li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:20})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[20].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
@@ -1157,7 +1159,7 @@ class Events extends React.Component {
 									<img draggable='false'  src={listData[21].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
-									</div></li>
+									</div></li> */}
 								</ul>
 								</section>
 								<section className={eventcaroone==4?"section is-active4 transition":"section transition"} id="section3">

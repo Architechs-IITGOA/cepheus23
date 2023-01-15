@@ -303,7 +303,7 @@ margin-bottom: 20px;
 }
 .nav-dot:hover, .nav-dot.is-active {
 transform: scale(1.4);
-background: #FCC200;
+background: #2776EA;
 }
 .section {
 
@@ -826,7 +826,7 @@ font-style: normal;
   height:500px;
 }
 #sub-head{
-  color:#FFC200;
+  color:#acc3e8;
   font-family: SpaceBoards;
   margin-top:3%;
   font-size:37px;
@@ -994,7 +994,7 @@ font-style: normal;
     height:500px;
   }
   #sub-head{
-    color:#FFC200;
+    color:#acc3e8;
     margin-top:3%;
     font-size:28px;
     margin-left:-25%;
@@ -1198,7 +1198,7 @@ font-style: normal;
     height:500px;
   }
   #sub-head{
-    color:#FFC200;
+    color:#acc3e8;
     margin-top:-150px;
     font-size:18px;
     margin-left:3%;
