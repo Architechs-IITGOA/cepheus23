@@ -76,7 +76,7 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
                         <ol>
                             {userdata.regevents.map((item, i) => {
                                 return (
-                                    <li>{event_names[item+1]}</li>
+                                    <li>{event_names[item-1]}</li>
                                 )
                             })}
                         </ol>
