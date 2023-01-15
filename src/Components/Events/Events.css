@@ -1396,6 +1396,20 @@ font-style: normal;
   font-family: 'Outfit';
 
 }
+#reg_team1001{
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s;
+  background-color: #282c34;
+  box-shadow: 0 0 10px #fff;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'Outfit';
+
+}
 .popup_active input{
   margin-bottom: 25px;
   margin-top: 15px;
