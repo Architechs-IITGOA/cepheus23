@@ -53,7 +53,25 @@ const myStyle = {
   }
   const elemStyle = {
     // hover:"scale(1.2)",
-    backgroundImage:'url(./elem.png)',
+    backgroundImage:'url(./offline.png)',
+	// width:'45%',
+	// height:'2%',
+  }
+  const elemStyleoff = {
+    // hover:"scale(1.2)",
+    backgroundImage:'url(./online.png)',
+  }
+  const elemStylemed = {
+    // hover:"scale(1.2)",
+    backgroundImage:'url(./offline.png)',
+	width:'180px',
+	height:'180px',
+  }
+  const elemStyleoffmed = {
+    // hover:"scale(1.2)",
+    backgroundImage:'url(./online.png)',
+	width:'180px',
+	height:'180px',
   }
   
   const buttonStyle = {
@@ -872,18 +890,19 @@ class Events extends React.Component {
 					<div className='setting' >
 						
 						<center>
+						<MediaQuery minWidth={700}>
 						<ul  className="firstpagelist">
 							<li ><div style={elemStyle} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false})}} >
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
+							{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>ONLINE</h1></center>
-							</div>
+							</div> */}
 							</div></li>
-							<li><div style={elemStyle} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false})}}>
+							<li><div style={elemStyleoff} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
-							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
+							{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>OFFLINE</h1></center>
-							</div>
+							</div> */}
 							</div></li>
 							{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
@@ -892,6 +911,31 @@ class Events extends React.Component {
 							</div>
 							</div></li> */}
 						</ul>
+						</MediaQuery>
+						<MediaQuery maxWidth={700}>
+							<ul  className="firstpagelist">
+								<li ><div style={elemStylemed} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false})}} >
+								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
+								{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
+									<center><h1  id="text" style={{paddingTop:'5px'}}>ONLINE</h1></center>
+								</div> */}
+								</div></li>
+								<li><div style={elemStyleoffmed} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false})}}>
+								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
+								{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
+									<center><h1  id="text" style={{paddingTop:'5px'}}>OFFLINE</h1></center>
+								</div> */}
+								</div></li>
+								{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false})}}>
+								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
+								<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
+									<center><h1  id="text" style={{paddingTop:'5px'}}>TALKS</h1></center>
+								</div>
+								</div></li> */}
+							</ul>
+							
+
+						</MediaQuery>
 						</center>
 						<br></br>
 						<br></br>

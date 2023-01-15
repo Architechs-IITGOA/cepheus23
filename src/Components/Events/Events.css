@@ -703,8 +703,8 @@ font-style: normal;
   display: flex;
   margin-top:6%;
   flex-direction: row;
-  justify-content: space-around;
-  width: 80vw;
+  justify-content: space-evenly;
+  width: 70vw;
   margin-left: -3%;
 }
 
@@ -1055,6 +1055,7 @@ font-style: normal;
   }
   .firstpagelist>li{
     margin-top: 10vh;
+    
   }
   #online,#offline,#talks{
   
@@ -1069,7 +1070,7 @@ font-style: normal;
     display: block;
     /* margin-left: 32%; */
     width: 100%;
-    margin-left: -10%;
+    margin-left: 0%;
     /* margin-top: -4vh; */
   }
   #text{
@@ -1105,9 +1106,10 @@ font-style: normal;
   
   .event{
     background-size: cover;
-    width: 14vh;
+    width: 15vh;
     height:14vh;
     margin-top: 25px;
+    margin-left: 15%;
     cursor: pointer;
   }
   #list,#list1,#list2{
