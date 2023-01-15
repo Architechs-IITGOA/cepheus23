@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df968ef3.css",
+    "main.js": "/static/js/main.65b22287.js",
+    "static/js/787.9dfd3640.chunk.js": "/static/js/787.9dfd3640.chunk.js",
+    "static/media/events_page.png": "/static/media/events_page.34901c7709ed60ee71f4.png",
+    "static/media/cepheus_contact_us_bg.png": "/static/media/cepheus_contact_us_bg.ee2b72d70eceb0b94fda.png",
+    "static/media/CepheusBackgrounds[Recovered]_tech.png": "/static/media/CepheusBackgrounds[Recovered]_tech.2ac27aea4a465f1f9090.png",
+    "static/media/Cepheus Backgrounds Mobile_damage-06.png": "/static/media/Cepheus Backgrounds Mobile_damage-06.0dce0697bd5dfdc32482.png",
+    "static/media/offline.png": "/static/media/offline.36e9a530cb3f2787aa5e.png",
+    "static/media/talks.png": "/static/media/talks.34d2a421a96916b8a63e.png",
+    "static/media/online.png": "/static/media/online.08d0493070c835eea199.png",
+    "static/media/bluePlanet.png": "/static/media/bluePlanet.8bfba2ecffcdea1f0fc7.png",
+    "static/media/homeImg.png": "/static/media/homeImg.6b905c0fea2cde508305.png",
+    "static/media/CepheusBackgroundsdamage.jpg": "/static/media/CepheusBackgroundsdamage.e23272be82b0608e25f1.jpg",
+    "static/media/land.png": "/static/media/land.01f2e31a259d96312dbf.png",
+    "static/media/evebg.jpeg": "/static/media/evebg.92ff05f13604fed8d2b1.jpeg",
+    "static/media/Outfit-VariableFont_wght.ttf": "/static/media/Outfit-VariableFont_wght.bc779fb16a97a6842a72.ttf",
+    "static/media/Polygon 2.png": "/static/media/Polygon 2.8224b078db1da7063fd2.png",
+    "static/media/fullPink.png": "/static/media/fullPink.1c9e329e3889c80b1995.png",
+    "static/media/evemobbg.jpeg": "/static/media/evemobbg.b2b9570e5522576d21b4.jpeg",
+    "static/media/homeRocket.png": "/static/media/homeRocket.715b393506ef68b10ee4.png",
+    "static/media/FontsFree-Net-Spaceboardsdemo-8MyRB.ttf": "/static/media/FontsFree-Net-Spaceboardsdemo-8MyRB.5a5780fd58fdab1f5b01.ttf",
+    "index.html": "/index.html",
+    "main.df968ef3.css.map": "/static/css/main.df968ef3.css.map",
+    "main.65b22287.js.map": "/static/js/main.65b22287.js.map",
+    "787.9dfd3640.chunk.js.map": "/static/js/787.9dfd3640.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df968ef3.css",
+    "static/js/main.65b22287.js"
+  ]
+}
