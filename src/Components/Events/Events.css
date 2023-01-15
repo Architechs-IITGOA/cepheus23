@@ -722,7 +722,8 @@ font-style: normal;
 }
 #main-heading{
   color:white;
-  font-family: SpaceBoards;
+  font-family: 'SpaceBoards';
+  text-transform: uppercase;
   font-size: 36px;
   /* margin-top: 10px; */
   padding-top: 20px;

@@ -4,19 +4,31 @@ import { useEffect } from "react";
 import "./RegistrationPage.css"
 import axios from "axios";
 axios.defaults.withCredentials = true;
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
 
-export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata,success, reg_failed, error}){
+export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata,success, reg_failed, error, avatar_male, avatar_female}){
     const HandleRegistrationData = (e) => {
         setUserRegistered(true);
         e.preventDefault();
         console.log(e.target[0].value);
+        let imgurl;
+        let randnum = Math.floor(Math.random()*6);
+        console.log(randnum);
+        if(e.target[2].value==="Female"){
+            imgurl = avatar_female[randnum].link;
+        } else {
+            imgurl = avatar_male[randnum].link;
+        }
+        console.log(imgurl);
         setUserdata((userdata) => ({
             ...userdata,
             gender: e.target[2].value,
             age: e.target[3].value,
             college: e.target[4].value,
             grade: e.target[5].value,
-            mobile: e.target[6].value
+            mobile: e.target[6].value,
+            name: e.target[0].value,
+            imgurl: link_initial + imgurl
         }));        
         console.log(userdata);
         // var grade_number;
@@ -29,10 +41,11 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
         axios.post("https://backendcepheus.cf/apiM2/register",
         {  
             // token: userdata.tokenId,
-            user_name: userdata.name,
+            user_name: e.target[0].value,
             college: e.target[4].value,
             mobile: e.target[6].value,
-            grade: grade_number
+            grade: grade_number,
+            image_url: imgurl
         },
         {withCredentials: true})
         .then((res) => {
@@ -50,7 +63,7 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
             <h2>Please fill out this form to participate.</h2>
             <form action="post" onSubmit={(e) => HandleRegistrationData(e)}>
                 <label>Full Name</label><br></br>
-                <input type="text" name="name" id="name" value={userdata.name}/><br></br>
+                <input type="text" name="name" id="name"/><br></br>
                 <label>Email</label><br></br>
                 <input type="email" name="email" id="email" value={userdata.email} disabled/><br></br>
                 <label>Gender</label><br></br>

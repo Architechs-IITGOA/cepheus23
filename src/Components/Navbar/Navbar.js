@@ -6,7 +6,10 @@ import "./Navbar.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 axios.defaults.withCredentials = true;
+
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
 
 export default function Navbar({
   handleProfileClick,
@@ -54,9 +57,11 @@ export default function Navbar({
       } else {
         setUserdata((userdata) => ({
           ...userdata,
+          name: res.data.user_name,
           college: res.data.college,
           grade: res.data.grade,
           mobile: res.data.mobile,
+          imgurl: link_initial + res.data.image_url
         }));
         console.log(userdata);
       }
@@ -113,7 +118,7 @@ export default function Navbar({
         <div style={success?{display:'block'}:{display:'none'}}>
         <img
           style={successor ? { display: "block" } : { display: "none" }}
-          src="img/user_placeholder.png"
+          src={userdata.imgurl}
           alt="avatar"
           onClick={() => handleProfileClick()}
         ></img>
