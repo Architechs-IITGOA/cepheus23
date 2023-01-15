@@ -10,7 +10,7 @@ import land from "../Home/land.png";
 const Home = () => {
   const ref = useRef();
   return (
-    <div className="home">
+    <div className="home" id="Home">
       <Parallax className="home" pages={4} ref={ref}>
         <ParallaxLayer
           sticky={{ start: 0, end: 1.3 }}
@@ -33,11 +33,7 @@ const Home = () => {
           <div className="theme">OUR <br/> THEME</div>
           </div>
           <div className="themeDes">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos ipsam, in, ea repellendus unde, quia a soluta molestias
-            eius id quibusdam perferendis? Nemo accusamus et aliquid ab eligendi
-            recusandae cupiditate?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates ut dolore inventore quidem laboriosam vero doloribus saepe assumenda eveniet autem voluptatibus quod, dolorum suscipit, voluptatum aliquam, asperiores nemo libero?
+          The inevitable fight between a rogue AI and mankind has shook the Cepheus verse to its core. War has ensued, but not all hope is lost. Be a part of the elite Cepheus Ciphers and navigate through these troubled waters using your technical skills. Take this journey of a lifetime and immerse yourself in the interactive multiverse of Cepheus.
           </div>
         </ParallaxLayer>
 

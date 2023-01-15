@@ -7,7 +7,7 @@ axios.defaults.withCredentials = true;
 
 export default function EditProfile({isEditProfile, userdata, setEditProfile, setUserdata,success, error}){
     const HandleEditProfile = (e) => {
-        setEditProfile(true);
+        setEditProfile(false);
         e.preventDefault();
         console.log(e.target[0].value);
         setUserdata((userdata) => ({
@@ -78,7 +78,7 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                 {/* <input type="number" name="grade" id="grade" placeholder="Enter your grade or program name here, e.g., BTech or 10th" required/><br /> */}
                 <label>Contact Number</label><br></br>
                 <input type="text" name="contact" id="contact" required/><br></br>
-                <button type="submit">Submit</button>
+                <button type="submit">Update</button>
             </form>
             <button type="cancel" class="edit-cancel" onClick={() => setEditProfile(false)}>Cancel</button>
         </div>

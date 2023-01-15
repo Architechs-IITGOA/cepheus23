@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
 
-const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
 const avatar_male = [
   {
@@ -136,7 +136,7 @@ const SiteContainer = () => {
             error={error}
           />
         ) : null}
-        {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast_reg} 
+        {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
           reg_failed={reg_failed}
           error={error}
           avatar_female = {avatar_female}

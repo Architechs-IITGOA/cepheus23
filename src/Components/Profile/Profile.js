@@ -6,7 +6,33 @@ import { gapi } from 'gapi-script';
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
+const event_names = [
+    "Lorem Ipsum",
+    "HackOverFlow",
+    "Circuital Dilemma",
+    "Data Science Hackathon",
+    "HackTheGames",
+    "CTF",
+    "FizzBuzz",
+    "Online Treasure Hunt",
+    "Bridge Building Comeptition",
+    "Copy the Nature",
+    "Rule The Market",
+    "Launch Galaset",
+    "KBC Quiz Competition",
+    "Maze Amaze",
+    "Scratch",
+    "Treasure Hunt",
+    "Buy My Code",
+    "Pare It Down",
+    "Game Theory",
+    "Arduino Workshop",
+    "EV Bike Competition",
+    "Line Maze Fun Game",
+    "Dive the Boat"
+]
+
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
 export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked, setUserdata}) {
 
@@ -46,15 +72,16 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
             <div className="profile-right">
                 <div class="participated-events">
                     <h2>Participated Events</h2>
-
-                    <ol>
-                       <li>Treasure Hunt</li>
-                       <li>Beat The Street</li>
-                       <li>Hack Overflow</li>
-                       <li>Bridge Builder</li>
-                       <li>Front End Challange</li>
-                       <li>Play With Microbit</li>
-                    </ol>
+                    {userdata.regevents? 
+                        <ol>
+                            {userdata.regevents.map((item, i) => {
+                                return (
+                                    <li>{event_names[item+1]}</li>
+                                )
+                            })}
+                        </ol>
+                    : <p>You have not participated in any event yet.</p>}
+                    
                 </div>
                 <div className="profile-buttons">
                     
