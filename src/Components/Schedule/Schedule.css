@@ -9,6 +9,8 @@
   scroll-snap-align: start;
   align-items: center;
   padding-top: 100px;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .scheduleHead {
