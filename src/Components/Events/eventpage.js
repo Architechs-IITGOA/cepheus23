@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error,setUserdata, exiting }) {
+export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error,setUserdata,islogin,notlogin, exiting }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
   const [join, setjoin] = useState(false);
@@ -171,7 +171,8 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
   };
 
   const register = (e) => {
-    if (teamSize > 1) {
+    if(!islogin) notlogin()
+    else if (teamSize > 1) {
       setclicked(true);
     } else {
       console.log("individual event");
