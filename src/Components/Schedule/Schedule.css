@@ -243,7 +243,7 @@
 
 
 .scheduleCard {
-  width: 20vw;
+  min-width: 20vw;
   height: 15vw;
   background-color: #00000099;
   /* display: flex; */
@@ -316,6 +316,9 @@ li {
   background-color: none;
   backdrop-filter: blur(15px);
   border: 0.5px solid #fff;
+  clip-path: polygon(25% 0, 100% 0%, 75% 100%, 0% 100%);
+  z-index: 10;
+
 }
 
 .schedule-date{ 
@@ -353,10 +356,25 @@ li {
   }
 }
 
+@media screen and (max-width: 1176px) {
+  .scheduleCard:hover .schedule-date {
+    font-size: 13px;
+  }
+  .scheduleCard:hover .schedule-list {
+    font-size: 8px;
+    top: 4vh;
+    left: -2.5vw;
+  }
+}
+
 @media screen and (max-width: 1110px) {
 
   .scheduleCard {
     top: 35%;
+  }
+
+  li {
+    margin-bottom: 1.6vh;
   }
 
   .feb8 {
@@ -379,11 +397,25 @@ li {
     top: 64%;
     left: 45.5%;
   }
-
+  
   .scheduleCard:hover .schedule-list {
     left: -3.5vw;
   }
 
+}
+
+@media screen and (max-width: 1010px) {
+  .scheduleCard:hover .schedule-date {
+    font-size: 10px;
+
+  }
+  .scheduleCard:hover .schedule-list {
+    top: 3vh;
+  }
+
+  li {
+    margin-bottom: 1.4vh;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -397,7 +429,8 @@ li {
 
   .scheduleCard:hover .schedule-list {
     font-size: 7px;
-    left: -5vw;
+    left: -2.5vw;
+    /* left: -5vw; */
   }
 
   li {
@@ -405,13 +438,13 @@ li {
   }
   
 }
-
+/* 
 @media screen and (max-width: 930px) {
   .scheduleCard:hover .schedule-list {
-    font-size: 8px;
+    font-size: 7px;
     left: -4.5vw;
   }
-}
+} */
 
 @media screen and (max-width: 900px) {
   .scheduleCard {
@@ -435,7 +468,7 @@ li {
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 840px) {
   .feb8 {
     left:21% ; 
   }
@@ -448,6 +481,10 @@ li {
   .feb12 {
     left: 46.5%;
   }
+
+  .scheduleCard:hover .schedule-list {
+    left: -4vw;
+  }
 }
 
 @media screen and (max-width: 790px) {
@@ -456,7 +493,7 @@ li {
   }
 
   li {
-    font-size: 8px;
+    /* font-size: 8px; */
     left: 30%;
   }
 
