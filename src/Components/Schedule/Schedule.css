@@ -20,18 +20,10 @@
   font-size: clamp(2.5rem, 1rem + 15vh, 4.5rem);
   font-family: 'SpaceBoards';
 }
-.scheduleDates {
-  position: absolute;
-  margin-top: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100vw;
-}
-.scheduleDates img {
+/* .scheduleDates img {
   opacity: 0.8;
   width: 25vw;
-  /* position: absolute; */
+  position: absolute;
 }
 .feb8,
 .feb9,
@@ -41,13 +33,13 @@
   position: absolute;
   top: 0;
   word-wrap: break-word;
-}
-.feb8 {
+} */
+/* .feb8 {
   left: 0;
 }
 .feb9 {
   left: 18.5vw;
-  /* background-color: #00000099; */
+  background-color: #00000099;
 }
 .feb10 {
   left: 37vw;
@@ -66,7 +58,7 @@
   color: cyan;
   font-size: clamp(1rem, 0.5rem + 3vw, 1.5rem);
   word-wrap: break-word;
-}
+} */
 
 
 
@@ -76,10 +68,10 @@
   /* border: 1px solid red; */
 }
 
-.polygon:hover  {
+/* .polygon:hover  {
   transform: scale(2);
   opacity: .65;
-}
+} */
 
 /* .feb:hover:after{
   content: attr(data-hover);
@@ -87,14 +79,14 @@
   font-size: .5rem;
 } */
 
-.feb {
+/* .feb {
   width: 15vw;
   font-size: 19px;
 }
 
 .feb::before{
   content: attr(data-before);
-}
+} */
 
 .polygon:hover + .feb::after {
   content: attr(data-hover);
@@ -103,7 +95,7 @@
 
 
 
-@media screen and (max-width: 1110px) {
+/* @media screen and (max-width: 1110px) {
 
   .feb {
     font-size: 20px;
@@ -246,26 +238,7 @@
   .scheduleHead {
     font-size: 48px;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 
 
@@ -281,13 +254,21 @@
   top: 40%;
   transition: all 0.4s;
   flex-direction:column;
+  justify-content: center;
 }
 
 .scheduleCard .schedule-list {
-  margin-top: 400px;
+  position: absolute;
+  top: 400px;
   opacity: 0;
   transition: all 0.6s;
   list-style: none;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 .feb8 {
@@ -326,6 +307,10 @@
   left: 45%;
 } */
 
+li {
+  margin-bottom: 2vh;
+}
+
 .scheduleCard:hover {
   transform: scale(2);
   background-color: none;
@@ -346,7 +331,312 @@
   left: 60%;
 }
 
+
 .scheduleCard:hover .schedule-list {
-  margin-top: 40px;
+  width: fit-content;
   opacity: 1;
+  font-size: 10px;
+  top: 5vh;
+  left: -1.5vw;
+}
+
+.temporary {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media screen and (max-width: 1360px) {
+  .scheduleCard:hover .schedule-list {
+    font-size: 9px;
+    left: -2.5vw;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+
+  .scheduleCard {
+    top: 35%;
+  }
+
+  .feb8 {
+    left: 23%;
+  }
+
+  .feb9 {
+    left: 40%;
+  }
+
+  .feb10 {
+    left: 57%;
+  }
+
+  .feb11 {
+    top: 64%;
+    left: 28.5%
+  }
+  .feb12 {
+    top: 64%;
+    left: 45.5%;
+  }
+
+  .scheduleCard:hover .schedule-list {
+    left: -3.5vw;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+  .scheduleCard{
+    width: 21vw;
+  }
+
+  .feb11, .feb12 {
+    top: 61%;
+  }
+
+  .scheduleCard:hover .schedule-list {
+    font-size: 7px;
+    left: -5vw;
+  }
+
+  li {
+    margin-bottom: 1vh;
+  }
+  
+}
+
+@media screen and (max-width: 930px) {
+  .scheduleCard:hover .schedule-list {
+    font-size: 8px;
+    left: -4.5vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .scheduleCard {
+    width: 22vw;
+  }
+  .feb8 {
+    left: 22%;
+  }
+  .feb10{
+    left: 58%;
+  }
+
+  .feb11 {
+    left: 28%;
+    top: 60%;
+  }
+  .feb12 {
+    left: 46%;
+    top: 60%;
+
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .feb8 {
+    left:21% ; 
+  }
+  .feb10 {
+    left: 59%;
+  }
+  .feb11 {
+    left: 27.5%;
+  }
+  .feb12 {
+    left: 46.5%;
+  }
+
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .schedule-date {
+    font-size: 14px;
+  }
+
+  li {
+    left: 30%;
+  }
+
+  p {
+    font-size: 8px;
+  }
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  .scheduleCard {
+    width: 25vw;
+  }
+
+  .feb8 {
+    left: 19%;
+  }
+  .feb10 {
+    left: 61%;
+  }
+
+  .feb11, .feb12 {
+    top: 56%;
+  }
+
+  .feb11 {
+    left:26%;
+  }
+
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width:690px) {
+  .scheduleCard {
+    width: 28vw;
+    height: 18vw;
+  }
+  .feb8 {
+    left: 17%;
+  }
+  .feb10 {
+    left: 63%;
+  }
+  .feb11 {
+    left: 23%
+  }
+
+  .feb11, .feb12 {
+    top: 58%;
+  }
+
+  .schedule-date {
+    font-size: 10px;
+  }
+
+  li {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .scheduleCard:hover .schedule-list {
+    left: -5.5vw;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .scheduleCard {
+    height: 19vw;
+  }
+
+  .feb11, .feb12 {
+    top: 56%;
+  }
+}
+
+@media screen and (max-width:530px) {
+  .scheduleCard {
+    width: 175px;
+    height: 110px;
+    top: 31%;
+  }
+  .feb8, .feb10{
+    left: 17.5%;
+  }
+
+  .feb9,.feb11 {
+    left: 50%;
+  }
+
+  .feb10, .feb11 {
+    top: 52.5%;
+  }
+
+  .feb12 {
+    left: 27.5%;
+    top: 74%;
+  }
+
+  .scheduleHead {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .feb8, .feb10{
+    left: 14%;
+  }
+
+  .feb9,.feb11 {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scheduleHead {
+    font-size: 45px;
+  }
+
+  .feb8, .feb10{
+    left: 7.5%;
+  }
+
+  .feb9,.feb11 {
+    left: 47.5%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .scheduleCard {
+    width: 150px;
+    height: 100px;
+  }
+
+  .feb10, .feb11 {
+    top: 51%;
+  }
+
+  .feb12 {
+    top: 71%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .scheduleHead {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .scheduleHead {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:220px) {
+  .scheduleHead {
+    font-size: 12px;
+  }
 }

@@ -60,8 +60,8 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                     <option value="Female">Female</option>
                     <option value="Others">Others</option>
                 </select><br></br>
-                {/* <label>Age</label><br></br>
-                <input type="number" name="age" id="age" value = {userdata.age} required/><br></br> */}
+                <label>Age</label><br></br>
+                <input type="number" name="age" id="age" required/><br></br>
                 <label>College/School Name</label><br></br>
                 <input type="text" name="college-school-name" id="clgsklname" required/><br></br>
                 <label>Grade</label><br />
