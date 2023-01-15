@@ -252,6 +252,7 @@ class Events extends React.Component {
 	
 	
 	render(){
+		
 		const eveno = this.state.eveno;
 		const clicked = this.state.clicked;
 		const clicked2 = this.state.clicked2;
@@ -1248,7 +1249,7 @@ class Events extends React.Component {
 					
 						<div className={clickedtwo||eventtwo||eventthree||eventfour||eventfive||eventsix||eventseven||eventeight||eventnine||clickedtwooff||eventtwooff||eventthreeoff||eventfouroff||eventfiveoff||eventsixoff||eventsevenoff||eventeightoff||eventnineoff||clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'eventzon':'eventzoff'}>
 						
-						<Eventcard  data={listData[eveno]} exiting={()=>{
+						<Eventcard  data={listData[eveno]} userdata={this.props.userdata} exiting={()=>{
 
 								this.setState({clickedtwo :false});
 								this.setState({eventtwo :false});

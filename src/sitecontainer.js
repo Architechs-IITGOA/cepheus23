@@ -156,7 +156,7 @@ const SiteContainer = () => {
       >
         <Home />
         <About />
-        <Events />
+        <Events userdata = {userdata} />
         <Schedule />
         <Sponsors />
         <Contact />

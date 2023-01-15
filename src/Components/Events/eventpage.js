@@ -5,12 +5,13 @@ import MediaQuery from "react-responsive";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function Eventcard({ data, exiting }) {
+export default function Eventcard({userdata, data, exiting }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
   const [join, setjoin] = useState(false);
   const [confirm, setconfirm] = useState(false);
   const [createTeamName, setCreateTeamName] = useState("");
+  const [createTeamNameind, setCreateTeamNameind] = useState("");
   const [joinTeamCode, setJoinTeamCode] = useState("");
 
   const handleTeamCreation = (e) => {
@@ -21,7 +22,7 @@ export default function Eventcard({ data, exiting }) {
       .post(
         "https://backendcepheus.cf/apiM2/createteam",
         {
-          event_id: 1,
+          event_id: "1",
           team_name: createTeamName,
         },
         { withCredentials: true }
@@ -30,17 +31,11 @@ export default function Eventcard({ data, exiting }) {
         console.log(res.data);
         teamcode = res.data.team_code;
         // success();
-      })
-      .catch((err) => {
-        console.log(err);
-        // error();
-      });
-
-      axios
+        axios
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
-          event_id: 1,
+          event_id: "1",
           team_code: teamcode,
         },
         { withCredentials: true }
@@ -53,6 +48,54 @@ export default function Eventcard({ data, exiting }) {
         console.log(err);
         // error();
       });
+      })
+      .catch((err) => {
+        console.log(err);
+        // error();
+      });
+
+      
+  };
+  const handleTeamCreationind = (e) => {
+    e.preventDefault();
+    let teamcodeind;
+    axios
+      .post(
+        "https://backendcepheus.cf/apiM2/createteam",
+        {
+          event_id: "15",
+          team_name: userdata.email,
+        },
+        { withCredentials: true }
+      )
+      .then((res) => {
+        console.log(res.data);
+        teamcodeind = res.data.team_code;
+        // success();
+        axios
+      .post(
+        "https://backendcepheus.cf/apiM2/regevent",
+        {
+          event_id: 15,
+          team_code: teamcodeind,
+        },
+        { withCredentials: true }
+      )
+      .then((res) => {
+        console.log(res.data);
+        // success();
+      })
+      .catch((err) => {
+        console.log(err);
+        // error();
+      });
+      })
+      .catch((err) => {
+        console.log(err);
+        // error();
+      });
+
+      
   };
 
   const handleJoinTeamCode = (e) => {
@@ -77,11 +120,15 @@ export default function Eventcard({ data, exiting }) {
       });
   };
 
-  const register = () => {
+  const register = (e) => {
     if (teamSize > 1) {
       setclicked(true);
     } else {
       console.log("individual event");
+      setCreateTeamNameind(userdata.email);
+      console.log(userdata.email)
+      handleTeamCreationind(e);
+      console.log("succes yeah!!")  
     }
   };
   // const close = () =>{
@@ -169,7 +216,7 @@ export default function Eventcard({ data, exiting }) {
                   </center>
                 </div>
                 <center>
-                  <button id="button-right" onClick={register}>
+                  <button id="button-right" onClick={(e) => register(e)}>
                     Register
                   </button>
                 </center>
