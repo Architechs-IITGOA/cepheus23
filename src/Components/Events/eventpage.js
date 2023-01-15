@@ -230,7 +230,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
                     Team Size: {data.teamsize}
                   </h3>
                   {/* <br></br> */}
-                  <h3 style={{ marginTop: "7px" }} id="sub-left-head">
+                  <h3 style={{ marginTop: "7px",color:'#acc3e8' }} id="sub-left-head">
                     Contact:Event Coheads
                   </h3>
                   <h4 id="sub-sub-left-head">{data.left1}</h4>
@@ -258,7 +258,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
                         Team Size: {data.teamsize}
                       </h3>
                       {/* <br></br> */}
-                      <h3 style={{ color: "#FCC200" }}>
+                      <h3 style={{ color: "#acc3e8" }}>
                         Contact:Event Coheads
                       </h3>
                       <h4>{data.left1}</h4>
