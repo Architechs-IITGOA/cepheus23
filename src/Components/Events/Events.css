@@ -107,14 +107,14 @@
 }
 
 .events .events-bg{
-  background-image: url("./Events-Images/new_bg1.png");
+  background-image: url("./Events-Images/final_bg_1_2.png");
   /* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083349/cepheus23/events_page_fxkfcz.webp"); */
   background-size: cover;
   background-repeat: repeat-y;
   margin: 0px;
   height: 100vh;
   width: 100vw;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .events-blur{
@@ -238,7 +238,7 @@ cursor: pointer;
 }
 .nav-dots2aft {
 position: fixed;
-top: 48.5%;
+top: 56.5%;
 right: 4%;
 transform: translateY(-50%);
 margin: 0;
@@ -248,7 +248,7 @@ cursor: pointer;
 }
 .nav-dots1aft {
 position: fixed;
-top: 50%;
+top: 58.5%;
 right: 4%;
 transform: translateY(-50%);
 margin: 0;
@@ -673,7 +673,7 @@ transition:0.2s;
 }
 
 .events-bg1{
-background-image: url("./Events-Images/evemobbg.jpeg");
+background-image: url("./Events-Images/final_bg_1.png");
 /* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083334/cepheus23/bg-mob_r6jnsf.webp"); */
   background-size: cover;
   background-repeat: repeat-y;
@@ -753,7 +753,7 @@ font-style: normal;
 #blur{
   width:950px;
   background: rgba(255, 255, 255, 0.15);
-  height:500px;
+  height:425px;
   margin-top:-2.4%;
   backdrop-filter:blur(10px);
   border-radius:15px;
@@ -1045,10 +1045,10 @@ font-style: normal;
   }
   
   .events .events-bg{
-    background-image: url("./Events-Images/evemobbg.jpeg");
+    background-image: url("./Events-Images/final_bg_1.png");
   }
   .events-bg1{
-    background-image: url("./Events-Images/evemobbg.jpeg");
+    background-image: url("./Events-Images/final_bg_1.png");
   }
   .firstpagelist{
     margin-top: 15vh;
@@ -1462,6 +1462,53 @@ font-style: normal;
 }
 
 
+
+
+.myStyleh2{
+  position: relative;
+  /* width: 435px; */
+  height: 77px;
+  top: 20px;
+ 
+  font-family: 'SpaceBoards';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 350%;
+  line-height: 77px;
+  /* identical to box height */
+ 
+ 
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+}
+@media (max-width: 900px){
+    .myStyleh2{
+    font-size: 320%;
+  }
+}
+@media (max-width: 700px){
+    .myStyleh2{
+    font-size: 290%;
+    top: 25px;
+  }
+}
+ 
+@media (max-width: 600px){
+    .myStyleh2{
+    font-size: 220%;
+    top: 25px;
+  }
+ }
+ 
+@media (max-width: 320px){
+  .myStyleh2{
+    font-size: 180%;
+    top: 10px;
+  }
+}
 
 
 

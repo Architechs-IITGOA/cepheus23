@@ -40,6 +40,9 @@
 
 .profile-left .profile-image {
     width: 200px;
+    height: 200px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
     margin-bottom: 11.5%;
 }
 

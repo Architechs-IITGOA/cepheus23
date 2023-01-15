@@ -1,5 +1,5 @@
 .schedule {
-  background-image: url(../../../public/img/CepheusBackgrounds[Recovered]_tech.png);
+  background-image: url(../../../public/img/CepheusBackgrounds[Recovered]_tech.jpg);
   background-size: cover;
   width: 100%;
   background-position: center;
@@ -19,6 +19,9 @@
   /* text-align: center; */
   font-size: clamp(2.5rem, 1rem + 15vh, 4.5rem);
   font-family: 'SpaceBoards';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 350%;
 }
 /* .scheduleDates img {
   opacity: 0.8;
@@ -668,5 +671,27 @@ li {
 @media screen and (max-width:220px) {
   .scheduleHead {
     font-size: 12px;
+  }
+}
+@media (max-width: 900px){
+    .scheduleHead{
+    font-size: 320%;
+  }
+}
+@media (max-width: 700px){
+  .scheduleHead{
+    font-size: 290%;
+  }
+}
+ 
+@media (max-width: 600px){
+  .scheduleHead{
+    font-size: 220%;
+  }
+ }
+ 
+@media (max-width: 320px){
+  .scheduleHead{
+    font-size: 180%;
   }
 }

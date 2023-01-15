@@ -34,7 +34,7 @@ const event_names = [
 
 const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
-export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked, setUserdata,success_logout}) {
+export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked, setUserdata,success_logout, isUserRegistered, setUserRegistered}) {
 
     const clientId = '218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com';
     useEffect(() => {
@@ -53,13 +53,14 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
         })}
     , []);
     
-    console.log(userdata.regevents);
-
+    // console.log(userdata.regevents);
+    console.log(userdata.imgurl.substr(userdata.imgurl.length-4, userdata.imgurl.length-1));
     return (
         <div class={isProfileClicked ? "profile profile-active" : "profile"}>
             <img src="" alt=""></img>
             <div class="profile-left">
-                <img src={userdata.imgurl} alt="avatar" class="profile-image"></img>
+                <img src={userdata.imgurl.substr(userdata.imgurl.length-4, userdata.imgurl.length-1)==="null"? "img/user_placeholder.png" : userdata.imgurl} alt="avatar" class="profile-image"></img>
+                {/* src={userdata.imgurl.substr(userdata.imgurl.length-5, userdata.imgurl.length-1)==="null"? "img/user_placeholder.png" : userdata.imgurl)} */}
                 <img src="img/profile_name_border.png" alt="" class="name-border"></img>
                 
                 <p class="name">{userdata.firstName}</p>
@@ -98,7 +99,7 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
                         )}
                             clientId={clientId}
                             buttonText="Logout"
-                            onLogoutSuccess={() => {console.log('loggedout successfully');success_logout();auth_reset()}}
+                            onLogoutSuccess={() => {console.log('loggedout successfully');success_logout();auth_reset();setEditProfile(false); setUserRegistered(true)}}
                             onLogoutFailure={(err) => {console.log(err);auth_continue()}}
                         />
                         

@@ -16,7 +16,8 @@
 .contact-heading {
     margin-top: 120px;
     font-family: SpaceBoards;
-    font-size: 36px;
+    font-size: 350%;
+    font-weight: 400;
 }
 
 .contact-content {
@@ -64,3 +65,27 @@
         height: 150px;
     }
 }
+
+@media (max-width: 900px){
+    .contact-heading{
+      font-size: 320%;
+    }
+  }
+@media (max-width: 700px){
+    .contact-heading{
+      font-size: 290%;
+    }
+  }
+   
+@media (max-width: 600px){
+    .contact-heading{
+      font-size: 220%;
+    }
+   }
+   
+@media (max-width: 320px){
+    .contact-heading{
+      font-size: 180%;
+    }
+  }
+  

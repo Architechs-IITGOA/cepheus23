@@ -134,7 +134,7 @@ export default function Contact() {
   }
   return(
     <div class="contact-us" id="Contact">
-      <h1 class="contact-heading">CONTACT US</h1>
+      <h1 class="contact-heading">Contact Us</h1>
       <div class="contact-content">
         <div class="contact-full-card">
           <MainCard data={displayData}/>

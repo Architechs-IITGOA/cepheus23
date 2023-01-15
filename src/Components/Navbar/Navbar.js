@@ -131,7 +131,7 @@ export default function Navbar({
         <div style={success?{display:'block'}:{display:'none'}}>
         <img
           style={successor ? { display: "block" } : { display: "none" }}
-          src={userdata.imgurl}
+          src={userdata.imgurl.substr(userdata.imgurl.length-4, userdata.imgurl.length-1)==="null"? "img/user_placeholder.png" : userdata.imgurl}
           alt="avatar"
           onClick={() => handleProfileClick()}
         ></img>

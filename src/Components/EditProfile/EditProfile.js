@@ -1,11 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import "./EditProfile.css"
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
 export default function EditProfile({isEditProfile, userdata, setEditProfile, setUserdata,success, error}){
+    const [name, setName] = useState(userdata.name);
+    const [gender, setGender] = useState(userdata.gender);
+    const [age, setAge] = useState();
+    const [college, setCollege] = useState(userdata.college);
+    const [grade, setGrade] = useState(userdata.grade);
+    const [contact, setContact] = useState(userdata.mobile);
     const HandleEditProfile = (e) => {
         setEditProfile(false);
         e.preventDefault();
@@ -50,22 +56,22 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
             <h2>Edit Profile</h2>
             <form action="post" onSubmit={(e) => HandleEditProfile(e)}>
                 <label>Full Name</label><br></br>
-                <input type="text" name="name" id="name"/><br></br>
+                <input type="text" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)}/><br></br>
                 <label>Email</label><br></br>
                 <input type="email" name="email" id="email" value={userdata.email} disabled/><br></br>
                 <label>Gender</label><br></br>
                 {/* <input type="text" name="gender" id="gender" placeholder="Enter your gender here" required/><br></br> */}
-                <select name="gender" id="gender">
+                <select name="gender" id="gender" value={gender} onChange={(e) => setGender(e.target.value)}>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Others">Others</option>
                 </select><br></br>
                 <label>Age</label><br></br>
-                <input type="number" name="age" id="age" required/><br></br>
+                <input type="number" name="age" id="age" value={age} onChange={(e) => setAge(e.target.value)} required/><br></br>
                 <label>College/School Name</label><br></br>
-                <input type="text" name="college-school-name" id="clgsklname" required/><br></br>
+                <input type="text" name="college-school-name" id="clgsklname" value={college} onChange={(e) => setCollege(e.target.value)} required/><br></br>
                 <label>Grade</label><br />
-                <select name="grade" id="grade">
+                <select name="grade" id="grade" value={grade} onChange={(e) => setGrade(e.target.value)}>
                     <option value="8">8th</option>
                     <option value="9">9th</option>
                     <option value="10">10th</option>
@@ -77,7 +83,7 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                 </select><br></br>
                 {/* <input type="number" name="grade" id="grade" placeholder="Enter your grade or program name here, e.g., BTech or 10th" required/><br /> */}
                 <label>Contact Number</label><br></br>
-                <input type="text" name="contact" id="contact" required/><br></br>
+                <input type="text" name="contact" id="contact" value= {contact} onChange={(e) => setContact(e.target.value)}required/><br></br>
                 <button type="submit">Update</button>
             </form>
             <button type="cancel" class="edit-cancel" onClick={() => setEditProfile(false)}>Cancel</button>

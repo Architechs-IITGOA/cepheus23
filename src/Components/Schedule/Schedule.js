@@ -1,12 +1,11 @@
 import React from "react";
 import "./Schedule.css";
-import polygon from "../Schedule/Polygon 2.png";
 
 export default function Schedule() {
   return (
     <>
       <div className="schedule" id="Schedule">
-        <div className="scheduleHead">SCHEDULE</div>
+        <div className="scheduleHead">Schedule</div>
         <div className="scheduleCards">
           <div className="scheduleCard feb8">
             <p className="schedule-date">8 February</p>

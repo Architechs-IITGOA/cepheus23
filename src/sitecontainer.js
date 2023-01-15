@@ -125,8 +125,19 @@ const SiteContainer = () => {
           setEditProfile={setEditProfile}
           setProfileClicked={setProfileClicked}
           success_logout = {success_logout}
+          isUserRegistered = {isUserRegistered}
+          setUserRegistered = {setUserRegistered}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
+        {/* <EditProfile
+            isEditProfile={isEditProfile}
+            userdata={userdata}
+            setEditProfile={setEditProfile}
+            setUserdata={setUserdata}
+            success={success_toast_edit}
+            reg_failed={reg_failed}
+            error={error}
+          /> */}
         {isEditProfile ? (
           <EditProfile
             isEditProfile={isEditProfile}

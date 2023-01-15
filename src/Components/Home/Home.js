@@ -9,6 +9,8 @@ import pink from "../Home/fullPink.png";
 import land from "../Home/land.png";
 const Home = () => {
   const ref = useRef();
+  const date = new Date('February 8, 2023 00:00:00').getTime();
+
   return (
     <div className="home" id="Home">
       <Parallax className="home" pages={4} ref={ref}>
@@ -41,7 +43,7 @@ const Home = () => {
           <img className="pink" src={pink} alt="" />
           <div className="thirdHome">
             <div className="journey"> THE JOURNEY BEGINS IN</div>
-            <div className="clock"><Countdown className="clock" date={Date.now() + 3000000000} /></div>
+            <div className="clock"><Countdown className="clock" date={Date.now() + (date - Date.now())} /></div>
           </div>
           <img className="land" src={land} alt="" />
         </ParallaxLayer>

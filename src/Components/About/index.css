@@ -17,6 +17,8 @@ body {
   align-items: center;
   scroll-snap-align: start;
   overflow: hidden;
+  overflow-y: scroll;
+  
 }
 
 .myStyleh1{
