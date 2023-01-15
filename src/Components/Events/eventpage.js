@@ -342,7 +342,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
               <label className={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Team Code : {display_team_code}</label>
               <br />
               <br />
-              <div className={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Please save this team code and share it with your teamaters to join the team</div>
+              <div className={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Please save this team code and share it with your teamates to join the team</div>
               <br></br>
             </center>
           </div>
