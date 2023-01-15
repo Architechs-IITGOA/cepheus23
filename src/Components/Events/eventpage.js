@@ -363,7 +363,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
               />
               <br></br>
               <button
-                //   id="reg_team1"
+                  id="reg_team1001"
                 onClick={(e) => handleJoinTeamCode(e)}
               >
                 Next
