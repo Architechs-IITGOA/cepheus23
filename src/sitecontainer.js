@@ -66,7 +66,7 @@ const SiteContainer = () => {
     email: "",
     imgurl: ""
   });
-
+  const [islogin,setislogin] = useState(false);
   const handleProfileClick = () => {
     setProfileClicked(!isProfileClicked);
   };
@@ -96,6 +96,7 @@ const SiteContainer = () => {
   const success_jointeam= () => toast.success("Joined team Successfully!");
   const success_regevent= () => toast.success("Successfully registed!");
   const success_logout= () => toast.success("Successfully logged out!");
+  const notlogin = () => toast.error("Please login before register");
   const reg_failed = (err) => toast.error(err.toUpperCase());
   // const wrong_mail = () => toast.warning("Please enter a valid email");
   const error = (err) => toast.error(err);
@@ -115,6 +116,7 @@ const SiteContainer = () => {
           success={success}
           reg_failed={reg_failed}
           error={error}
+          setislogin={setislogin}
         />
         <Profile
           isProfileClicked={isProfileClicked}
@@ -127,6 +129,7 @@ const SiteContainer = () => {
           success_logout = {success_logout}
           isUserRegistered = {isUserRegistered}
           setUserRegistered = {setUserRegistered}
+          setislogin = {setislogin}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
         {/* <EditProfile
@@ -174,7 +177,7 @@ const SiteContainer = () => {
       >
         <Home />
         <About />
-        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} setUserdata={setUserdata} />
+        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} setUserdata={setUserdata} islogin = {islogin} notlogin ={notlogin}  />
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />

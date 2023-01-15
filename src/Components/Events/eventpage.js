@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error,setUserdata, exiting }) {
+export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error,setUserdata,islogin,notlogin, exiting }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
   const [join, setjoin] = useState(false);
@@ -59,6 +59,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           })
           .catch((err) => {
             console.log(err);
+            error(err.response.data.message);
           })
         success_createteam();
         // success();
@@ -116,6 +117,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           })
           .catch((err) => {
             console.log(err);
+            error(err.response.data.message);
           })
         // success();
       })
@@ -169,7 +171,8 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
   };
 
   const register = (e) => {
-    if (teamSize > 1) {
+    if(!islogin) notlogin()
+    else if (teamSize > 1) {
       setclicked(true);
     } else {
       console.log("individual event");
@@ -363,10 +366,10 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
               />
               <br></br>
               <button
-                  id="reg_team1001"
+                  id="reg_team1"
                 onClick={(e) => handleJoinTeamCode(e)}
               >
-                Next
+                Submit
               </button>
             </div>
             <div className={confirm ? "create_active" : "create_inactive"}>

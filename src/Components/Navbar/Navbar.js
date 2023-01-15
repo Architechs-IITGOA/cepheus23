@@ -21,7 +21,8 @@ export default function Navbar({
   isMenuClicked,
   setMenuClicked,
   setUserRegistered,
-  success, reg_failed, error
+  success, reg_failed, error,
+  setislogin
 }) {
   const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
@@ -35,7 +36,6 @@ export default function Navbar({
     };
     gapi.load('client:auth2', initClient);
 });
-
   const responseGoogle = (response) => {
     console.log(response);
 
@@ -47,6 +47,7 @@ export default function Navbar({
       tokenId: response.tokenId
     }));
     auth_start();
+    setislogin(true);
     axios.post("https://backendcepheus.cf/apiM2/login",
     {idToken: response.tokenId},
     {withCredentials: true})
