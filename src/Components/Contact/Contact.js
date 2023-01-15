@@ -84,7 +84,7 @@ const contactDetails = [
   },
   {
     name: "Shreya yadav",
-    role: "Desgin Head",
+    role: "Design Head",
     email: "shreya.yadav.20031@iitgoa.ac.in",
     phone: "9431011303",
     photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673264431/chepheus/ShreyaYadav-DesignHead-9431011303_sllh5l.webp"
