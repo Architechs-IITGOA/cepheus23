@@ -102,7 +102,14 @@ const contactDetails = [
     email: "diya.bhagat.20063@iitgoa.ac.in",
     phone: "8102115698",
     photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673284871/chepheus/DiyaBhagat-DecorationHead-8102115698_1_r80vhu.webp"
-  }
+  },
+  {
+    name: "Krishnaveni Unnikrishnan",
+    role: "Content Head",
+    email: "krishnaveni.unnikrishnan.20063@iitgoa.ac.in",
+    phone: "7736017928",
+    photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673774228/chepheus/Krishnaveni_Unnikrishnan_ContentHead__7736017928_ptnbqz.webp"
+  },
 ];
 
 export default function Contact() {
