@@ -99,7 +99,7 @@ const SiteContainer = () => {
   // const wrong_mail = () => toast.warning("Please enter a valid email");
   const error = (err) => toast.error(err);
   return (
-    <div>
+    <div baseurl>
       <div>
         <Navbar
           handleProfileClick={handleProfileClick}

@@ -30,7 +30,7 @@ export default function Navbar({
     const initClient = () => {
         gapi.client.init({
             clientId: clientId,
-            scope: 'openid'
+            scope: 'email profile openid'
         });
     };
     gapi.load('client:auth2', initClient);
