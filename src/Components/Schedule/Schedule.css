@@ -240,10 +240,14 @@
   }
 } */
 
+.scheduleCards{
+  border: 1px solid red;
+}
 
 
-
-
+.scheduleCard{
+  border: 1px solid blue;
+}
 
 
 
@@ -260,6 +264,7 @@
   top: 40%;
   transition: all 0.4s;
   flex-direction:column;
+  justify-content: center;
 }
 
 .scheduleCard .schedule-list {
@@ -336,9 +341,6 @@ li {
   left: 60%;
 }
 
-.schedule-list {
-  /* border: 1px solid red; */
-}
 
 .scheduleCard:hover .schedule-list {
   width: fit-content;
@@ -536,6 +538,85 @@ li {
 
 @media screen and (max-width:530px) {
   .scheduleCard {
-    height: 21vw;
+    width: 175px;
+    height: 110px;
+    top: 31%;
+  }
+  .feb8, .feb10{
+    left: 17.5%;
+  }
+
+  .feb9,.feb11 {
+    left: 50%;
+  }
+
+  .feb10, .feb11 {
+    top: 52.5%;
+  }
+
+  .feb12 {
+    left: 27.5%;
+    top: 74%;
+  }
+
+  .scheduleHead {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .feb8, .feb10{
+    left: 14%;
+  }
+
+  .feb9,.feb11 {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .scheduleHead {
+    font-size: 45px;
+  }
+
+  .feb8, .feb10{
+    left: 7.5%;
+  }
+
+  .feb9,.feb11 {
+    left: 47.5%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .scheduleCard {
+    width: 150px;
+    height: 100px;
+  }
+
+  .feb10, .feb11 {
+    top: 51%;
+  }
+
+  .feb12 {
+    top: 71%;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .scheduleHead {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .scheduleHead {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:220px) {
+  .scheduleHead {
+    font-size: 12px;
   }
 }
