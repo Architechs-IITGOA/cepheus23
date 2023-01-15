@@ -11,35 +11,37 @@ const Home = () => {
   const ref = useRef();
   return (
     <div className="home">
-      <Parallax className="home" pages={3} ref={ref}>
+      <Parallax className="home" pages={4} ref={ref}>
         <ParallaxLayer
-          sticky={{ start: 0, end: 0.4 }}
-          factor={2}
+          sticky={{ start: 0, end: 1.3 }}
           offset={0}
-          speed={2}
         >
           <img className="bluePlanet" src={bluePlanet} alt="" />
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={1.5}>
-          <img className="rocket" src={rocket} alt="" />
+        <ParallaxLayer offset={0} >
           <div className="title">
+          <img className="rocket" src={rocket} alt="" />
+
             <div className="heading">CEPHEUS</div>
             <div className="subHeading">TECHNICAL FEST OF IIT GOA</div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer offset={1} speed={0.5}>
+
+        <ParallaxLayer   offset={2} >
+          <div className="homeSecond">
           <img className="pinkPlanet" src={pink} alt="" />
           <div className="theme">OUR <br/> THEME</div>
+          </div>
           <div className="themeDes">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Dignissimos ipsam, in, ea repellendus unde, quia a soluta molestias
             eius id quibusdam perferendis? Nemo accusamus et aliquid ab eligendi
             recusandae cupiditate?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates ut dolore inventore quidem laboriosam vero doloribus saepe assumenda eveniet autem voluptatibus quod, dolorum suscipit, voluptatum aliquam, asperiores nemo libero?
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={1}>
-          {" "}
+        <ParallaxLayer  offset={3} >
           <img className="pink" src={pink} alt="" />
           <div className="thirdHome">
             <div className="journey"> THE JOURNEY BEGINS IN</div>
