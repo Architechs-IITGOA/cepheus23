@@ -78,6 +78,7 @@ export default function Navbar({
     // setsuccess(false);
   };
   return (
+    <div>
     <div className="navbar">
       <div class="navbar-logo">
         <img src="img/cepheus_logo.jfif" alt=""></img>
@@ -93,7 +94,7 @@ export default function Navbar({
         <a href="#About">About</a>
         <a href="#Events">Events</a>
         <a href="#Schedule">Schedule</a>
-        <a href="#Sponsors">Sponsors</a>
+        {/* <a href="#Sponsors">Sponsors</a> */}
         <a href="#Contact">Contact</a>
         <div style={successor ? { display: "none" } : { display: "inline-flex" }}>
           <GoogleLogin
@@ -124,7 +125,8 @@ export default function Navbar({
         ></img>
         </div>
       </div>
-      <ToastContainer 
+    </div>
+    <div><ToastContainer 
                 className="toastbar"
                 position="bottom-right"
                 autoClose={3000}
@@ -135,7 +137,7 @@ export default function Navbar({
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover={true}
-            />
-    </div>
+            /></div>
+            </div>
   );
 }

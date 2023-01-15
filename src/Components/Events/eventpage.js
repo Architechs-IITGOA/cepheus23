@@ -29,14 +29,7 @@ export default function Eventcard({ data, exiting }) {
       .then((res) => {
         console.log(res.data);
         teamcode = res.data.team_code;
-        // success();
-      })
-      .catch((err) => {
-        console.log(err);
-        // error();
-      });
-
-      axios
+        axios
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
@@ -47,6 +40,12 @@ export default function Eventcard({ data, exiting }) {
       )
       .then((res) => {
         console.log(res.data);
+        // success();
+      })
+      .catch((err) => {
+        console.log(err);
+        // error();
+      });
         // success();
       })
       .catch((err) => {
