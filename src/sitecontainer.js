@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
 
-const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
 const avatar_male = [
   {
@@ -90,10 +90,14 @@ const SiteContainer = () => {
   const authorisation_failure = () => {
     setsuccess(false);
   };
-  const success_toast = () => toast.success("Registration Successful!");
-  const reg_failed = () => toast.error("Registration Failed! Please try again");
+  const success_toast_reg = () => toast.success("Registration Successful!");
+  const success_toast_edit = () => toast.success("Profile edit Successful!");
+  const success_createteam= () => toast.success("Team Created Successfully!");
+  const success_jointeam= () => toast.success("Joined team Successfully!");
+  const success_regevent= () => toast.success("Successfully registed!");
+  const reg_failed = (err) => toast.error(err.toUpperCase());
   // const wrong_mail = () => toast.warning("Please enter a valid email");
-  const error = () => toast.error("Error occurred! Please try again.");
+  const error = (err) => toast.error(err);
   return (
     <div>
       <div>
@@ -127,7 +131,7 @@ const SiteContainer = () => {
             userdata={userdata}
             setEditProfile={setEditProfile}
             setUserdata={setUserdata}
-            success={success_toast}
+            success={success_toast_edit}
             reg_failed={reg_failed}
             error={error}
           />
@@ -143,7 +147,7 @@ const SiteContainer = () => {
             userdata={userdata}
             setUserRegistered={setUserRegistered}
             setUserdata={setUserdata}
-            success={success_toast}
+            success={success_toast_reg}
             reg_failed={reg_failed}
             error={error}
             avatar_female = {avatar_female}
@@ -157,7 +161,7 @@ const SiteContainer = () => {
       >
         <Home />
         <About />
-        <Events userdata = {userdata} />
+        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} />
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />

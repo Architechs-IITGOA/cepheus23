@@ -500,6 +500,13 @@ li {
   p {
     font-size: 8px;
   }
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -525,6 +532,14 @@ li {
   .feb11 {
     left:26%;
   }
+
+  .schedule-date {
+    font-size: 13px;
+  }
+
+  li {
+    font-size: 7px;
+  }
 }
 
 @media screen and (max-width:690px) {
@@ -544,6 +559,14 @@ li {
 
   .feb11, .feb12 {
     top: 58%;
+  }
+
+  .schedule-date {
+    font-size: 10px;
+  }
+
+  li {
+    font-size: 6px;
   }
 }
 

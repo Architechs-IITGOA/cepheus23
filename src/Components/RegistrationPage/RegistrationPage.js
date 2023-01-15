@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import "./RegistrationPage.css"
 import axios from "axios";
 axios.defaults.withCredentials = true;
-const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
 export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata,success, reg_failed, error, avatar_male, avatar_female}){
     const HandleRegistrationData = (e) => {

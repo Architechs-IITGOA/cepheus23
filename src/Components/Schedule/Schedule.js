@@ -5,7 +5,7 @@ import polygon from "../Schedule/Polygon 2.png";
 export default function Schedule() {
   return (
     <>
-      <div className="schedule">
+      <div className="schedule" id="Schedule">
         <div className="scheduleHead">SCHEDULE</div>
         <div className="scheduleCards">
           <div className="scheduleCard feb8">

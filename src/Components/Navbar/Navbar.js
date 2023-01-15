@@ -9,7 +9,7 @@ import axios from "axios";
 import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 axios.defaults.withCredentials = true;
 
-const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
 export default function Navbar({
   handleProfileClick,
