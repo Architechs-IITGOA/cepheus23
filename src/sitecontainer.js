@@ -4,11 +4,11 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Events from "./Components/Events/Events";
 import Schedule from "./Components/Schedule/Schedule";
-import Sponsors from "./Components/Sponsors/Sponsors";
+// import Sponsors from "./Components/Sponsors/Sponsors";
 import Contact from "./Components/Contact/Contact";
 import Profile from "./Components/Profile/Profile";
 import RegistrationPage from "./Components/RegistrationPage/RegistrationPage";
-import EditProfile from "./Components/About/EditProfile/EditProfile";
+import EditProfile from "./Components/EditProfile/EditProfile";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
@@ -116,6 +116,7 @@ const SiteContainer = () => {
           auth_continue={authorisation_continue}
           auth_reset={authorisation_reset}
           userdata={userdata}
+          setUserdata={setUserdata}
           setEditProfile={setEditProfile}
           setProfileClicked={setProfileClicked}
         />
@@ -131,11 +132,11 @@ const SiteContainer = () => {
             error={error}
           />
         ) : null}
-        {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
+        <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
           reg_failed={reg_failed}
           error={error}
           avatar_female = {avatar_female}
-            avatar_male = {avatar_male}/> */}
+            avatar_male = {avatar_male}/>
         {isUserRegistered ? null : (
           <RegistrationPage
             isUserRegistered={isUserRegistered}
@@ -158,7 +159,7 @@ const SiteContainer = () => {
         <About />
         <Events userdata = {userdata} />
         <Schedule />
-        <Sponsors />
+        {/* <Sponsors /> */}
         <Contact />
       </div>
     </div>

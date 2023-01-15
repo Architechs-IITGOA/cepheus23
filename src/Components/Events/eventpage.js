@@ -63,7 +63,7 @@ export default function Eventcard({userdata, data, exiting }) {
       .post(
         "https://backendcepheus.cf/apiM2/createteam",
         {
-          event_id: "15",
+          event_id: "19",
           team_name: userdata.email,
         },
         { withCredentials: true }
@@ -76,7 +76,7 @@ export default function Eventcard({userdata, data, exiting }) {
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
-          event_id: 15,
+          event_id: 19,
           team_code: teamcodeind,
         },
         { withCredentials: true }

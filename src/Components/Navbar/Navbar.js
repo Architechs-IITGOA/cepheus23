@@ -93,7 +93,7 @@ export default function Navbar({
         <a href="#About">About</a>
         <a href="#Events">Events</a>
         <a href="#Schedule">Schedule</a>
-        <a href="#Sponsors">Sponsors</a>
+        {/* <a href="#Sponsors">Sponsors</a> */}
         <a href="#Contact">Contact</a>
         <div style={successor ? { display: "none" } : { display: "inline-flex" }}>
           <GoogleLogin
@@ -124,18 +124,20 @@ export default function Navbar({
         ></img>
         </div>
       </div>
+      <div className="toast-container-div">
       <ToastContainer 
-                className="toastbar"
-                position="bottom-right"
-                autoClose={3000}
-                hideProgressBar={true}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover={true}
-            />
+    className="toastbar"
+    position="bottom-right"
+    autoClose={3000}
+    hideProgressBar={true}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover={true}
+/>
+</div>
     </div>
   );
 }
