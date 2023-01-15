@@ -64,6 +64,19 @@ export default function Navbar({
           imgurl: link_initial + res.data.image_url
         }));
         console.log(userdata);
+        axios.post("https://backendcepheus.cf/apiM2/getreg",
+          {},
+          {withCredentials: true})
+          .then((res) => {
+            console.log(res.data);
+            setUserdata((userdata) => ({
+              ...userdata,
+              regevents: res.data.regevents
+            }))
+          })
+          .catch((err) => {
+            console.log(err);
+          })
       }
     })
     .catch((err) => {

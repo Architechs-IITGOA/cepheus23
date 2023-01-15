@@ -95,6 +95,7 @@ const SiteContainer = () => {
   const success_createteam= () => toast.success("Team Created Successfully!");
   const success_jointeam= () => toast.success("Joined team Successfully!");
   const success_regevent= () => toast.success("Successfully registed!");
+  const success_logout= () => toast.success("Successfully logged out!");
   const reg_failed = (err) => toast.error(err.toUpperCase());
   // const wrong_mail = () => toast.warning("Please enter a valid email");
   const error = (err) => toast.error(err);
@@ -123,6 +124,7 @@ const SiteContainer = () => {
           setUserdata={setUserdata}
           setEditProfile={setEditProfile}
           setProfileClicked={setProfileClicked}
+          success_logout = {success_logout}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
         {isEditProfile ? (
@@ -161,7 +163,7 @@ const SiteContainer = () => {
       >
         <Home />
         <About />
-        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} />
+        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} setUserdata={setUserdata} />
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />

@@ -1,11 +1,12 @@
 import "./Events.css";
 import React, { useState } from "react";
 import MediaQuery from "react-responsive";
+import { useEffect } from "react";
 // import axios from "axios";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error, exiting }) {
+export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error,setUserdata, exiting }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
   const [join, setjoin] = useState(false);
@@ -46,6 +47,19 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
         console.log(res.data);
         setdisplay_team_code(teamcode);
         setdisplayteamcode(true);
+        axios.post("https://backendcepheus.cf/apiM2/getreg",
+          {},
+          {withCredentials: true})
+          .then((res) => {
+            console.log(res.data);
+            setUserdata((userdata) => ({
+              ...userdata,
+              regevents: res.data.regevents
+            }))
+          })
+          .catch((err) => {
+            console.log(err);
+          })
         success_createteam();
         // success();
       })
@@ -90,6 +104,19 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .then((res) => {
         console.log(res.data);
         success_regevent();
+        axios.post("https://backendcepheus.cf/apiM2/getreg",
+          {},
+          {withCredentials: true})
+          .then((res) => {
+            console.log(res.data);
+            setUserdata((userdata) => ({
+              ...userdata,
+              regevents: res.data.regevents
+            }))
+          })
+          .catch((err) => {
+            console.log(err);
+          })
         // success();
       })
       .catch((err) => {
@@ -119,6 +146,19 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       )
       .then((res) => {
         console.log(res.data);
+        axios.post("https://backendcepheus.cf/apiM2/getreg",
+          {},
+          {withCredentials: true})
+          .then((res) => {
+            console.log(res.data);
+            setUserdata((userdata) => ({
+              ...userdata,
+              regevents: res.data.regevents
+            }))
+          })
+          .catch((err) => {
+            console.log(err);
+          })
         success_jointeam();
         // success();
       })
@@ -300,6 +340,9 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
             <br />
             <center>
               <label className={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Team Code : {display_team_code}</label>
+              <br />
+              <br />
+              <div className={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Please save this team code and share it with your teamates to join the team</div>
               <br></br>
             </center>
           </div>
@@ -320,7 +363,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
               />
               <br></br>
               <button
-                //   id="reg_team1"
+                  id="reg_team1001"
                 onClick={(e) => handleJoinTeamCode(e)}
               >
                 Next
