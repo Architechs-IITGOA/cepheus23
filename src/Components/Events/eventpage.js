@@ -59,6 +59,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           })
           .catch((err) => {
             console.log(err);
+            error(err.response.data.message);
           })
         success_createteam();
         // success();
@@ -116,6 +117,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           })
           .catch((err) => {
             console.log(err);
+            error(err.response.data.message);
           })
         // success();
       })
@@ -363,10 +365,10 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
               />
               <br></br>
               <button
-                  id="reg_team1001"
+                  id="reg_team1"
                 onClick={(e) => handleJoinTeamCode(e)}
               >
-                Next
+                Submit
               </button>
             </div>
             <div className={confirm ? "create_active" : "create_inactive"}>
