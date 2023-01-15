@@ -161,7 +161,7 @@ const SiteContainer = () => {
       >
         <Home />
         <About />
-        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} />
+        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} setUserdata={setUserdata} />
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />
