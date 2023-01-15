@@ -132,11 +132,11 @@ const SiteContainer = () => {
             error={error}
           />
         ) : null}
-        {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
+        <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
           reg_failed={reg_failed}
           error={error}
           avatar_female = {avatar_female}
-            avatar_male = {avatar_male}/> */}
+            avatar_male = {avatar_male}/>
         {isUserRegistered ? null : (
           <RegistrationPage
             isUserRegistered={isUserRegistered}
@@ -157,7 +157,7 @@ const SiteContainer = () => {
       >
         <Home />
         <About />
-        <Events />
+        <Events userdata = {userdata} />
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />
