@@ -11,8 +11,10 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
   const [join, setjoin] = useState(false);
   const [confirm, setconfirm] = useState(false);
   const [createTeamName, setCreateTeamName] = useState("");
+  const [displayteamcode, setdisplayteamcode] = useState(false);
   // const [createTeamNameind, setCreateTeamNameind] = useState("");
   const [joinTeamCode, setJoinTeamCode] = useState("");
+  const [display_team_code,setdisplay_team_code] = useState("");
 
   const handleTeamCreation = (e) => {
     e.preventDefault();
@@ -42,6 +44,8 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       )
       .then((res) => {
         console.log(res.data);
+        setdisplay_team_code(teamcode);
+        setdisplayteamcode(true);
         success_createteam();
         // success();
       })
@@ -72,6 +76,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
       .then((res) => {
         console.log(res.data);
         teamcodeind = res.data.team_code;
+
         // success();
         axios
       .post(
@@ -291,6 +296,12 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
             <button id="reg_team1" onClick={(e) => handleTeamCreation(e)}>
               Submit
             </button>
+            <br />
+            <br />
+            <center>
+              <label className={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Team Code : {display_team_code}</label>
+              <br></br>
+            </center>
           </div>
           <div className={join ? "create_active" : "create_inactive"}>
             <div className={confirm ? "create_inactive" : "create_active"}>

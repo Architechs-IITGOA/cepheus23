@@ -1441,6 +1441,9 @@ font-style: normal;
   display: none;
 }
 
+.teamcode_inactive{
+  display: none;
+}
 
 
 
