@@ -5,13 +5,13 @@ import MediaQuery from "react-responsive";
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function Eventcard({userdata, data, exiting }) {
+export default function Eventcard({userdata, data,success_createteam,success_jointeam,success_regevent,error, exiting }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
   const [join, setjoin] = useState(false);
   const [confirm, setconfirm] = useState(false);
   const [createTeamName, setCreateTeamName] = useState("");
-  const [createTeamNameind, setCreateTeamNameind] = useState("");
+  // const [createTeamNameind, setCreateTeamNameind] = useState("");
   const [joinTeamCode, setJoinTeamCode] = useState("");
 
   const handleTeamCreation = (e) => {
@@ -42,16 +42,17 @@ export default function Eventcard({userdata, data, exiting }) {
       )
       .then((res) => {
         console.log(res.data);
+        success_createteam();
         // success();
       })
       .catch((err) => {
         console.log(err);
-        // error();
+        error(err.response.data.message);
       });
       })
       .catch((err) => {
         console.log(err);
-        // error();
+        error(err.response.data.message);
       });
 
       
@@ -83,16 +84,17 @@ export default function Eventcard({userdata, data, exiting }) {
       )
       .then((res) => {
         console.log(res.data);
+        success_regevent();
         // success();
       })
       .catch((err) => {
         console.log(err);
-        // error();
+        error(err.response.data.message);
       });
       })
       .catch((err) => {
         console.log(err);
-        // error();
+        error(err.response.data.message);
       });
 
       
@@ -112,11 +114,12 @@ export default function Eventcard({userdata, data, exiting }) {
       )
       .then((res) => {
         console.log(res.data);
+        success_jointeam();
         // success();
       })
       .catch((err) => {
         console.log(err);
-        // error();
+        error(err.response.data.message);
       });
   };
 
@@ -125,10 +128,10 @@ export default function Eventcard({userdata, data, exiting }) {
       setclicked(true);
     } else {
       console.log("individual event");
-      setCreateTeamNameind(userdata.email);
-      console.log(userdata.email)
+      // setCreateTeamNameind(userdata.email);
+      // console.log(userdata.email)
       handleTeamCreationind(e);
-      console.log("succes yeah!!")  
+      // console.log("succes yeah!!")  
     }
   };
   // const close = () =>{
