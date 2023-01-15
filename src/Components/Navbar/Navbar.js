@@ -78,7 +78,6 @@ export default function Navbar({
     // setsuccess(false);
   };
   return (
-    <div>
     <div className="navbar">
       <div class="navbar-logo">
         <img src="img/cepheus_logo.jfif" alt=""></img>
@@ -125,19 +124,20 @@ export default function Navbar({
         ></img>
         </div>
       </div>
+      <div className="toast-container-div">
+      <ToastContainer 
+    className="toastbar"
+    position="bottom-right"
+    autoClose={3000}
+    hideProgressBar={true}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover={true}
+/>
+</div>
     </div>
-    <div><ToastContainer 
-                className="toastbar"
-                position="bottom-right"
-                autoClose={3000}
-                hideProgressBar={true}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover={true}
-            /></div>
-            </div>
   );
 }
