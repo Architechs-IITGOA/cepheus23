@@ -225,7 +225,7 @@ class Events extends React.Component {
 	  incrementCount = () => {
 		
 			this.setState(prevState => {
-				console.log(prevState.animstop);
+				// console.log(prevState.animstop);
 			if (prevState.animstop==false){
 				let nextCount = prevState.eventcarou + 1;
 				if (nextCount > 3) {
