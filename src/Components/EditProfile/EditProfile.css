@@ -1,7 +1,7 @@
 .editprofile {
     position: fixed;
     width: 500px;
-    height: 80%;
+    /* height: 80%; */
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -12,6 +12,11 @@
     padding: 10px 40px 40px;
     text-align: left;
     flex-direction: column;
+    /* overflow: scroll; */
+}
+
+.editprofile {
+    height: 75%;
     overflow: scroll;
 }
 
@@ -88,4 +93,10 @@ input:active {
 
 input:disabled {
     color: #fff;
+}
+
+@media screen and (max-width:550px) {
+    .editprofile {
+        max-width: 90%;
+    }
 }

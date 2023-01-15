@@ -150,13 +150,21 @@ const SiteContainer = () => {
             success={success_toast_edit}
             reg_failed={reg_failed}
             error={error}
+            avatar_female = {avatar_female}
+            avatar_male = {avatar_male}
           />
         ) : null}
-        {/* <RegistrationPage isUserRegistered={isUserRegistered} userdata={userdata} setUserRegistered={setUserRegistered} setUserdata={setUserdata} success={success_toast} 
-          reg_failed={reg_failed}
-          error={error}
-          avatar_female = {avatar_female}
-            avatar_male = {avatar_male}/> */}
+        {/* <RegistrationPage
+            isUserRegistered={isUserRegistered}
+            userdata={userdata}
+            setUserRegistered={setUserRegistered}
+            setUserdata={setUserdata}
+            success={success_toast_reg}
+            reg_failed={reg_failed}
+            error={error}
+            avatar_female = {avatar_female}
+            avatar_male = {avatar_male}
+          /> */}
         {isUserRegistered ? null : (
           <RegistrationPage
             isUserRegistered={isUserRegistered}

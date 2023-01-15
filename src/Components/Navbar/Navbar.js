@@ -134,7 +134,10 @@ export default function Navbar({
           style={successor ? { display: "block" } : { display: "none" }}
           src={userdata.imgurl.substr(userdata.imgurl.length-4, userdata.imgurl.length-1)==="null"? "img/user_placeholder.png" : userdata.imgurl}
           alt="avatar"
-          onClick={() => handleProfileClick()}
+          onClick={() => {
+            handleProfileClick()
+            setMenuClicked(!isMenuClicked);
+          }}
         ></img>
         </div>
       </div>

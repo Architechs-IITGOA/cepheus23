@@ -700,7 +700,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			para: 'Cepheus invites every enthusiast techno-wizard to join us in our endeavor to revolutionize the fight against climate change. Build a 2 Wheeler EV(Electric Vehicle) and further the cause toward a greener tomorrow.'
 			
 			
 			

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import "./RegistrationPage.css"
 import axios from "axios";
@@ -7,6 +7,7 @@ axios.defaults.withCredentials = true;
 const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
 
 export default function RegistrationPage({isUserRegistered, userdata, setUserRegistered, setUserdata,success, reg_failed, error, avatar_male, avatar_female}){
+    const [name, setName] = useState(userdata.name);
     const HandleRegistrationData = (e) => {
         setUserRegistered(true);
         e.preventDefault();
@@ -63,7 +64,7 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
             <h2>Please fill out this form to participate.</h2>
             <form action="post" onSubmit={(e) => HandleRegistrationData(e)}>
                 <label>Full Name</label><br></br>
-                <input type="text" name="name" id="name"/><br></br>
+                <input type="text" name="name" id="name" value={name} onChange = {(e) => setName(e.target.value)}/><br></br>
                 <label>Email</label><br></br>
                 <input type="email" name="email" id="email" value={userdata.email} disabled/><br></br>
                 <label>Gender</label><br></br>
@@ -74,7 +75,7 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
                     <option value="Others">Others</option>
                 </select><br></br>
                 <label>Age</label><br></br>
-                <input type="number" name="age" id="age" placeholder="Enter your age here" required/><br></br>
+                <input type="number" name="age" id="age" placeholder="Enter your age here" onWheel={(e) => e.target.blur()} required/><br></br>
                 <label>College/School Name</label><br></br>
                 <input type="text" name="college-school-name" id="clgsklname" placeholder="Enter your college/achool name here" required/><br></br>
                 <label>Grade</label><br />

@@ -5,7 +5,9 @@ import "./EditProfile.css"
 import axios from "axios";
 axios.defaults.withCredentials = true;
 
-export default function EditProfile({isEditProfile, userdata, setEditProfile, setUserdata,success, error}){
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
+
+export default function EditProfile({isEditProfile, userdata, setEditProfile, setUserdata,success, error, avatar_female, avatar_male}){
     const [name, setName] = useState(userdata.name);
     const [gender, setGender] = useState(userdata.gender);
     const [age, setAge] = useState();
@@ -15,15 +17,35 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
     const HandleEditProfile = (e) => {
         setEditProfile(false);
         e.preventDefault();
-        console.log(e.target[0].value);
-        setUserdata((userdata) => ({
-            ...userdata,
-            gender: e.target[2].value,
-            age: e.target[3].value,
-            college: e.target[4].value,
-            grade: e.target[5].value,
-            mobile: e.target[6].value
-        }));        
+        if(userdata.gender!==gender){
+            let imgurl;
+            let randnum = Math.floor(Math.random()*6);
+            console.log(randnum);
+            if(gender==="Female"){
+                imgurl = avatar_female[randnum].link;
+            } else {
+                imgurl = avatar_male[randnum].link;
+            }
+            setUserdata((userdata) => ({
+                ...userdata,
+                gender: e.target[2].value,
+                age: e.target[3].value,
+                college: e.target[4].value,
+                grade: e.target[5].value,
+                mobile: e.target[6].value,
+                imgurl: link_initial + imgurl
+            }));   
+        } else {
+            setUserdata((userdata) => ({
+                ...userdata,
+                gender: e.target[2].value,
+                age: e.target[3].value,
+                college: e.target[4].value,
+                grade: e.target[5].value,
+                mobile: e.target[6].value
+            }));   
+        }
+             
         console.log(userdata);
         // var grade_number;
         // if(e.target[5].value[0]<='9' && e.target[5].value[0]>='0'){
@@ -67,7 +89,7 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                     <option value="Others">Others</option>
                 </select><br></br>
                 <label>Age</label><br></br>
-                <input type="number" name="age" id="age" value={age} onChange={(e) => setAge(e.target.value)} required/><br></br>
+                <input type="number" name="age" id="age" value={age} onChange={(e) => setAge(e.target.value)} onWheel={(e) => e.target.blur()} required/><br></br>
                 <label>College/School Name</label><br></br>
                 <input type="text" name="college-school-name" id="clgsklname" value={college} onChange={(e) => setCollege(e.target.value)} required/><br></br>
                 <label>Grade</label><br />
