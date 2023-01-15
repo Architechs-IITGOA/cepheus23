@@ -50,7 +50,7 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
             <h2>Edit Profile</h2>
             <form action="post" onSubmit={(e) => HandleEditProfile(e)}>
                 <label>Full Name</label><br></br>
-                <input type="text" name="name" id="name" placeholder={userdata.name} /><br></br>
+                <input type="text" name="name" id="name"/><br></br>
                 <label>Email</label><br></br>
                 <input type="email" name="email" id="email" value={userdata.email} disabled/><br></br>
                 <label>Gender</label><br></br>
@@ -60,10 +60,10 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                     <option value="Female">Female</option>
                     <option value="Others">Others</option>
                 </select><br></br>
-                {/* <label>Age</label><br></br>
-                <input type="number" name="age" id="age" value = {userdata.age} required/><br></br> */}
+                <label>Age</label><br></br>
+                <input type="number" name="age" id="age" required/><br></br>
                 <label>College/School Name</label><br></br>
-                <input type="text" name="college-school-name" id="clgsklname" value={userdata.college} required/><br></br>
+                <input type="text" name="college-school-name" id="clgsklname" required/><br></br>
                 <label>Grade</label><br />
                 <select name="grade" id="grade">
                     <option value="8">8th</option>
@@ -77,9 +77,10 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                 </select><br></br>
                 {/* <input type="number" name="grade" id="grade" placeholder="Enter your grade or program name here, e.g., BTech or 10th" required/><br /> */}
                 <label>Contact Number</label><br></br>
-                <input type="text" name="contact" id="contact" value={userdata.mobile} required/><br></br>
+                <input type="text" name="contact" id="contact" required/><br></br>
                 <button type="submit">Submit</button>
             </form>
+            <button type="cancel" class="edit-cancel" onClick={() => setEditProfile(false)}>Cancel</button>
         </div>
     )
 }

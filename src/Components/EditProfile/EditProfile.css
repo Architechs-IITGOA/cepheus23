@@ -74,3 +74,13 @@ input:active {
     background-color: rgb(191, 35, 35);
 
 }
+
+.editprofile .edit-cancel {
+    background-color: transparent;
+    border: 0.2px solid #fff;
+}
+
+.editprofile .edit-cancel:hover {
+    background-color: white;
+    color: #000;
+}

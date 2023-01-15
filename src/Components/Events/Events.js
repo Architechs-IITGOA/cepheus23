@@ -155,9 +155,11 @@ class Events extends React.Component {
 		this.state = {eventeighttal:false};
 		this.state = {eventninetal:false};
 		this.state = {reset:false};
+		this.state = {stopanim:false};
 		this.state = {eventcarou:0};
 		this.state = {eventcaroone:0};
 		this.state = {eventcartwo:0};
+		
 		this.state = {
 			left1 : 'ABX2',
 			left2 : 'ABX',
@@ -200,29 +202,44 @@ class Events extends React.Component {
 	  }
 	
 	  intervalId = 0;
+	  
 	
 	  incrementCount = () => {
-		this.setState(prevState => {
-		  let nextCount = prevState.eventcarou + 1;
-		  if (nextCount > 3) {
-			nextCount = 0;
-		  }
-		  return { eventcarou: nextCount};
-		});
-		this.setState(prevState => {
-		  let nextCountone = prevState.eventcaroone + 1;
-		  if (nextCountone > 4) {
-			nextCountone = 0;
-		  }
-		  return { eventcaroone: nextCountone };
-		});
-		this.setState(prevState => {
-		  let nextCounttwo = prevState.eventcartwo + 1;
-		  if (nextCounttwo > 2) {
-			nextCounttwo = 0;
-		  }
-		  return { eventcartwo: nextCounttwo };
-		});
+		
+			this.setState(prevState => {
+				console.log(prevState.animstop);
+			if (prevState.animstop==false){
+				let nextCount = prevState.eventcarou + 1;
+				if (nextCount > 3) {
+				
+				nextCount = 0;
+				}
+				return { eventcarou: nextCount};
+			}
+			
+			
+			});
+			this.setState(prevState => {
+			if (prevState.animstop==false){
+				let nextCountone = prevState.eventcaroone + 1;
+				if (nextCountone > 4) {
+				nextCountone = 0;
+				}
+				return { eventcaroone: nextCountone };
+			}
+			
+			});
+			// this.setState(prevState => {
+			// if (prevState.animstop==false){
+			// 	let nextCounttwo = prevState.eventcartwo + 1;
+			// 	if (nextCounttwo > 2) {
+			// 	nextCounttwo = 0;
+			// 	}
+			// 	return { eventcartwo: nextCounttwo };
+			// }
+			
+			// });
+		
 	  }
 	
 	  componentDidMount() {
@@ -272,17 +289,20 @@ class Events extends React.Component {
 		const eventcaroone = this.state.eventcaroone;
 		const eventcartwo = this.state.eventcartwo;
 		const reset = this.state.reset;
-		
+		const stopanim = this.state.stopanim;
+		// this.setState({animstop:false});
+		///c_scale,q_auto:eco,w_240
 		
 
 
 		const listData =[ {
 			teamsize: 2,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Design Challenge',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Design_Challange_omrs0o.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Design_Challange_omrs0o.webp',
+			left1 : '1.Utsav Bansal (6267184086)',
+			left2 : '2.Madhura Botave (8830846416)',
+			id : 1,
+			name : 'Lorem Ipsum',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Every great design begins with an even better story. Through this event, we hope to find bright and innovative designers across the country to face off and design the user interface for a website based on the theme “Multiverse”. The submission can be made individually or as a team of two within 24 hours from the start of the competition.',
@@ -293,12 +313,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Full Stack Hackathon',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290944/Cepheus/Full_stack_hachathon_vkcaql.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290944/Cepheus/Full_stack_hachathon_vkcaql.webp',
+			teamsize: 3,
+			left1 : '1.Aditya Koshti (8767313024)',
+			left2 : '2.Naman Gupta (9403264682)',
+			id : 0,
+			name : 'HackOverFlow',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/WEB_HACKOVERFLOW_4x_waua5k.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/WEB_HACKOVERFLOW_4x_waua5k.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'From functionality and appearance to navigation and coding integrity, a lot goes into creating an eye-catching, user-friendly website. We bring to you an amusing challenge where every participating team will have to develop a website based on the theme, “Multiverse survival”. The team will have to work on the topic and create a fully functional website. There may be a presentation round as well to track your progress.!',
@@ -309,12 +330,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			teamsize: 3,
+			left1 : '1.Atharva Bhawsar (9643204258)',
+			left2 : '2.Anushka Srivastava (7987274593)',
+			id : 0,
 			name : 'Circuital Dilemma',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290952/Cepheus/Circuital_Dilemma_ouhmnd.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290952/Cepheus/Circuital_Dilemma_ouhmnd.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724087/cepheus23_posters/web_Circuital_Dilemma_V1_4x_gqyc93.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724087/cepheus23_posters/web_Circuital_Dilemma_V1_4x_gqyc93.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'This event offers an opportunity to test your digital circuit problem-solving skills using logic and innovation while retaining the spirit of collective learning. The two-stage submission process involves tackling some real-life problems while being constrained to a given time. The First stage consists of short but tricky MCQs and the participants would need to solve the questions in a short timeframe. This will be an elimination round. The teams who reach the second round will have to solve some really interesting yet complex real life problems based on multiple concepts of Digital Design and Digital Circuits.',
@@ -326,11 +348,12 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Ananya Alekar (8424942069)',
+			left2 : '2.Abhinav Reddy (9392534843)',
+			id : 0,
 			name : 'Data Science Hackathon',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Data_Science_Hackathon_p6wklq.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290947/Cepheus/Data_Science_Hackathon_p6wklq.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724087/cepheus23_posters/WEB_dATASCIENCE_4x_qg7k1v.png',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724087/cepheus23_posters/WEB_dATASCIENCE_4x_qg7k1v.png',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'We are living in a world of big data that is empowering businesses and organizations to make data-driven decisions.  Delve deep into your Data Science skills and build an ML model to help a planet that is facing an unprecedented problem. The problem statements involve tackling some real-life problems and using the insights gained to guide decision-making and strategic planning.',
@@ -341,12 +364,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'OpenCV Emotion detection',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290950/Cepheus/OpernCV_mk1vs2.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290950/Cepheus/OpernCV_mk1vs2.webp',
+			teamsize: 2,
+			left1 : '1.Tiya Gupta (8810506020)',
+			left2 : '2.Akash Khandelwal (9923041275)',
+			id : 0,
+			name : 'HackTheGames',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724091/cepheus23_posters/WEB_Hack_The_Games_4x_lseb12.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724091/cepheus23_posters/WEB_Hack_The_Games_4x_lseb12.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Gesture recognition is an active research field in Human-Computer Interaction technology. It has many applications in virtual environment control, sign language translation, robot control, and music creation. In this workshop, you will be able to learn and understand how gesture recognition is implemented using OpenCV, following which there will be a hackathon. Participants will have to automate any game of their choice with the use of hand gestures, thereby creating a virtual mouse.',
@@ -357,12 +381,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			teamsize: 4,
+			left1 : '1.Akhil T. Sivakumar (9989152948)',
+			left2 : '2.Khushi Chaudhary (8318921233)',
+			id : 0,
 			name : 'CTF',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724079/cepheus23_posters/web_CTF_4x_hntg9n.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724079/cepheus23_posters/web_CTF_4x_hntg9n.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Capture The Flag is a 3-day event in which teams will be given challenges involving cybersecurity. The essence of a CTF is puzzle-solving. The challenges are created by and for people who like solving puzzles. The goal of each challenge will be to find the hidden flag. The difficulty of the challenge determines the points awarded to the team. The team that gets the most points in the shortest amount of time wins.',
@@ -374,11 +399,12 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Rohith G (8248539650)',
+			left2 : '2.Harsh Kankrecha (6353323553)',
+			id : 0,
 			name : 'FizzBuzz',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/FizzBuzz_gnl65x.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/FizzBuzz_gnl65x.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/WEB_fizzbuzz_4x_lmzxto.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/WEB_fizzbuzz_4x_lmzxto.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'FizzBuzz is a competitive coding contest. In this event, participants will be given algorithm-based problems to solve within a 2-hour time limit. This is an individual event. Don\'t fret, even if you\'re a beginner, the event ensures that everybody regardless of what their level is, will receive an opportunity to solve a problem. Do you have what it takes to survive Fizzbuzz and come out on top?',
@@ -390,11 +416,12 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : '1.Sai Adarsh (8688530237)',
+			left2 : '2.Abhinav Reddy (9392534843)',
+			id : 0,
 			name : 'Online Treasure Hunt',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290948/Cepheus/Online_Treasure_hunt_slarbk.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290948/Cepheus/Online_Treasure_hunt_slarbk.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/WEB_Online_Treasure_Hunt_4x_z92rog.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/WEB_Online_Treasure_Hunt_4x_z92rog.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'This will be a 12-hour Treasure Hunt-style event with five rounds of various tasks depending on the participants\' coding and analytical skills. The contestants will receive points for their progress on problem statements in each round, and the competition will be held on a single platform. After 3-4 events, there will be some elimination based on the points earned, and the winner of the competition will be decided based on the highest number of points earned.',
@@ -405,12 +432,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			teamsize: 4,
+			left1 : '1.Vaidehi Chougule (8080586791)',
+			left2 : '2.Aditya Muvarappu (9584848383)',
+			id : 0,
 			name : 'Bridge Building Competition',
-			source: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Bridge_Building_gqvsiy.webp',
-			source1: 'https://res.cloudinary.com/dz7pcvoef/image/upload/c_scale,q_auto:eco,w_240/v1673290943/Cepheus/Bridge_Building_gqvsiy.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724079/cepheus23_posters/web_bridge_building_4x_h4qprk.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724079/cepheus23_posters/web_bridge_building_4x_h4qprk.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'We\'ve all heard the poem \"London Bridge is falling down, falling down, falling down,\" but have you ever wondered why the bridge is going down? Of course, as a result of poor design! To ensure nothing like that happens again, in this challenge, it is up to you to design an extraordinarily well-planned bridge provided that all the given constraints are fulfilled.',
@@ -421,15 +449,16 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Front End Challenge',
-			source: './poster.png',
-			source1: './poster.png',
+			teamsize: 4,
+			left1 : '1.Nikhil Kumar (7739625907)',
+			left2 : '2.Tarun Vasupally (6304614040)',
+			id : 0,
+			name : 'Copy the nature',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724081/cepheus23_posters/web_copythenature_4x_v1c6uh.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724081/cepheus23_posters/web_copythenature_4x_v1c6uh.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'We’re sure everyone has experienced how frustrating it gets while browsing a government website, at least once in their life. The reason? Simple! Poor functionality and counter-intuitive UI design. After all, websites are the first impressions that we have on our clients. Step up for this challenge that we present to you. Use your CSS and JS skills and explore your creativity to style a webpage and make it functional. Keep an eye out for the constraints - you can’t modify the HTML file that will be provided. ',
+			para: 'Showcase your passion for 3D modeling with this competition. Participants in this challenge must create a 3D model of a living creature with no restrictions on creativity. The species can be extinct or even fictitious, so let your imagination take the wheel and start designing!',
 			
 			
 			
@@ -437,12 +466,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Pitching event',
-			source: './poster.png',
-			source1: './poster.png',
+			teamsize: 5,
+			left1 : '1.Pavithra T Soman (9446091496)',
+			left2 : '2.Akarsh Jha (9354078200)',
+			id : 0,
+			name : 'Launch Galaset',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/web_LAUNCH_GALASET_4x_o5icab.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/web_LAUNCH_GALASET_4x_o5icab.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'The hype that Shark Tank India created, a few months back, was real! It had all of us glued to our seats, and sparked our minds with curiosity and awe. We’re planning to give you a similar experience this year. Except, that you’ll not be watching this time. You’ll be the one pitching your ideas to the panel of investors in front of you. Pitch your startup ideas, specifically in the domain of FinTech in under 7 minutes. Stand a chance to be noticed by the investors and get their help in financing your ideas.',
@@ -453,12 +483,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'KBC Quiz Competition',
-			source: './poster.png',
-			source1: './poster.png',
+			teamsize: 2,
+			left1 : '1.Suyash Jaduan (8770321291)',
+			left2 : '2.Ashish Rathaur (9720188699)',
+			id : 0,
+			name : 'KBC Quiz',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/web_kbc_4x_kkvt2b.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/web_kbc_4x_kkvt2b.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Watching KBC on TV is by far one of our favorite memories. Our excitement is at its peak when a question is presented to the participant, and the stakes are high. Join us for a fun KBC quiz event this year. In teams of 3, you will have 30 seconds to answer the question given to you. But, here’s the catch. A wrong answer will fetch you negative marks, so be confident about your answers. Put your speed and knowledge to the test!',
@@ -469,12 +500,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Line Follower Bot competition',
-			source: './poster.png',
-			source1: './poster.png',
+			teamsize: 4,
+			left1 : '1.Hetarth Bhatt (8780632021)',
+			left2 : '2.Ayush Yadav (9118319300)',
+			id : 0,
+			name : 'Maze Amaze',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724112/cepheus23_posters/WEB_maze_amaze_4x_cluiei.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724112/cepheus23_posters/WEB_maze_amaze_4x_cluiei.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Ever been fascinated by remote-controlled cars or F1 racing events? Then this event is perfect for you. Dive right into this race, where we present to you an obstacle-ridden track. Bring in your line follower bots, and start racing them across the line tracks. Needless to say, the fastest bot wins the race!',
@@ -488,6 +520,7 @@ class Events extends React.Component {
 			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
+			id : 0,
 			name : 'Line Maze Fun game',
 			source: './poster.png',
 			source1: './poster.png',
@@ -502,11 +535,12 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Scratch for school students',
-			source: './poster.png',
-			source1: './poster.png',
+			left1 : '1.Swamini Shirsat (7875722003)',
+			left2 : '2.Vaibhav Mathur (6377882468)',
+			id : 0,
+			name : 'Scratch Competition',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724112/cepheus23_posters/WEB_scratch_comp_4x_zbpdqc.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724112/cepheus23_posters/WEB_scratch_comp_4x_zbpdqc.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'A fun event for school students to introduce them to the world of programming using scratch. Scratch is a tool that allows people to explore the world of coding and logic flow without having any prior knowledge. This would be a workshop cum hackathon in which we would be demonstrating how to build a game using scratch followed by a problem statement. The participants have to create a game based on the problem statement implementing what has been demonstrated in the workshop. We aim to teach the importance of coding to students and introduce them to the basic logic flow and structure behind programming.',
@@ -517,12 +551,13 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			teamsize: 4,
+			left1 : '1.Prathamesh Yeole (9518718463)',
+			left2 : '2.Abhay Tiwari (8299307702)',
+			id : 0,
 			name : 'Treasure hunt',
-			source: './poster.png',
-			source1: './poster.png',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/web_treasurehunt_4x_jzwk0h.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/web_treasurehunt_4x_jzwk0h.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'The event is somewhat similar to Treasure Hunt but in a computer sciency way! Participants would have to solve tricky questions of competitive programming to find clues for the next waypoint. The event will be conducted in two phases - Snail trail and Escape room. In snail trail, the participants would have to collect multiple clues, each clue leading to another. All the clues collected in the first round will be useful in the second round in which the teams will be separated in different rooms and will be given a task to solve in which the previous clues will be useful. So get ready to solve these brain racking problem statements and awaken the Sherlock Holmes within you!',
@@ -536,9 +571,10 @@ class Events extends React.Component {
 			teamsize: 1,
 			left1 : '1.Abcd Xyz (9884736273)',
 			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Trading',
-			source: './poster.png',
-			source1: './poster.png',
+			id : 0,
+			name : 'Rule The Market',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'You have heard about trading in stocks and trading in cryptocurrency, but have you ever heard about trading in programming? We are hosting a fascinating event that will test both your trading and coding skills. Problem statements will be released and the participants will have to create functions that might be helpful to complete the challenge. The name and description of all functions will be open to all the participants. If participants are convinced by the price and description then they can trade. ',
@@ -550,11 +586,12 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Toil and Trouble',
-			source: './poster.png',
-			source1: './poster.png',
+			left1 : '1.Abhay Tiwari (8299307702)',
+			left2 : '2.Mulayam (9817568174)',
+			id : 0,
+			name : 'Pare It Down',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724107/cepheus23_posters/WEB_PAIRITDOWN_4x_x2mq4e.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724107/cepheus23_posters/WEB_PAIRITDOWN_4x_x2mq4e.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'Curious about competitive programming but don’t know where to start? We bring to you a fun coding event to help you hone your programming skills even without any prior experience. There will be five coding rounds which will  progress from easy to medium difficulty levels namely,  Introduction to a new language, Debugging Round, Brain Racking, Blind Code, and CP with risk and reward. ',
@@ -565,15 +602,33 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event1',
-			source: './poster.png',
-			source1: './poster.png',
+			teamsize: 3,
+			left1 : '1.Varun Singh (9958357706)',
+			left2 : '2.Yash Bhansali (7304893913)',
+			id : 0,
+			name : 'Arduino\'s Trial',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724083/cepheus23_posters/web_Arduino_s_trial_4x_vlhvot.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724083/cepheus23_posters/web_Arduino_s_trial_4x_vlhvot.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			para: 'In order to expand the knowledge of participants we will be hosting a workshop followed by a competition on Arduino. The entire workshop is split into 3 sessions, during which the facilitators will explain the fundamentals of Arduino and other basic sensors and motors while also demonstrating some live projects using both hardware and software. Whatever your skill level is, you’re sure to have fun as you will learn to harness the power of Arduino in your own DIY projects.',
+			
+			
+			
+
+
+		},
+		{
+			teamsize: 2,
+			left1 : '1.Arnav Kamat (8237063638)',
+			left2 : '2.Aniket Chaudhri (7087363393)',
+			id : 0,
+			name : 'Buy My Code',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724083/cepheus23_posters/web_Buy_My_Code_4x_mqgyu7.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724083/cepheus23_posters/web_Buy_My_Code_4x_mqgyu7.webp',
+			border: './border1.png',
+			exitsrc: './exit.png',
+			para: 'You have heard about trading in stocks and trading in cryptocurrency, but have you ever heard about trading in programming? We are hosting a fascinating event that will test both your trading and coding skills. Problem statements will be released and the participants will have to create functions that might be helpful to complete the challenge. The name and description of all functions will be open to all the participants. If participants are convinced by the price and description then they can trade. ',
 			
 			
 			
@@ -582,188 +637,12 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event2',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event3',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event4',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event5',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event6',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event7',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event8',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Event9',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Copy the nature',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Showcase your passion for 3D modeling with this competition. Participants in this challenge must create a 3D model of a living creature with no restrictions on creativity. The species can be extinct or even fictitious, so let your imagination take the wheel and start designing!',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Dive the bOAt (Fun Event)',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Have you ever played with Legos? If yes: you have an edge! If not: your time has arrived! Get ready to build a boat and wade through uncertain waters without losing your hold You will be given lego building bars, a motor, and a battery to create your own boat. You must configure the boat in such a way that it reaches a certain distance or person within the stipulated time.',
-			
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Climbing Up the challenge',
-			source: './poster.png',
-			source1: './poster.png',
-			border: './border1.png',
-			exitsrc: './exit.png',
-			para: 'Put your problem-solving skills to the test in this event that will test your knowledge in the mechanical domain through our curated set of puzzles and trivia. We will present you with four checkpoints and the first team to successfully complete all four will be declared the winner. We hope to see interesting and intuitive approaches from the participants.',
-			
-			
-			
-
-
-		},
-		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Game Theory event',
-			source: './poster.png',
-			source1: './poster.png',
+			left1 : '1.Nandini B. (9094357472)',
+			left2 : '2.Vaidehi Chougule (8080586791)',
+			id : 0,
+			name : 'Game Theory Event',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724091/cepheus23_posters/WEB_game_theory_4x_oidpxd.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724091/cepheus23_posters/WEB_game_theory_4x_oidpxd.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'It\'s riveting to see how games and human nature can get complicated and interesting at the same time. Game Theory is the tool in use to comprehend the subtle relation between the two. It also lays the foundation for some profound algorithms used in AI today. If Game Theory is back on the grid, so are we. There would be a faceoff between participants in each round, which will consist of multiple games. The selected players would proceed to the next round and climb up the Leaderboard. So keep an eye out for everyone\'s strengths and weaknesses, and get ready to play on both fronts.',
@@ -774,22 +653,194 @@ class Events extends React.Component {
 
 		},
 		{
-			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
-			name : 'Arduino Workshop',
-			source: './poster.png',
-			source1: './poster.png',
+			teamsize: 18,
+			left1 : '1.Runal Palkar (9137884831)',
+			left2 : '',
+			id : 0,
+			name : 'E-Bike Competition',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'In order to expand the knowledge of participants we will be hosting a workshop followed by a competition on Arduino The entire workshop is split into 3 sessions, during which the facilitators will explain the fundamentals of Arduino and other basic sensors and motors while also demonstrating some live projects using both hardware and software. Whatever your skill level is, you’re sure to have fun as you will learn to harness the power of Arduino in your own DIY projects.'
-			
+			para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
 			
 			
 			
 
 
 		},
+		{
+			teamsize: 2,
+			left1 : '1.Abcd Xyz (9884736273)',
+			left2 : '2.Abcd Xyz (9884736273)',
+			id : 0,
+			name : 'Dive the Boat',
+			source: './poster.png',
+			source1: './poster.png',
+			border: './border1.png',
+			exitsrc: './exit.png',
+			para: 'Have you ever played with Legos? If yes: you have an edge! If not: your time has arrived! Get ready to build a boat and wade through uncertain waters without losing your hold. You will be given lego building bars, a motor, and a battery to create your own boat. You must configure the boat in such a way that it reaches a certain distance or person within the stipulated time.',
+			
+			
+			
+
+
+		},
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Event6',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Event7',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Event8',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Event9',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Lorem Ipsum is a website designing event wherein you will be given some text and images as content for which you must design a website, with reference to the theme Squid Game, within a given time period of 4 hours. It’s time to get those creative juices flowing and put your designing skills to the test!',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Copy the nature',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Showcase your passion for 3D modeling with this competition. Participants in this challenge must create a 3D model of a living creature with no restrictions on creativity. The species can be extinct or even fictitious, so let your imagination take the wheel and start designing!',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Dive the bOAt (Fun Event)',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Have you ever played with Legos? If yes: you have an edge! If not: your time has arrived! Get ready to build a boat and wade through uncertain waters without losing your hold You will be given lego building bars, a motor, and a battery to create your own boat. You must configure the boat in such a way that it reaches a certain distance or person within the stipulated time.',
+			
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Climbing Up the challenge',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'Put your problem-solving skills to the test in this event that will test your knowledge in the mechanical domain through our curated set of puzzles and trivia. We will present you with four checkpoints and the first team to successfully complete all four will be declared the winner. We hope to see interesting and intuitive approaches from the participants.',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Game Theory event',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'It\'s riveting to see how games and human nature can get complicated and interesting at the same time. Game Theory is the tool in use to comprehend the subtle relation between the two. It also lays the foundation for some profound algorithms used in AI today. If Game Theory is back on the grid, so are we. There would be a faceoff between participants in each round, which will consist of multiple games. The selected players would proceed to the next round and climb up the Leaderboard. So keep an eye out for everyone\'s strengths and weaknesses, and get ready to play on both fronts.',
+			
+			
+			
+
+
+		// },
+		// {
+		// 	teamsize: 1,
+		// 	left1 : '1.Abcd Xyz (9884736273)',
+		// 	left2 : '2.Abcd Xyz (9884736273)',
+		// 	id : 0,
+		// 	name : 'Arduino Workshop',
+		// 	source: './poster.png',
+		// 	source1: './poster.png',
+		// 	border: './border1.png',
+		// 	exitsrc: './exit.png',
+		// 	para: 'In order to expand the knowledge of participants we will be hosting a workshop followed by a competition on Arduino The entire workshop is split into 3 sessions, during which the facilitators will explain the fundamentals of Arduino and other basic sensors and motors while also demonstrating some live projects using both hardware and software. Whatever your skill level is, you’re sure to have fun as you will learn to harness the power of Arduino in your own DIY projects.'
+			
+			
+			
+			
+
+
+		// },
 		];
 		
 		
@@ -812,7 +863,7 @@ class Events extends React.Component {
 					<br></br>
 					<br></br>
 					{/* <br></br> */}
-					<h1  id="main-heading">EVENTS</h1>
+					<h1 id="main-heading">EVENTS</h1>
 	
 					{/* <div className={clicked||clicked2||clicked3?'secondoff1':'firston1'}> */}
 					<div  className={clicked||clicked2||clicked3?'eventzoff100':'eventzon100'}>
@@ -821,31 +872,31 @@ class Events extends React.Component {
 						
 						<center>
 						<ul  className="firstpagelist">
-							<li ><div style={elemStyle} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0})}} >
+							<li ><div style={elemStyle} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false})}} >
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>ONLINE</h1></center>
 							</div>
 							</div></li>
-							<li><div style={elemStyle} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0})}}>
+							<li><div style={elemStyle} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>OFFLINE</h1></center>
 							</div>
 							</div></li>
-							<li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0})}}>
+							{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>TALKS</h1></center>
 							</div>
-							</div></li>
+							</div></li> */}
 						</ul>
 						</center>
 						<br></br>
 						<br></br>
 						<center>
 						{/* <img src={im4}  className="events-rb first"></img>  */}
-						<div className='buttondiv' >
+						<div className='buttondiv' style={{display:"none"}} >
 							<img src={im4}  className="buttonimg"></img> 
 						</div>
 						</center>
@@ -878,17 +929,17 @@ class Events extends React.Component {
 								<section className={eventcarou==0?"section is-active transition":"section transition"}   id="section1">
 								
 									<ul id="list" >
-									<li ><div className='event'   onClick={()=>{ this.setState({clickedtwo:true});this.setState({eveno:0})}}  >
+									<li ><div className='event'   onClick={()=>{ this.setState({clickedtwo:true});this.setState({eveno:0})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
 									<img draggable='false'  src={listData[0].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventtwo:true});this.setState({eveno:1})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventtwo:true});this.setState({eveno:1})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[1].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventthree:true});this.setState({eveno:2})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventthree:true});this.setState({eveno:2})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[2].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
@@ -898,17 +949,17 @@ class Events extends React.Component {
 								<section className={eventcarou==1?"section is-active1 transition":"section transition"} id="section2">
 								
 									<ul id="list1" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventfour:true});this.setState({eveno:3})}} >
+									<li ><div className='event'   onClick={()=> {this.setState({eventfour:true});this.setState({eveno:3})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[3].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventfive:true});this.setState({eveno:4})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventfive:true});this.setState({eveno:4})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[4].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventsix:true});this.setState({eveno:5})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventsix:true});this.setState({eveno:5})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[5].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
@@ -918,17 +969,17 @@ class Events extends React.Component {
 								<section className={eventcarou==2?"section is-active2 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventseven:true});this.setState({eveno:6})}}  >
+									<li ><div className='event'   onClick={()=> {this.setState({eventseven:true});this.setState({eveno:6})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
 									<img draggable='false'  src={listData[6].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventeight:true});this.setState({eveno:7})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventeight:true});this.setState({eveno:7})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[7].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventnine:true});this.setState({eveno:8})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventnine:true});this.setState({eveno:8})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[8].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
@@ -938,8 +989,8 @@ class Events extends React.Component {
 								<section className={eventcarou==3?"section is-active3 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventseven:true});this.setState({eveno:27})}}  >
-									<img draggable='false'  src={listData[27].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<li ><div className='event'   onClick={()=> {this.setState({eventseven:true});this.setState({eveno:9})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
+									<img draggable='false'  src={listData[9].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -987,18 +1038,18 @@ class Events extends React.Component {
 								<section className={eventcaroone==0?"section is-active transition":"section transition"} id="section1">
 								
 									<ul id="list" >
-									<li ><div className='event'   onClick={()=> {this.setState({clickedtwooff:true});this.setState({eveno:9})}}  >
-									<img draggable='false'  src={listData[9].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
-									
-									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventtwooff:true});this.setState({eveno:10})}} >
+									<li ><div className='event'   onClick={()=> {this.setState({clickedtwooff:true});this.setState({eveno:10})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
 									<img draggable='false'  src={listData[10].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventthreeoff:true});this.setState({eveno:11})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventtwooff:true});this.setState({eveno:11})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[11].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
+									
+									</div></li>
+									<li><div className='event'   onClick={()=> {this.setState({eventthreeoff:true});this.setState({eveno:12})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									<img draggable='false'  src={listData[12].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -1007,18 +1058,18 @@ class Events extends React.Component {
 								<section className={eventcaroone==1?"section is-active1 transition":"section transition"} id="section2">
 								
 									<ul id="list1" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventfouroff:true});this.setState({eveno:12})}} >
-									<img draggable='false'  src={listData[12].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
-									
-									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventfiveoff:true});this.setState({eveno:13})}} >
+									<li ><div className='event'   onClick={()=> {this.setState({eventfouroff:true});this.setState({eveno:13})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[13].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventsixoff:true});this.setState({eveno:14})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventfiveoff:true});this.setState({eveno:14})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[14].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
+									
+									</div></li>
+									<li><div className='event'   onClick={()=> {this.setState({eventsixoff:true});this.setState({eveno:15})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									<img draggable='false'  src={listData[15].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -1027,18 +1078,18 @@ class Events extends React.Component {
 								<section className={eventcaroone==2?"section is-active2 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:15})}}  >
-									<img draggable='false'  src={listData[15].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
-									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
-									
-									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:16})}} >
+									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:16})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
 									<img draggable='false'  src={listData[16].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventnineoff:true});this.setState({eveno:17})}} >
+									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:17})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[17].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
+									
+									</div></li>
+									<li><div className='event'   onClick={()=> {this.setState({eventnineoff:true});this.setState({eveno:18})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									<img draggable='false'  src={listData[18].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -1047,18 +1098,18 @@ class Events extends React.Component {
 								<section className={eventcaroone==3?"section is-active3 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
-									<li ><div className='event'  onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:28})}}  >
-									<img draggable='false'  src={listData[28].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<li ><div className='event'  onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:19})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
+									<img draggable='false'  src={listData[19].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:29})}} >
-									<img draggable='false'  src={listData[29].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:20})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									<img draggable='false'  src={listData[20].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventnineoff:true});this.setState({eveno:30})}} >
-									<img draggable='false'  src={listData[30].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<li><div className='event'   onClick={()=> {this.setState({eventnineoff:true});this.setState({eveno:21})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									<img draggable='false'  src={listData[21].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -1067,8 +1118,8 @@ class Events extends React.Component {
 								<section className={eventcaroone==4?"section is-active4 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:31})}}  >
-									<img draggable='false'  src={listData[31].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:22})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
+									<img draggable='false'  src={listData[22].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -1091,9 +1142,9 @@ class Events extends React.Component {
 					
 					</div>
 					</div>
-					<div  className={clicked3?'eventzon10':'eventzoff10'}>
+					{/* <div  className={clicked3?'eventzon10':'eventzoff10'}> */}
 					{/* <div className={clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'secondoff1':'secondon'}> */}
-					<div className={clicked||clicked2||clicked3?'secondon':'secondoff'}>
+					{/* <div className={clicked||clicked2||clicked3?'secondon':'secondoff'}>
 					<div className={clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'eventzoff1':'eventzon1'}>
 					<div className={'eventzon1'}>
 					<div className={clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'secondoff':'secondon'}>
@@ -1187,12 +1238,12 @@ class Events extends React.Component {
 					{/* </div> */}
 	
 	
-					<div >
+					{/* <div >
 					
 					</div>
-					</div>
+					</div>  */}
 
-					<div style={{marginTop:'-8vh'}} >
+					<div id='landpage'  >
 					
 					
 						<div className={clickedtwo||eventtwo||eventthree||eventfour||eventfive||eventsix||eventseven||eventeight||eventnine||clickedtwooff||eventtwooff||eventthreeoff||eventfouroff||eventfiveoff||eventsixoff||eventsevenoff||eventeightoff||eventnineoff||clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'eventzon':'eventzoff'}>

@@ -3,17 +3,37 @@ import React, { Component,useEffect,useState } from 'react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import "./Profile.css"
 import { gapi } from 'gapi-script';
+import axios from "axios";
+axios.defaults.withCredentials = true;
 
+const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_120/v16736772"
 
-export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked}) {
+export default function Profile({isProfileClicked,auth_reset,auth_continue,userdata, setEditProfile, setProfileClicked, setUserdata}) {
 
     const clientId = '218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com';
+    useEffect(() => {
+        axios.post("https://backendcepheus.cf/apiM2/getreg",
+        {},
+        {withCredentials: true})
+        .then((res) => {
+          console.log(res.data);
+          setUserdata((userdata) => ({
+            ...userdata,
+            regevents: res.data.regevents
+          }))
+        })
+        .catch((err) => {
+          console.log(err);
+        })}
+    , []);
     
+    console.log(userdata.regevents);
+
     return (
         <div class={isProfileClicked ? "profile profile-active" : "profile"}>
             <img src="" alt=""></img>
             <div class="profile-left">
-                <img src="img/avatar1.png" alt="avatar" class="profile-image"></img>
+                <img src={userdata.imgurl} alt="avatar" class="profile-image"></img>
                 <img src="img/profile_name_border.png" alt="" class="name-border"></img>
                 
                 <p class="name">{userdata.firstName}</p>
@@ -26,6 +46,7 @@ export default function Profile({isProfileClicked,auth_reset,auth_continue,userd
             <div className="profile-right">
                 <div class="participated-events">
                     <h2>Participated Events</h2>
+
                     <ol>
                        <li>Treasure Hunt</li>
                        <li>Beat The Street</li>
