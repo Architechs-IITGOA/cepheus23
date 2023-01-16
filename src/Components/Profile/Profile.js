@@ -156,7 +156,7 @@ export default function Profile({
                     .catch((err) => {
                         console.log(err);
                     });
-                    window.location.reload(false);
+                    // window.location.reload(false);
                 }}
                 
                 onLogoutFailure={(err) => {

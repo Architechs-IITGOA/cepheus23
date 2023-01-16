@@ -32,6 +32,8 @@
     align-items: center;
     backdrop-filter: blur(8px);
     padding: 20px;
+    margin-top: auto;
+    border-radius: 20px;
 }
 
 .contact-full-card {
@@ -57,12 +59,14 @@
 @media (max-width : 1110px){
     .contact-content{
         display: block;
+        height: 650px;
+
     }
     .contact-carousal{
         flex-direction: row;
         overflow-x: scroll;
         overflow-y: hidden;
-        height: 150px;
+        height: 200px;
     }
 }
 
@@ -78,10 +82,20 @@
   }
    
 @media (max-width: 600px){
+    .contact-content {
+      width: 90%;
+    }
     .contact-heading{
       font-size: 220%;
     }
    }
+
+@media (max-width: 400px){
+  .contact-content{
+    height: auto;
+  }
+}
+
    
 @media (max-width: 320px){
     .contact-heading{

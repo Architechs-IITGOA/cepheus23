@@ -210,6 +210,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
                 <img
                   draggable="false"
                   id="close2"
+                  alt="exit"
                   src={data.exitsrc}
                   onClick={() => {
                     exiting();
@@ -217,6 +218,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
                 ></img>
                 <center>
                   <img
+                    alt=""
                     draggable="false"
                     style={{ borderRadius: "15px" }}
                     id="left-post"
@@ -239,6 +241,7 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
               </div>
               <div id="inner-right">
                 <img
+                alt=""
                   draggable="false"
                   id="close1"
                   src={data.exitsrc}
@@ -281,9 +284,12 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           <img
             draggable="false"
             id="formcls"
+            alt=""
             style={{ cursor: "pointer" }}
             src={data.exitsrc}
             onClick={() => {
+              setdisplay_team_code('');
+              setdisplayteamcode(false);
               if (confirm) {
                 setconfirm(false);
               } else {

@@ -8,18 +8,18 @@
 } */
 
 .main-card-border {
-    width: 200px;
+    width: 270px;
 }
 
 .main-card-content {
     margin-top: 40px;
     position: absolute;
-    width: 200px;
+    width: 270px;
 }
 
 .main-card-content img{
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    height: 150px;
     border-radius: 100px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -36,7 +36,7 @@
 }
 
 .main-card-contact-detail .name-role{
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -46,7 +46,35 @@
 }
 
 .main-card-contact-detail .contact {
-    font-size: 14px;
+    font-size: 18px;
     word-break: break-all;
+}
+
+@media screen and (max-width: 400px) {
+    .main-card-border {
+        width: 68vw;
+    }
+
+    .main-card-content img{
+        width: 38vw;
+        height: 38vw;
+        margin-bottom: 4vw;
+    }
+
+    .main-card-content {
+        width: 68vw;
+    }
+
+    .main-card-contact-detail .name-role{ 
+        font-size: 6vw;
+    }
+
+    .main-card-contact-detail .name-role:nth-child(2){
+        margin-bottom: 5vw;
+    }
+
+    .main-card-contact-detail .contact {
+        font-size: 4vw;
+    }
 }
 

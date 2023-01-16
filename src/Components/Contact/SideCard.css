@@ -32,3 +32,32 @@
     font-weight: bold;
     margin: 0;
 }
+
+@media (max-width: 400px){
+    .contact-side-card{
+        display: flex;
+        margin: 4vw;
+        cursor: pointer;
+    }
+
+    .side-card-border {
+        width: 75vw;
+    }
+
+    .side-card-content{
+        width: 75vw;
+        margin-left: -75vw;
+    }
+
+    .side-card-content img{
+        margin-left: 10vw;
+        margin-right: 9vw;
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .side-card-position {
+        font-size: 4.5vw;
+    }
+
+}

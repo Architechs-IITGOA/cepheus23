@@ -17,6 +17,7 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
     const HandleEditProfile = (e) => {
         setEditProfile(false);
         e.preventDefault();
+        var grade_number = parseInt(e.target[5].value);
         if(userdata.gender!==gender){
             let imgurl;
             let randnum = Math.floor(Math.random()*6);
@@ -34,7 +35,25 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                 grade: e.target[5].value,
                 mobile: e.target[6].value,
                 imgurl: link_initial + imgurl
-            }));   
+            }));
+            axios.post("https://backendcepheus.cf/apiM2/register",
+            {  
+                // token: userdata.tokenId,
+                user_name: userdata.name,
+                college: e.target[4].value,
+                mobile: e.target[6].value,
+                grade: grade_number,
+                image_url: imgurl
+            },
+            {withCredentials: true})
+            .then((res) => {
+                console.log(res.data);
+                success();
+            })
+            .catch((err) => {
+                console.log(err);
+                error();
+            })
         } else {
             setUserdata((userdata) => ({
                 ...userdata,
@@ -44,33 +63,24 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
                 grade: e.target[5].value,
                 mobile: e.target[6].value
             }));   
+            axios.post("https://backendcepheus.cf/apiM2/register",
+            {  
+                // token: userdata.tokenId,
+                user_name: userdata.name,
+                college: e.target[4].value,
+                mobile: e.target[6].value,
+                grade: grade_number
+            },
+            {withCredentials: true})
+            .then((res) => {
+                console.log(res.data);
+                success();
+            })
+            .catch((err) => {
+                console.log(err);
+                error();
+            })
         }
-             
-        console.log(userdata);
-        // var grade_number;
-        // if(e.target[5].value[0]<='9' && e.target[5].value[0]>='0'){
-        console.log(e.target[2].value);
-        var grade_number = parseInt(e.target[5].value);
-        console.log(grade_number);
-
-        // }
-        axios.post("https://backendcepheus.cf/apiM2/register",
-        {  
-            // token: userdata.tokenId,
-            user_name: userdata.name,
-            college: e.target[4].value,
-            mobile: e.target[6].value,
-            grade: grade_number
-        },
-        {withCredentials: true})
-        .then((res) => {
-            console.log(res.data);
-            success();
-        })
-        .catch((err) => {
-            console.log(err);
-            error();
-        })
     }
 
     return (
