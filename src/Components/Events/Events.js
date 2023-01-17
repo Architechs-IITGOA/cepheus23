@@ -394,9 +394,6 @@ class Events extends React.Component {
 			exitsrc: './exit.png',
 			para: 'Gesture recognition is an active research field in Human-Computer Interaction technology. It has many applications in virtual environment control, sign language translation, robot control, and music creation. In this workshop, you will be able to learn and understand how gesture recognition is implemented using OpenCV, following which there will be a hackathon. Participants will have to automate any game of their choice with the use of hand gestures, thereby creating a virtual mouse.',
 			
-			
-			
-
 
 		},
 		{
@@ -537,7 +534,7 @@ class Events extends React.Component {
 		},
 		
 		{
-			teamsize: 1,
+			teamsize: 2,
 			left1 : '1.Swamini Shirsat (7875722003)',
 			left2 : '2.Vaibhav Mathur (6377882468)',
 			id : 15,
@@ -547,11 +544,6 @@ class Events extends React.Component {
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: 'A fun event for school students to introduce them to the world of programming using scratch. Scratch is a tool that allows people to explore the world of coding and logic flow without having any prior knowledge. This would be a workshop cum hackathon in which we would be demonstrating how to build a game using scratch followed by a problem statement. The participants have to create a game based on the problem statement implementing what has been demonstrated in the workshop. We aim to teach the importance of coding to students and introduce them to the basic logic flow and structure behind programming.',
-			
-			
-			
-
-
 		},
 		{
 			teamsize: 4,
@@ -572,8 +564,8 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Abcd Xyz (9884736273)',
-			left2 : '2.Abcd Xyz (9884736273)',
+			left1 : 'Shreya Marda (7676286680)',
+			left2 : '',
 			id : 11,
 			name : 'Rule The Market',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
@@ -700,7 +692,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724088/cepheus23_posters/WEB_EBIKE_4x_pdprj1.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Cepheus invites every enthusiast techno-wizard to join us in our endeavor to revolutionize the fight against climate change. Build a 2 Wheeler EV(Electric Vehicle) and further the cause toward a greener tomorrow.'
+			para: 'The E-bike competition is a 2-wheeler electric vehicle event for all enthusiasts of electric vehicle technology and sustainable transportation. Participants will have the opportunity to showcase their skills in design, engineering, and innovation as they compete against their peers to build the cheapest and most efficient E-bike.  The competition will include a series of tests that the participants have to pass to gain points and top the leaderboard. Whether you&apos;re a student, or a professional, this is a unique opportunity to push the boundaries of E-bike design and performance. Join us and be a part of the future of sustainable transportation.'
 			
 			
 			

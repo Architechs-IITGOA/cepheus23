@@ -835,14 +835,15 @@ font-style: normal;
 #para{
   color:white;
   /* font-family: SpaceBoards; */
-  width:85%;
+  width:95%;
   margin-left:-20%;
-  font-size:13px;
+  font-size:16px;
   text-align:justify;
   height: 170px;
   overflow-x: scroll;
 }
 #button-right{
+  transition: 0.4s;
   width:40%;
   /* background-color:white; */
   border-radius:5px;
@@ -1001,9 +1002,9 @@ font-style: normal;
   }
   #para{
     color:white;
-    width:77%;
+    width:90%;
     margin-left:-20%;
-    font-size:13px;
+    font-size:15px;
     text-align:justify;
   }
   #button-right{

@@ -1,4 +1,18 @@
-import React, { useRef } from "react";
+// import React from "react";
+// import "./Home.css";
+
+// export default function Home() {
+//   return(
+//     <div className="home" id="home">
+//         <div className="firstlayer">
+//             <img src="img/blueplanet.png" alt="" />
+//         </div>
+//     </div>
+//   )
+// }
+
+
+import React, {useRef} from "react";
 import "../Home/Home.css";
 import ReactDOM from 'react-dom';
 import Countdown from 'react-countdown';

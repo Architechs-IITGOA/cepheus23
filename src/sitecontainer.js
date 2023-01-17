@@ -181,9 +181,8 @@ const SiteContainer = () => {
       </div>
       <div
         onClick={() => handleBodyClick()}
-        class={isProfileClicked ? "blur noblur" : "noblur"}
-      >
-        <Home />
+      > 
+        <Home/>
         <About />
         <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} setUserdata={setUserdata} islogin = {islogin} notlogin ={notlogin}  />
         <Schedule />
