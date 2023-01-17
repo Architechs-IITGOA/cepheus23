@@ -15,6 +15,7 @@ export default function Schedule() {
                   <li>&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Hackoverflow - 1:00 PM</li> 
                   <li>&emsp;&emsp;CTF - 9:00 PM</li> 
                   <li>&emsp; &emsp;&emsp;&emsp;&emsp;Bridge Building - 9:00 PM</li> 
+                  <li>&emsp;&emsp;&emsp;&nbsp;&nbsp;Copy The Nature - 1st Feb</li>
                 </ul>
             </div>
           </div>
@@ -25,7 +26,8 @@ export default function Schedule() {
                 <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Circuital Dilemma - 6:00 PM</li>
                 <li>&emsp;&emsp;&emsp;&emsp;Fizzbuzz - 7:00 PM</li>
                 <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Data Science Hackathon - 9:00 PM</li>
-                <li>&emsp;&emsp;&nbsp;&nbsp;&nbsp;Lorem Ipsum - 9:00 PM</li>
+                <li>&emsp;&emsp;&emsp;Lorem Ipsum - 9:00 PM</li>
+                <li>E-Bike Competition</li>
                 </ul>
             </div>
           </div>
@@ -33,7 +35,6 @@ export default function Schedule() {
             <p className="schedule-date">10 February</p>
             <div className="schedule-list">
                 <ul>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Copy The Nature - 1st Feb</li>
                   <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Scratch Competition -	10:00 AM</li>
                   <li>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Arduino's Trial -	10:00 AM</li>
                   <li>&emsp;&nbsp;&nbsp;KBC Quiz - 3:00 PM</li>
@@ -56,10 +57,9 @@ export default function Schedule() {
             <p className="schedule-date">12 February</p>
             <div className="schedule-list">
                 <ul>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;E-Bike Competition - 9th Feb</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Pare It Down - 11:00 AM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Launch Galaset - 12:00 PM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Game Theory Event - 3:00 PM</li>
+                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Pare It Down - 11:00 AM</li>
+                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Launch Galaset - 12:00 PM</li>
+                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;Game Theory Event - 3:00 PM</li>
                 </ul>
             </div>
           </div>
