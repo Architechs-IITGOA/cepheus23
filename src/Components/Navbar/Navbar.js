@@ -37,8 +37,6 @@ export default function Navbar({
     gapi.load('client:auth2', initClient);
 });
   const responseGoogle = (response) => {
-    console.log(response);
-
     setUserdata((userdata) => ({
       ...userdata,
       name: response.profileObj.name,
@@ -52,7 +50,6 @@ export default function Navbar({
     {idToken: response.tokenId},
     {withCredentials: true})
     .then((res) => {
-      console.log(res.data);
       if(!res.data.registered){
         setUserRegistered(false);
       } else {
@@ -64,12 +61,10 @@ export default function Navbar({
           mobile: res.data.mobile,
           imgurl: link_initial + res.data.image_url
         }));
-        console.log(userdata);
         axios.post("https://backendcepheus.cf/apiM2/getreg",
           {},
           {withCredentials: true})
           .then((res) => {
-            console.log(res.data);
             setUserdata((userdata) => ({
               ...userdata,
               regevents: res.data.regevents

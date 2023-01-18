@@ -21,7 +21,6 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
         if(userdata.gender!==gender){
             let imgurl;
             let randnum = Math.floor(Math.random()*6);
-            console.log(randnum);
             if(gender==="Female"){
                 imgurl = avatar_female[randnum].link;
             } else {
@@ -47,7 +46,6 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
             },
             {withCredentials: true})
             .then((res) => {
-                console.log(res.data);
                 success();
             })
             .catch((err) => {
@@ -73,7 +71,6 @@ export default function EditProfile({isEditProfile, userdata, setEditProfile, se
             },
             {withCredentials: true})
             .then((res) => {
-                console.log(res.data);
                 success();
             })
             .catch((err) => {

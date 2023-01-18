@@ -11,7 +11,6 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
     const HandleRegistrationData = (e) => {
         setUserRegistered(true);
         e.preventDefault();
-        console.log(e.target[0].value);
         let imgurl;
         let randnum = Math.floor(Math.random()*6);
         console.log(randnum);
@@ -20,7 +19,6 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
         } else {
             imgurl = avatar_male[randnum].link;
         }
-        console.log(imgurl);
         setUserdata((userdata) => ({
             ...userdata,
             gender: e.target[2].value,
@@ -31,12 +29,9 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
             name: e.target[0].value,
             imgurl: link_initial + imgurl
         }));        
-        console.log(userdata);
         // var grade_number;
         // if(e.target[5].value[0]<='9' && e.target[5].value[0]>='0'){
-        console.log(e.target[2].value);
         var grade_number = parseInt(e.target[5].value);
-        console.log(grade_number);
 
         // }
         axios.post("https://backendcepheus.cf/apiM2/register",
@@ -50,7 +45,6 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
         },
         {withCredentials: true})
         .then((res) => {
-            console.log(res.data);
             success();
         })
         .catch((err) => {

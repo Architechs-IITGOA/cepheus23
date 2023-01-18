@@ -1,11 +1,10 @@
 // import logo from './logo.svg';
 import Eventcard from './eventpage'
 import './Events.css';
-import im1 from './Events-Images/online.png'
-import im2 from './Events-Images/offline.png'
-import im3 from './Events-Images/talks.png'
+// import im1 from './Events-Images/online.png'
+// import im2 from './Events-Images/offline.png'
+// import im3 from './Events-Images/talks.png'
 import im4 from './Events-Images/rulebook.png'
-import background from "./events_page.png"
 import MediaQuery from 'react-responsive';
 import { useState, useEffect, useRef } from 'react';
 // import './style.css';

@@ -57,7 +57,6 @@ export default function Profile({
         { withCredentials: true }
       )
       .then((res) => {
-        console.log(res.data);
         setUserdata((userdata) => ({
           ...userdata,
           regevents: res.data.regevents,

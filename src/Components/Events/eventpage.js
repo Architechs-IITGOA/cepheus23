@@ -31,7 +31,6 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
         { withCredentials: true }
       )
       .then((res) => {
-        console.log(res.data);
         teamcode = res.data.team_code;
         // success();
         axios
@@ -51,7 +50,6 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           {},
           {withCredentials: true})
           .then((res) => {
-            console.log(res.data);
             setUserdata((userdata) => ({
               ...userdata,
               regevents: res.data.regevents
@@ -89,7 +87,6 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
         { withCredentials: true }
       )
       .then((res) => {
-        console.log(res.data);
         teamcodeind = res.data.team_code;
 
         // success();
@@ -109,7 +106,6 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           {},
           {withCredentials: true})
           .then((res) => {
-            console.log(res.data);
             setUserdata((userdata) => ({
               ...userdata,
               regevents: res.data.regevents
@@ -152,7 +148,6 @@ export default function Eventcard({userdata, data,success_createteam,success_joi
           {},
           {withCredentials: true})
           .then((res) => {
-            console.log(res.data);
             setUserdata((userdata) => ({
               ...userdata,
               regevents: res.data.regevents
