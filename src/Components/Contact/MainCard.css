@@ -50,31 +50,60 @@
     word-break: break-all;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 850px) {
     .main-card-border {
-        width: 68vw;
+        width: 220px;
     }
 
     .main-card-content img{
-        width: 38vw;
-        height: 38vw;
-        margin-bottom: 4vw;
+        width: 110px;
+        height: 110px;
+        margin-bottom: 2vw;
     }
 
     .main-card-content {
-        width: 68vw;
+        width: 220px;
     }
 
     .main-card-contact-detail .name-role{ 
-        font-size: 6vw;
+        font-size: 18px;
     }
 
     .main-card-contact-detail .name-role:nth-child(2){
-        margin-bottom: 5vw;
+        margin-bottom: 25px;
     }
 
     .main-card-contact-detail .contact {
-        font-size: 4vw;
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .main-card-border {
+        width: 55vw;
+    }
+
+    .main-card-content img{
+        width: 28vw;
+        height: 28vw;
+        margin-bottom: 3vw;
+    }
+
+    .main-card-content {
+        width: 55vw;
+    }
+
+    .main-card-contact-detail .name-role{ 
+        font-size: 4.5vw;
+    }
+
+    .main-card-contact-detail .name-role:nth-child(2){
+        margin-bottom: 4vw;
+    }
+
+    .main-card-contact-detail .contact {
+        font-size: 3.5vw;
     }
 }
 

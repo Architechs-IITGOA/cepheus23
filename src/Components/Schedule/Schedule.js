@@ -11,11 +11,11 @@ export default function Schedule() {
             <p className="schedule-date">8 February</p>
             <div className="schedule-list">
                 <ul style={{width: 'fit-content'}}>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rule The Market - 10:00 AM</li> 
-                  <li>&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Hackoverflow - 1:00 PM</li> 
-                  <li>&emsp;&emsp;CTF - 9:00 PM</li> 
-                  <li>&emsp; &emsp;&emsp;&emsp;&emsp;Bridge Building - 9:00 PM</li> 
-                  <li>&emsp;&emsp;&emsp;&nbsp;&nbsp;Copy The Nature - 1st Feb</li>
+                  <li className="schedule-list-item">Rule The Market - 10:00 AM</li> 
+                  <li className="schedule-list-item">Hackoverflow - 1:00 PM</li> 
+                  <li className="schedule-list-item">CTF - 9:00 PM</li> 
+                  <li className="schedule-list-item">Bridge Building - 9:00 PM</li> 
+                  <li className="schedule-list-item">Copy The Nature - 1st Feb</li>
                 </ul>
             </div>
           </div>
@@ -23,11 +23,11 @@ export default function Schedule() {
             <p className="schedule-date">9 February</p>
             <div className="schedule-list">
                 <ul style={{width: 'fit-content'}}>
-                <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Circuital Dilemma - 6:00 PM</li>
-                <li>&emsp;&emsp;&emsp;&emsp;Fizzbuzz - 7:00 PM</li>
-                <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;Data Science Hackathon - 9:00 PM</li>
-                <li>&emsp;&emsp;&emsp;Lorem Ipsum - 9:00 PM</li>
-                <li>E-Bike Competition</li>
+                <li className="schedule-list-item">Circuital Dilemma - 6:00 PM</li>
+                <li className="schedule-list-item">Fizzbuzz - 7:00 PM</li>
+                <li className="schedule-list-item">Data Science Hackathon - 9:00 PM</li>
+                <li className="schedule-list-item">Lorem Ipsum - 9:00 PM</li>
+                <li className="schedule-list-item">E-Bike Competition</li>
                 </ul>
             </div>
           </div>
@@ -35,11 +35,11 @@ export default function Schedule() {
             <p className="schedule-date">10 February</p>
             <div className="schedule-list">
                 <ul>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Scratch Competition -	10:00 AM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Arduino's Trial -	10:00 AM</li>
-                  <li>&emsp;&nbsp;&nbsp;KBC Quiz - 3:00 PM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;Online Treasure Hunt - 4:00 PM</li>
-                  <li>&emsp;HacktheGames - 6:00 PM</li>
+                  <li className="schedule-list-item">Scratch Competition -	10:00 AM</li>
+                  <li className="schedule-list-item">Arduino's Trial -	10:00 AM</li>
+                  <li className="schedule-list-item">KBC Quiz - 3:00 PM</li>
+                  <li className="schedule-list-item">Online Treasure Hunt - 4:00 PM</li>
+                  <li className="schedule-list-item">HacktheGames - 6:00 PM</li>
                 </ul>
             </div>
           </div>
@@ -47,9 +47,9 @@ export default function Schedule() {
             <p className="schedule-date">11 February</p>
             <div className="schedule-list">
                 <ul>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Buy My Code - 11:00 AM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Maze Amaze - 12:00 PM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Treasure Hunt - 4:00 PM</li>
+                  <li className="schedule-list-item">Buy My Code - 11:00 AM</li>
+                  <li className="schedule-list-item">Maze Amaze - 12:00 PM</li>
+                  <li className="schedule-list-item">Treasure Hunt - 4:00 PM</li>
                 </ul>
             </div>
           </div>
@@ -57,9 +57,9 @@ export default function Schedule() {
             <p className="schedule-date">12 February</p>
             <div className="schedule-list">
                 <ul>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Pare It Down - 11:00 AM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Launch Galaset - 12:00 PM</li>
-                  <li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;Game Theory Event - 3:00 PM</li>
+                  <li className="schedule-list-item">Pare It Down - 11:00 AM</li>
+                  <li className="schedule-list-item">Launch Galaset - 12:00 PM</li>
+                  <li className="schedule-list-item">Game Theory Event - 3:00 PM</li>
                 </ul>
             </div>
           </div>
