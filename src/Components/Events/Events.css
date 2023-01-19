@@ -301,7 +301,11 @@ border-color:white;
 .nav-dot:not(:last-of-type) {
 margin-bottom: 20px;
 }
-.nav-dot:hover, .nav-dot.is-active {
+.nav-dot.is-active {
+transform: scale(1.4);
+background: #2776EA;
+}
+.nav-dot:hover{
 transform: scale(1.4);
 background: #2776EA;
 }
@@ -885,6 +889,15 @@ font-style: normal;
   /* .nav-dots{
     
   } */
+  .nav-dot:hover{
+    scale: 0.75;
+    background-color: white;
+  }
+  
+  .nav-dot.is-active{
+    scale: 1;
+    background-color: #2776EA;
+  }
   #online,#offline,#talks{
   
     background-size: cover;
