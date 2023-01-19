@@ -261,7 +261,7 @@ class Events extends React.Component {
 	  }
 	
 	  componentDidMount() {
-		this.intervalId = setInterval(this.incrementCount, 4000);
+		this.intervalId = setInterval(this.incrementCount, 5000);
 	  }
 	
 	  componentWillUnmount() {
