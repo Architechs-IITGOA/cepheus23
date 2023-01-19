@@ -240,12 +240,15 @@ export default function Eventcard({
                     style={{ marginTop: "3px", color: "white" }}
                     id="sub-left-head"
                   >
-                    Max Team-Size: {data.teamsize}
+                    Team Size: {data.teamsize}
                   </h3>
                   {/* <br></br> */}
-                  <h3 style={{ marginTop: "7px",color:'#acc3e8' }} id="sub-left-head">
-                  Contact:Event Head & Co-Head</h3>
-                  
+                  <h3
+                    style={{ marginTop: "7px", color: "#acc3e8" }}
+                    id="sub-left-head"
+                  >
+                    Contact:Event Head
+                  </h3>
                   <h4 id="sub-sub-left-head">{data.left1}</h4>
                   <h4 id="sub-sub-left-head">{data.left2}</h4>
                 </center>
@@ -269,11 +272,11 @@ export default function Eventcard({
                     <MediaQuery maxWidth={700}>
                       <br></br>
                       <h3 style={{ marginTop: "3px", color: "white" }}>
-                        Max Team-Size: {data.teamsize}
+                        Team Size: {data.teamsize}
                       </h3>
                       {/* <br></br> */}
                       <h3 style={{ color: "#acc3e8" }}>
-                        Contact:Event Head & Co-Head
+                        Contact:Event Coheads
                       </h3>
                       <h4>{data.left1}</h4>
                       <h4>{data.left2}</h4>
