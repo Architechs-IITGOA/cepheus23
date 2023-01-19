@@ -172,7 +172,8 @@ class Events extends React.Component {
 		this.state = {eventeighttal:false};
 		this.state = {eventninetal:false};
 		this.state = {reset:false};
-		this.state = {stopanim:false};
+		this.state = {animstop:false};
+		this.state = {animstop1:false};
 		this.state = {eventcarou:0};
 		this.state = {eventcaroone:0};
 		this.state = {eventcartwo:0};
@@ -225,7 +226,7 @@ class Events extends React.Component {
 		
 			this.setState(prevState => {
 				// console.log(prevState.animstop);
-			if (prevState.animstop==false){
+			if (prevState.animstop==false&&prevState.animstop1==false){
 				let nextCount = prevState.eventcarou + 1;
 				if (nextCount > 3) {
 				
@@ -237,7 +238,7 @@ class Events extends React.Component {
 			
 			});
 			this.setState(prevState => {
-			if (prevState.animstop==false){
+			if (prevState.animstop==false&&prevState.animstop1==false){
 				let nextCountone = prevState.eventcaroone + 1;
 				if (nextCountone > 4) {
 				nextCountone = 0;
@@ -266,9 +267,18 @@ class Events extends React.Component {
 	  componentWillUnmount() {
 		clearInterval(this.intervalId);
 	  }
+
+	//   willstop(){
+	// 	this.state.animstop = false;
+	//   }
 	
 	
 	render(){
+		const didmount = this.componentDidMount;
+		const willunmount = this.componentWillUnmount;
+		// const willstop = this.state.animstop;
+		// const willstop = this.willstop;
+		
 		
 		const eveno = this.state.eveno;
 		const clicked = this.state.clicked;
@@ -307,18 +317,21 @@ class Events extends React.Component {
 		const eventcaroone = this.state.eventcaroone;
 		const eventcartwo = this.state.eventcartwo;
 		const reset = this.state.reset;
-		const stopanim = this.state.stopanim;
+		const animstop = this.state.animstop;
+		const animstop1 = this.state.animstop1;
 		// this.setState({animstop:false});
 		///c_scale,q_auto:eco,w_240
 		
-
+		const willstop = () =>{
+			this.setState({animstop1:false});
+		}
 
 		const listData =[ {
 			teamsize: 2,
 			left1 : '1.Utsav Bansal (6267184086)',
 			left2 : '2.Madhura Botave (8830846416)',
 			id : 1,
-			name : 'Lorem IIpsum',
+			name : 'Lorem IPsum',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
 			border: './border1.png',
@@ -562,15 +575,15 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1. Shreya Marda (7676286680)',
-			left2 : '2. Akash (9923041275)',
+			left1 : 'Shreya Marda (7676286680)',
+			left2 : '',
 			id : 11,
 			name : 'Rule The Market',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: "Whether you are new to the trading and investing world or have some prior experience in the stock markets, Cepheus brings to you its Mock Trading competition organized by Alpha - The Finance Club of IIT Goa. The stakes are high and so are the rewards. The trading assets will happen with virtual money but the winners on the Leader-board (where the ranking will be based on the profits made) will win cash prizes and more."			
+			para: 'You have heard about trading in stocks and trading in cryptocurrency, but have you ever heard about trading in programming? We are hosting a fascinating event that will test both your trading and coding skills. Problem statements will be released and the participants will have to create functions that might be helpful to complete the challenge. The name and description of all functions will be open to all the participants. If participants are convinced by the price and description then they can trade. ',
 			
 			
 
@@ -582,8 +595,8 @@ class Events extends React.Component {
 			left2 : '2.Mulayam (9817568174)',
 			id : 18,
 			name : 'Pare It Down',
-			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724107/cepheus23_posters/WEB_PAIRITDOWN_4x_x2mq4e.webp',
-			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724107/cepheus23_posters/WEB_PAIRITDOWN_4x_x2mq4e.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1674155655/cepheus23_posters/WEB_PAIRITDOWN_4x_mldnq7.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1674155655/cepheus23_posters/WEB_PAIRITDOWN_4x_mldnq7.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: "Want to flex your coding muscles and have a blast doing it? Look no further! We're bringing you an event that'll take you on a wild coding journey, from easy-peasy intro rounds to brain-melting challenges. We've got five rounds in store for you: Introduction to a new language, Debugging Round, Brain Racker, Blind Code, and CP with risk and reward. Each round will have its own set of challenging problems that'll test your skills and push you to level up. The clock is ticking, so grab your keyboard and let's code like crazy!",
@@ -883,19 +896,19 @@ class Events extends React.Component {
 						<center>
 						<MediaQuery minWidth={700}>
 						<ul  className="firstpagelist">
-							<li ><div style={elemStyle} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false})}} >
+							<li ><div style={elemStyle} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false,animstop1:false})}} >
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>ONLINE</h1></center>
 							</div> */}
 							</div></li>
-							<li><div style={elemStyleoff} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false})}}>
+							<li><div style={elemStyleoff} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false,animstop1:false})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>OFFLINE</h1></center>
 							</div> */}
 							</div></li>
-							{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false})}}>
+							{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false,animstop1:false})}}>
 							<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 							<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 								<center><h1  id="text" style={{paddingTop:'5px'}}>TALKS</h1></center>
@@ -905,19 +918,19 @@ class Events extends React.Component {
 						</MediaQuery>
 						<MediaQuery maxWidth={700}>
 							<ul  className="firstpagelist">
-								<li ><div style={elemStylemed} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false})}} >
+								<li ><div style={elemStylemed} id = "online" onClick={()=> {this.setState({clicked:true,eventcarou:0,animstop:false,animstop1:false})}} >
 								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 								{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 									<center><h1  id="text" style={{paddingTop:'5px'}}>ONLINE</h1></center>
 								</div> */}
 								</div></li>
-								<li><div style={elemStyleoffmed} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false})}}>
+								<li><div style={elemStyleoffmed} id = 'offline' onClick={()=> {this.setState({clicked2:true,eventcaroone:0,animstop:false,animstop1:false})}}>
 								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 								{/* <div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 									<center><h1  id="text" style={{paddingTop:'5px'}}>OFFLINE</h1></center>
 								</div> */}
 								</div></li>
-								{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false})}}>
+								{/* <li><div style={elemStyle} id = 'talks' onClick={()=> {this.setState({clicked3:true,eventcartwo:0,animstop:false,animstop1:false})}}>
 								<img src="./border1.png" style={{width:'163%',marginLeft:"-26.5%",marginTop:'-20%'}}></img>
 								<div style={{width:'100%',height:"18%",backgroundColor:"black",marginTop:"-68%",marginLeft:'1%',backgroundColor:'#643434'}}>
 									<center><h1  id="text" style={{paddingTop:'5px'}}>TALKS</h1></center>
@@ -952,7 +965,7 @@ class Events extends React.Component {
 								<br></br>
 								<img draggable='false'  id='close' src='./exit.png'   onClick={()=> this.setState({clicked:false})}></img>
 									<h1 id='online-heading'>ONLINE EVENTS</h1>
-									
+								{/* <MediaQuery minWidth={700}>
 								<ul className="nav-dots1aft" id="js-dots" style={{marginTop:'0.8%'}}>
 								<li className={eventcarou==0?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcarou:0,reset:true})} }></li>
 								<li className={eventcarou==1?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcarou:1,reset:true})} ></li>
@@ -960,6 +973,16 @@ class Events extends React.Component {
 								<li className={eventcarou==3?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcarou:3,reset:true})} ></li>
 								
 								</ul>
+								</MediaQuery> */}
+								{/* <MediaQuery maxWidth={700}> */}
+								<ul className="nav-dots1aft" id="js-dots" style={{marginTop:'0.8%'}}>
+								<li className={eventcarou==0?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcarou:0,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)} } ></li>
+								<li className={eventcarou==1?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcarou:1,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								<li className={eventcarou==2?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcarou:2,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)} }></li>
+								<li className={eventcarou==3?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcarou:3,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								
+								</ul>
+								{/* </MediaQuery> */}
 	
 								<main className="main" id = 'js-section'>
 								<section className={eventcarou==0?"section is-active transition":"section transition"}   id="section1">
@@ -1030,6 +1053,11 @@ class Events extends React.Component {
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
+									<li><div className='event'   onClick={()=> {this.setState({eventsix:true});this.setState({eveno:15})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									<img draggable='false'  src={listData[15].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
+									
+									</div></li>
 									
 								</ul>
 								</section>
@@ -1060,7 +1088,7 @@ class Events extends React.Component {
 								<br></br>
 								<img draggable='false' id='close' src='./exit.png'   onClick={()=> this.setState({clicked2:false})}></img>
 									<h1 id='online-heading'>OFFLINE EVENTS</h1>
-									
+								{/* <MediaQuery minWidth={700}>	
 								<ul className="nav-dots2aft" id="js-dots2" style={{marginTop:'0.8%'}}>
 								<li className={eventcaroone==0?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:0,reset:true})}} ></li>
 								<li className={eventcaroone==1?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcaroone:1,reset:true})} ></li>
@@ -1069,6 +1097,17 @@ class Events extends React.Component {
 								<li className={eventcaroone==4?"nav-dot is-active":"nav-dot"} onClick={()=> this.setState({eventcaroone:4,reset:true})} ></li>
 								
 								</ul>
+								</MediaQuery> */}
+								{/* <MediaQuery maxWidth={700}>	 */}
+								<ul className="nav-dots2aft" id="js-dots2" style={{marginTop:'0.8%'}}>
+								<li className={eventcaroone==0?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:0,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								<li className={eventcaroone==1?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:1,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								<li className={eventcaroone==2?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:2,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								<li className={eventcaroone==3?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:3,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								<li className={eventcaroone==4?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:4,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								
+								</ul>
+								{/* </MediaQuery> */}
 	
 								<main className="main" id = 'js-section2'>
 								<section className={eventcaroone==0?"section is-active transition":"section transition"} id="section1">
@@ -1104,8 +1143,13 @@ class Events extends React.Component {
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
-									<li><div className='event'   onClick={()=> {this.setState({eventsixoff:true});this.setState({eveno:15})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
+									{/* <li><div className='event'   onClick={()=> {this.setState({eventsixoff:true});this.setState({eveno:15})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[15].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
+									
+									</div></li> */}
+									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:16})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
+									<img draggable='false'  src={listData[16].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
@@ -1114,11 +1158,11 @@ class Events extends React.Component {
 								<section className={eventcaroone==2?"section is-active2 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
-									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:16})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
+									{/* <li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:16})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
 									<img draggable='false'  src={listData[16].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
-									</div></li>
+									</div></li> */}
 									<li><div className='event'   onClick={()=> {this.setState({eventeightoff:true});this.setState({eveno:17})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}} >
 									<img draggable='false'  src={listData[17].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
