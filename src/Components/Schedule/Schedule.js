@@ -58,7 +58,7 @@ export default function Schedule() {
             <div className="schedule-list">
                 <ul>
                   <li className="schedule-list-item">Pare It Down - 11:00 AM</li>
-                  <li className="schedule-list-item">Launch Galaset - 12:00 PM</li>
+                  <li className="schedule-list-item">Launch Galaset - 11:00 AM</li>
                   <li className="schedule-list-item">Game Theory Event - 3:00 PM</li>
                 </ul>
             </div>

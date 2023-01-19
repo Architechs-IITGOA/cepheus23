@@ -318,13 +318,12 @@ class Events extends React.Component {
 			left1 : '1.Utsav Bansal (6267184086)',
 			left2 : '2.Madhura Botave (8830846416)',
 			id : 1,
-			name : 'Lorem Ipsum',
+			name : 'Lorem IIpsum',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Every great design begins with an even better story. Through this event, we hope to find bright and innovative designers across the country to face off and design the user interface for a website based on the theme “Multiverse”. The submission can be made individually or as a team of two within 24 hours from the start of the competition.',
-			
+			para: "If you think you have an eye for design, worry not we’ve got you! The Lorem Ipsum is a UI/UX Design Challenge for all you creative designers out there! As a part of this event, the participant must design a website using the provided content (text and images) and turn in their submissions before the clock runs out. Also do keep in mind, the website should revolve around the theme- ‘Multiverse’. We look forward to seeing your innovation in action."			
 			
 			
 
@@ -405,7 +404,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724079/cepheus23_posters/web_CTF_4x_hntg9n.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Capture The Flag is a 3-day event in which teams will be given challenges involving cybersecurity. The essence of a CTF is puzzle-solving. The challenges are created by and for people who like solving puzzles. The goal of each challenge will be to find the hidden flag. The difficulty of the challenge determines the points awarded to the team. The team that gets the most points in the shortest amount of time wins.',
+			para: "Get ready for a thrilling 3-day event where teams will put their cybersecurity skills to the test in the ultimate challenge: Capture The Flag! It's all about solving puzzles and finding the hidden flags. Each challenge will have its own level of difficulty and corresponding points awarded to the team. The team with the most points in the shortest amount of time will emerge victorious. So gather your team and sharpen your puzzle-solving skills, it's time to Capture The Flag!",
 			
 			
 			
@@ -422,7 +421,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/WEB_fizzbuzz_4x_lmzxto.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'FizzBuzz is a competitive coding contest. In this event, participants will be given algorithm-based problems to solve within a 2-hour time limit. This is an individual event. Don\'t fret, even if you\'re a beginner, the event ensures that everybody regardless of what their level is, will receive an opportunity to solve a problem. Do you have what it takes to survive Fizzbuzz and come out on top?',
+			para: "Introducing FizzBuzz, a competitive coding contest where participants will put their algorithm skills to the test. You'll have 2 hours to solve as many problems as you can. It's an individual event so you'll be going head-to-head against the best of the best. But don't worry if you're new to the game, we designed the event to give everyone, regardless of skill level, a chance to shine. So, do you have what it takes to conquer FizzBuzz and come out on top? Let's find out!",
 			
 			
 			
@@ -431,8 +430,8 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : '1.Sai Adarsh (8688530237)',
-			left2 : '2.Abhinav Reddy (9392534843)',
+			left1 : 'SSai Adarsh (8688530237)',
+			left2 : 'Abhinav Reddy (9392534843)',
 			id : 8,
 			name : 'Online Treasure Hunt',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/WEB_Online_Treasure_Hunt_4x_z92rog.webp',
@@ -507,7 +506,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724094/cepheus23_posters/web_kbc_4x_kkvt2b.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Watching KBC on TV is by far one of our favorite memories. Our excitement is at its peak when a question is presented to the participant, and the stakes are high. Join us for a fun KBC quiz event this year. In teams of 3, you will have 30 seconds to answer the question given to you. But, here’s the catch. A wrong answer will fetch you negative marks, so be confident about your answers. Put your speed and knowledge to the test!',
+			para: "Step right up folks and join the KBC quiz-tastic event of the year! Where finance is the name of the game and speed is the key to victory. Gather a partner and get ready to race against the clock, answering questions faster than a cheetah on steroids. But beware, one wrong move and you'll be deductin' points faster than a bank charges fees. So brush up on your finance knowledge and let the good times roll!",
 			
 			
 			
@@ -524,7 +523,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724112/cepheus23_posters/WEB_maze_amaze_4x_cluiei.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Ever been fascinated by remote-controlled cars or F1 racing events? Then this event is perfect for you. Dive right into this race, where we present to you an obstacle-ridden track. Bring in your line follower bots, and start racing them across the line tracks. Needless to say, the fastest bot wins the race!',
+			para: 'Have you ever dreamed of building a bot that can solve a maze on its own? Well, now you get a chance to do so! We challenge you to create a line-follower robot that can keep track of directions while solving a maze, analyze the path in the Dry run, and use this information in the Actual run to traverse the maze in the shortest possible time.',
 			
 			
 			
@@ -563,16 +562,15 @@ class Events extends React.Component {
 		},
 		{
 			teamsize: 1,
-			left1 : 'Shreya Marda (7676286680)',
-			left2 : '',
+			left1 : '1. Shreya Marda (7676286680)',
+			left2 : '2. Akash (9923041275)',
 			id : 11,
 			name : 'Rule The Market',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724104/cepheus23_posters/WEB_RULE_THE_MARKET_4x_hbvhjw.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'You have heard about trading in stocks and trading in cryptocurrency, but have you ever heard about trading in programming? We are hosting a fascinating event that will test both your trading and coding skills. Problem statements will be released and the participants will have to create functions that might be helpful to complete the challenge. The name and description of all functions will be open to all the participants. If participants are convinced by the price and description then they can trade. ',
-			
+			para: "Whether you are new to the trading and investing world or have some prior experience in the stock markets, Cepheus brings to you its Mock Trading competition organized by Alpha - The Finance Club of IIT Goa. The stakes are high and so are the rewards. The trading assets will happen with virtual money but the winners on the Leader-board (where the ranking will be based on the profits made) will win cash prizes and more."			
 			
 			
 
@@ -588,7 +586,7 @@ class Events extends React.Component {
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724107/cepheus23_posters/WEB_PAIRITDOWN_4x_x2mq4e.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'Curious about competitive programming but don’t know where to start? We bring to you a fun coding event to help you hone your programming skills even without any prior experience. There will be five coding rounds which will  progress from easy to medium difficulty levels namely,  Introduction to a new language, Debugging Round, Brain Racking, Blind Code, and CP with risk and reward. ',
+			para: "Want to flex your coding muscles and have a blast doing it? Look no further! We're bringing you an event that'll take you on a wild coding journey, from easy-peasy intro rounds to brain-melting challenges. We've got five rounds in store for you: Introduction to a new language, Debugging Round, Brain Racker, Blind Code, and CP with risk and reward. Each round will have its own set of challenging problems that'll test your skills and push you to level up. The clock is ticking, so grab your keyboard and let's code like crazy!",
 			
 			
 			
@@ -615,14 +613,14 @@ class Events extends React.Component {
 		{
 			teamsize: 2,
 			left1 : '1.Arnav Kamat (8237063638)',
-			left2 : '2.Aniket Chaudhri (7087363393)',
+			left2 : '',
 			id : 17,
 			name : 'Buy My Code',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724083/cepheus23_posters/web_Buy_My_Code_4x_mqgyu7.webp',
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724083/cepheus23_posters/web_Buy_My_Code_4x_mqgyu7.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'You have heard about trading in stocks and trading in cryptocurrency, but have you ever heard about trading in programming? We are hosting a fascinating event that will test both your trading and coding skills. Problem statements will be released and the participants will have to create functions that might be helpful to complete the challenge. The name and description of all functions will be open to all the participants. If participants are convinced by the price and description then they can trade. ',
+			para: "Calling all code wizards and trading gurus! Have you ever dreamed of combining your love for programming with your passion for trading? Well, dream no more! We're hosting an event that'll put your skills to the ultimate test. Think of it like a barter system for code, where problem statements are released and participants must create functions to solve them. The best part? The name and description of all the functions will be open to everyone, so you can trade the hottest code on the market. Ready to flex your coding and trading muscles? Let's do this!",
 			
 			
 			
