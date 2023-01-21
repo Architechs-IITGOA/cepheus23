@@ -969,7 +969,7 @@ font-style: normal;
     cursor: pointer;
   }
   #outer{
-    width:650px;
+    width:700px;
     background: rgba(255, 255, 255, 0.15);
     height:480px;
     margin-top:-1.3%;
@@ -1054,6 +1054,239 @@ font-style: normal;
   }
 }
 @media screen and (max-width:700px){
+  #landpage{
+    margin-top: -21vh;
+  }
+  
+  .events .events-bg{
+    background-image: url("./Events-Images/final_bg_1.png");
+  }
+  .events-bg1{
+    background-image: url("./Events-Images/final_bg_1.png");
+  }
+  .firstpagelist{
+    margin-top: 15vh;
+  }
+  .firstpagelist>li{
+    margin-top: 10vh;
+    
+  }
+  #online,#offline,#talks{
+  
+    background-size: cover;
+    width:17vh;
+    height:17vh;
+    margin-top: 2vh;
+    /* margin-left: 30%; */
+    cursor:pointer;
+  }
+  .firstpagelist{
+    display: block;
+    /* margin-left: 32%; */
+    width: 100%;
+    margin-left: 0%;
+    /* margin-top: -4vh; */
+  }
+  #text{
+    font-size: 2vh;
+  }
+  #main-heading{
+    font-size: 40px;
+    /* margin-top: -3vh; */
+  }
+  .buttonimg{
+    width: 200px;
+    margin-left: 2%;
+  }
+  .buttondiv{
+    width:200px;
+  }
+  .buttondiv{
+    margin-top: -40px;
+    margin-left: 20px;
+  }
+  #blur{
+    width:360px;
+    background: rgba(255, 255, 255, 0.15);
+    height:72vh;
+    margin-top:-21%;
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  .setting{
+    margin-top: -2vh;
+  }
+  
+  .event{
+    background-size: cover;
+    width: 15vh;
+    height:14vh;
+    margin-top: 25px;
+    margin-left: 15%;
+    cursor: pointer;
+  }
+  #list,#list1,#list2{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: -8vw;
+    margin-top: 10%;
+  
+  }
+  #online-heading{
+    color: white;
+    font-size: 20px;
+    margin-top: -2%;
+  }
+  #close{
+    width:30px;
+    margin-left:80%;
+    margin-top:2%;
+    cursor:pointer;
+  }
+  #close1{
+    width:30px;
+    margin-left:80%;
+    margin-top:2%;
+    cursor:pointer;
+    display: none;
+  }
+  #outer{
+    width:350px;
+    background: rgba(255, 255, 255, 0.15);
+    height:80vh;
+    margin-top:-10.3%;
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow:scroll;
+  }
+  #inner{
+    display:block;
+    align-items:center;
+    justify-content:space-evenly;
+  }
+  #inner-left{
+    width:50%;
+    height:200px
+  }
+  #left-post{
+    width:95%;
+    height:95%;
+    margin-top:70px;
+    margin-left:-3%;
+  }
+  #sub-left-head{
+    margin-left:-3%;
+    margin-top:-1%;
+    color:#FFC200;
+    display: none;
+    
+  }
+  #fake{
+    height: 20px;
+  }
+  #close2{
+    display: block;
+    width: 30px;
+    margin-left: 210px;
+    /* margin-top: 20px; */
+    /* padding-top: 25px; */
+
+  }
+  #close2:hover{
+    scale: 1.2;
+    transition: 0.2s;
+  }
+  #sub-sub-left-head{
+    margin-left:-3.5%;
+    color:white;
+    margin-top:-2%;
+    display: none;
+  }
+  #inner-right{
+    width:50%;
+    height:500px;
+  }
+  #sub-head{
+    color:#acc3e8;
+    margin-top:-150px;
+    font-size:18px;
+    margin-left:3%;
+  }
+  #para{
+    color:white;
+    width:120%;
+    margin-left:-10%;
+    font-size:1.4vh;
+    margin-top:132%;
+    text-align:justify;
+  }
+  #button-right{
+    width:90%;
+    /* background-color:white; */
+    border-radius:5px;
+    height:35px;
+    /* border-color:white; */
+    margin-top:10%;
+    margin-left:-5%;
+    font-size:18px;
+    font-weight:550;
+    cursor:pointer;
+    font-family: 'Outfit';
+    background-color: #282c34;
+  box-shadow: 0 0 10px #fff;
+  color: white;
+  margin-bottom: 15px;
+  }
+  .secondon1{
+    /* display: block; */
+    margin-right: 0px;
+    /* margin-top: -76vh; */
+    margin-top: -2.5vh;
+    visibility: visible;
+    transition-duration: 0.4s;
+    }
+    .secondoff1{
+    /* display: none; */
+    margin-right: -2000px;
+    visibility: hidden;
+    transition-duration: 0.4s;
+    }
+    .secondon2{
+    /* display: block; */
+    margin-right: 0px;
+    /* margin-top: -76vh; */
+    margin-top: -2.5vh;
+    visibility: visible;
+    transition-duration: 0.4s;
+    }
+    .secondoff2{
+    /* display: none; */
+    margin-right: -2000px;
+    visibility: hidden;
+    transition-duration: 0.4s;
+    }
+    .secondon3{
+    /* display: block; */
+    margin-right: 0px;
+    /* margin-top: -76vh; */
+    margin-top: -2.5vh;
+    visibility: visible;
+    transition-duration: 0.4s;
+    }
+    .secondoff3{
+    /* display: none; */
+    margin-right: -2000px;
+    visibility: hidden;
+    transition-duration: 0.4s;
+    }
+  
+}
+@media screen and (max-width:650px){
   #landpage{
     margin-top: -21vh;
   }
