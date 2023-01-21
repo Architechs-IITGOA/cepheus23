@@ -242,17 +242,17 @@ export default function Eventcard({
                     style={{ marginTop: "3px", color: "white" }}
                     id="sub-left-head"
                   >
-                    Team Size: {data.teamsize}
+                    Max Team-Size: {data.teamsize}
                   </h3>
                   {/* <br></br> */}
                   <h3
                     style={{ marginTop: "7px", color: "#acc3e8" }}
                     id="sub-left-head"
                   >
-                    Contact:Event Head
+                    Contact:
                   </h3>
-                  <h4 id="sub-sub-left-head">{data.left1}</h4>
-                  <h4 id="sub-sub-left-head">{data.left2}</h4>
+                  <h4 id="sub-sub-left-head"><span style={{ color: "#acc3e8" }}>Head:</span>{data.left1}</h4>
+                  <h4 id="sub-sub-left-head"><span style={{ color: "#acc3e8" }}>Co-Head:</span>{data.left2}</h4>
                 </center>
               </div>
               <div id="inner-right">
@@ -274,14 +274,14 @@ export default function Eventcard({
                     <MediaQuery maxWidth={700}>
                       <br></br>
                       <h3 style={{ marginTop: "3px", color: "white" }}>
-                        Team Size: {data.teamsize}
+                        Max Team-Size: {data.teamsize}
                       </h3>
                       {/* <br></br> */}
                       <h3 style={{ color: "#acc3e8" }}>
-                        Contact:Event Coheads
+                        Contact:
                       </h3>
-                      <h4>{data.left1}</h4>
-                      <h4>{data.left2}</h4>
+                      <h4><span style={{ color: "#acc3e8" }}>Head:</span>{data.left1}</h4>
+                      <h4><span style={{ color: "#acc3e8" }}>Co-Head:</span>{data.left2}</h4>
                     </MediaQuery>
                   </center>
                 </div>
@@ -318,7 +318,7 @@ export default function Eventcard({
               }
             }}
           ></img>
-          <center>
+          <center style={displayteamcode?{display:'none'}:{display:'block'}}>
             <h1>Team Details</h1>
           </center>
           {/* <form> */}
@@ -344,6 +344,7 @@ export default function Eventcard({
           </div>
 
           <div className={create ? "create_active" : "create_inactive"}>
+            <div style={displayteamcode?{display:'none'}:{display:'block'}}>
             <center>
               <label>Team Name</label>
               <br></br>
@@ -363,7 +364,12 @@ export default function Eventcard({
             </button>
             <br />
             <br />
+            </div>
             <center>
+              <div style={displayteamcode?{display:'block'}:{display:'none'}}>
+              <h2 style={{ color: "#acc3e8" }}>Congratulations</h2>
+              <h2 style={{ color: "#acc3e8" }}>Successfully Registered</h2>
+              </div>
               <label
                 className={
                   displayteamcode ? "teamcode_active" : "teamcode_inactive"
