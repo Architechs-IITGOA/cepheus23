@@ -706,6 +706,7 @@ font-style: normal;
   list-style: none;
   display: flex;
   margin-top:6%;
+  padding-top: 5vh;
   flex-direction: row;
   justify-content: space-evenly;
   width: 70vw;
@@ -1085,6 +1086,7 @@ font-style: normal;
     /* margin-left: 32%; */
     width: 100%;
     margin-left: 0%;
+    padding-top: 0;
     /* margin-top: -4vh; */
   }
   #text{
