@@ -17,6 +17,7 @@ export default function Eventcard({
   islogin,
   notlogin,
   exiting,
+  error_general
 }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
@@ -171,6 +172,7 @@ export default function Eventcard({
           })
           .catch((err) => {
             console.log(err);
+            error_general();
           });
         success_jointeam();
         // success();

@@ -22,7 +22,9 @@ export default function Navbar({
   setMenuClicked,
   setUserRegistered,
   success, reg_failed, error,
-  setislogin
+  setislogin,
+  success_login,
+  error_general
 }) {
   const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
@@ -50,6 +52,7 @@ export default function Navbar({
     {idToken: response.tokenId},
     {withCredentials: true})
     .then((res) => {
+      success_login();
       if(!res.data.registered){
         setUserRegistered(false);
       } else {
@@ -72,16 +75,19 @@ export default function Navbar({
           })
           .catch((err) => {
             console.log(err);
+            error_general();
           })
       }
     })
     .catch((err) => {
       console.log(err);
+      error_general();
     })
     // handleLogin();
     // setsuccess(true);
   };
   const responseGoogle1 = (response) => {
+    error_general();
     console.log(response);
     auth_failure();
     // setsuccess(false);

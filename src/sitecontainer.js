@@ -13,7 +13,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
 
-const link_initial = "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772"
+const link_initial =
+  "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772";
 
 const avatar_male = [
   {
@@ -64,9 +65,9 @@ const SiteContainer = () => {
     name: "",
     firstName: "",
     email: "",
-    imgurl: ""
+    imgurl: "",
   });
-  const [islogin,setislogin] = useState(false);
+  const [islogin, setislogin] = useState(false);
   const handleProfileClick = () => {
     setProfileClicked(!isProfileClicked);
   };
@@ -92,14 +93,16 @@ const SiteContainer = () => {
   };
   const success_toast_reg = () => toast.success("Registration Successful!");
   const success_toast_edit = () => toast.success("Profile edit Successful!");
-  const success_createteam= () => toast.success("Team Created Successfully!");
-  const success_jointeam= () => toast.success("Joined team Successfully!");
-  const success_regevent= () => toast.success("Successfully registed!");
-  const success_logout= () => toast.success("Successfully logged out!");
+  const success_createteam = () => toast.success("Team Created Successfully!");
+  const success_jointeam = () => toast.success("Joined team Successfully!");
+  const success_regevent = () => toast.success("Successfully registed!");
+  const success_login = () => toast.success("Successfully logged in!");
+  const success_logout = () => toast.success("Successfully logged out!");
   const notlogin = () => toast.error("Please login before register");
-  const reg_failed = (err) => toast.error(err.toUpperCase());
+  const reg_failed = (err) => toast.error(err[0].toUpperCase() + err.slice(1));
+  const error_general = () => toast.success("Something went wrong. Please try again or refresh the page!");
   // const wrong_mail = () => toast.warning("Please enter a valid email");
-  const error = (err) => toast.error(err);
+  const error = (err) => toast.error(err[0].toUpperCase() + err.slice(1));
   return (
     <div baseurl>
       <div>
@@ -117,6 +120,8 @@ const SiteContainer = () => {
           reg_failed={reg_failed}
           error={error}
           setislogin={setislogin}
+          success_login={success_login}
+          error_general={error_general}
         />
         <Profile
           isProfileClicked={isProfileClicked}
@@ -126,10 +131,11 @@ const SiteContainer = () => {
           setUserdata={setUserdata}
           setEditProfile={setEditProfile}
           setProfileClicked={setProfileClicked}
-          success_logout = {success_logout}
-          isUserRegistered = {isUserRegistered}
-          setUserRegistered = {setUserRegistered}
-          setislogin = {setislogin}
+          success_logout={success_logout}
+          isUserRegistered={isUserRegistered}
+          setUserRegistered={setUserRegistered}
+          setislogin={setislogin}
+          error_general={error_general}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
         {/* <EditProfile
@@ -150,8 +156,9 @@ const SiteContainer = () => {
             success={success_toast_edit}
             reg_failed={reg_failed}
             error={error}
-            avatar_female = {avatar_female}
-            avatar_male = {avatar_male}
+            avatar_female={avatar_female}
+            avatar_male={avatar_male}
+            error_general={error_general}
           />
         ) : null}
         {/* <RegistrationPage
@@ -174,17 +181,26 @@ const SiteContainer = () => {
             success={success_toast_reg}
             reg_failed={reg_failed}
             error={error}
-            avatar_female = {avatar_female}
-            avatar_male = {avatar_male}
+            avatar_female={avatar_female}
+            avatar_male={avatar_male}
+            error_general={error_general}
           />
         )}
       </div>
-      <div
-        onClick={() => handleBodyClick()}
-      > 
-        <Home/>
+      <div onClick={() => handleBodyClick()}>
+        <Home />
         <About />
-        <Events userdata = {userdata} success_createteam ={success_createteam} success_jointeam = {success_jointeam} success_regevent = {success_regevent} error = {error} setUserdata={setUserdata} islogin = {islogin} notlogin ={notlogin}  />
+        <Events
+          userdata={userdata}
+          success_createteam={success_createteam}
+          success_jointeam={success_jointeam}
+          success_regevent={success_regevent}
+          error={error}
+          setUserdata={setUserdata}
+          islogin={islogin}
+          notlogin={notlogin}
+          error_general = {error_general}
+        />
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />

@@ -46,6 +46,7 @@ export default function Profile({
   isUserRegistered,
   setUserRegistered,
   setislogin,
+  error_general
 }) {
   const clientId =
     "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
@@ -64,6 +65,7 @@ export default function Profile({
       })
       .catch((err) => {
         console.log(err);
+        error_general();
       });
   }, []);
 
@@ -138,8 +140,6 @@ export default function Profile({
                 buttonText="Logout"
                 onLogoutSuccess={() => {
                   console.log("loggedout successfully");
-                  success_logout();
-                  auth_reset();
                   setEditProfile(false);
                   setUserRegistered(true);
                   setislogin(false);
@@ -151,15 +151,20 @@ export default function Profile({
                     )
                     .then((res) => {
                         console.log(res.data);
+                        success_logout();
+                        auth_reset();
                     })
                     .catch((err) => {
                         console.log(err);
+                        error_general();
+                        auth_continue();
                     });
                     // window.location.reload(false);
                 }}
                 
                 onLogoutFailure={(err) => {
                   console.log(err);
+                  error_general();
                   auth_continue();
                 }}
               />
