@@ -17,7 +17,8 @@ export default function Eventcard({
   islogin,
   notlogin,
   exiting,
-  error_general
+  error_general,
+  success_indregevent
 }) {
   const teamSize = data.teamsize;
   const [create, setcreate] = useState(false);
@@ -115,6 +116,7 @@ export default function Eventcard({
           .then((res) => {
             console.log(res.data);
             success_regevent();
+            setTimeout(() => {success_indregevent()}, 2000);
             axios
               .post(
                 "https://backendcepheus.cf/apiM2/getreg",
@@ -175,6 +177,7 @@ export default function Eventcard({
             error_general();
           });
         success_jointeam();
+        success_indregevent();
         // success();
       })
       .catch((err) => {
@@ -318,7 +321,7 @@ export default function Eventcard({
               }
             }}
           ></img>
-          <center>
+          <center class={displayteamcode ? "input_inactive" : "input_active"}>
             <h1>Team Details</h1>
           </center>
           {/* <form> */}
@@ -345,7 +348,8 @@ export default function Eventcard({
 
           <div className={create ? "create_active" : "create_inactive"}>
             <center>
-              <label>Team Name</label>
+              <label class={displayteamcode ? "input_inactive" : "input_active"}>Team Name</label>
+              <label class={displayteamcode ? "teamcode_active" : "teamcode_inactive"}>Congratulations <br></br> You have successfully registered for the event</label>
               <br></br>
             </center>
             <input
@@ -356,9 +360,10 @@ export default function Eventcard({
               required
               value={createTeamName}
               onChange={(e) => setCreateTeamName(e.target.value)}
+              class={displayteamcode ? "input_inactive" : "input_active"}
             />
             <br></br>
-            <button id="reg_team1" onClick={(e) => handleTeamCreation(e)}>
+            <button id="reg_team1" onClick={(e) => handleTeamCreation(e)} class={displayteamcode ? "input_inactive" : "input_active"}>
               Submit
             </button>
             <br />
@@ -378,8 +383,7 @@ export default function Eventcard({
                   displayteamcode ? "teamcode_active" : "teamcode_inactive"
                 }
               >
-                Please save this team code and share it with your teamates to
-                join the team
+                Kindly save the team code and pass it along to your teammates so they may join the team. <br/> Also, please check your email inbox for further details about the event, noting that the email may be in your spam folder.
               </div>
               <br></br>
             </center>

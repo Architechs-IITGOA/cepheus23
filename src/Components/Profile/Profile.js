@@ -104,7 +104,7 @@ export default function Profile({
       <div className="profile-right">
         <div class="participated-events">
           <h2>Participated Events</h2>
-          {userdata.regevents.length !== 0 ? (
+          {userdata.regevents ? (
             <ol>
               {userdata.regevents.map((item, i) => {
                 return <li>{event_names[item - 1]}</li>;

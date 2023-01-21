@@ -96,6 +96,7 @@ const SiteContainer = () => {
   const success_createteam = () => toast.success("Team Created Successfully!");
   const success_jointeam = () => toast.success("Joined team Successfully!");
   const success_regevent = () => toast.success("Successfully registed!");
+  const success_indregevent = () => toast.success("Please check your email inbox for further details about the event. The email may be in your spam folder.", {autoClose: 10000});
   const success_login = () => toast.success("Successfully logged in!");
   const success_logout = () => toast.success("Successfully logged out!");
   const notlogin = () => toast.error("Please login before register");
@@ -200,6 +201,7 @@ const SiteContainer = () => {
           islogin={islogin}
           notlogin={notlogin}
           error_general = {error_general}
+          success_indregevent = {success_indregevent}
         />
         <Schedule />
         {/* <Sponsors /> */}

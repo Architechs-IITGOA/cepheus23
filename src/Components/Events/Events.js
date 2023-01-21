@@ -1300,7 +1300,7 @@ class Events extends React.Component {
 					
 						<div className={clickedtwo||eventtwo||eventthree||eventfour||eventfive||eventsix||eventseven||eventeight||eventnine||clickedtwooff||eventtwooff||eventthreeoff||eventfouroff||eventfiveoff||eventsixoff||eventsevenoff||eventeightoff||eventnineoff||clickedtwotal||eventtwotal||eventthreetal||eventfourtal||eventfivetal||eventsixtal||eventsevental||eventeighttal||eventninetal?'eventzon':'eventzoff'}>
 						
-						<Eventcard  data={listData[eveno]} userdata={this.props.userdata} success_createteam ={this.props.success_createteam} success_jointeam = {this.props.success_jointeam} success_regevent = {this.props.success_regevent} error = {this.props.error} error_general ={this.props.error_general} setUserdata={this.props.setUserdata} islogin = {this.props.islogin} notlogin = {this.props.notlogin}exiting={()=>{
+						<Eventcard  data={listData[eveno]} userdata={this.props.userdata} success_createteam ={this.props.success_createteam} success_jointeam = {this.props.success_jointeam} success_regevent = {this.props.success_regevent} success_indregevent = {this.props.success_indregevent} error = {this.props.error} error_general ={this.props.error_general} setUserdata={this.props.setUserdata} islogin = {this.props.islogin} notlogin = {this.props.notlogin}exiting={()=>{
 
 								this.setState({clickedtwo :false});
 								this.setState({eventtwo :false});
