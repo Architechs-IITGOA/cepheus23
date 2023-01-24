@@ -13,3 +13,28 @@
     /* pointer-events: none; */
     user-select: none;
 }
+
+.copyright {
+    scroll-snap-align: start;
+    background-color: #0d0d0d; 
+}
+
+.heart {
+    animation: heart-beat .35s infinite alternate;
+    display: inline-flex;
+}
+
+@keyframes heart-beat {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .copyright p{
+        font-size: 15px;
+    }
+}

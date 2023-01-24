@@ -12,6 +12,7 @@ import EditProfile from "./Components/EditProfile/EditProfile";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
+import SocialLinks from "./Components/SocialLinks/SocialLinks";
 
 const link_initial =
   "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772";
@@ -206,6 +207,8 @@ const SiteContainer = () => {
         <Schedule />
         {/* <Sponsors /> */}
         <Contact />
+        <SocialLinks />
+        <div className="copyright">Made with <p className="heart">❤️</p> by ArchiTechs</div>
       </div>
     </div>
   );

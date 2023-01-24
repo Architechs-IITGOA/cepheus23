@@ -50,32 +50,32 @@ export default function Profile({
 }) {
   const clientId =
     "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
-  useEffect(() => {
-    axios
-      .post(
-        "https://backendcepheus.cf/apiM2/getreg",
-        {},
-        { withCredentials: true }
-      )
-      .then((res) => {
-        setUserdata((userdata) => ({
-          ...userdata,
-          regevents: res.data.regevents,
-        }));
-      })
-      .catch((err) => {
-        console.log(err);
-        error_general();
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .post(
+  //       "https://backendcepheus.cf/apiM2/getreg",
+  //       {},
+  //       { withCredentials: true }
+  //     )
+  //     .then((res) => {
+  //       setUserdata((userdata) => ({
+  //         ...userdata,
+  //         regevents: res.data.regevents,
+  //       }));
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //       error_general();
+  //     });
+  // }, []);
 
   // console.log(userdata.regevents);
-  console.log(
-    userdata.imgurl.substr(
-      userdata.imgurl.length - 4,
-      userdata.imgurl.length - 1
-    )
-  );
+  // console.log(
+  //   userdata.imgurl.substr(
+  //     userdata.imgurl.length - 4,
+  //     userdata.imgurl.length - 1
+  //   )
+  // );
   return (
     <div class={isProfileClicked ? "profile profile-active" : "profile"}>
       <img src="" alt=""></img>
