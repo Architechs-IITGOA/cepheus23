@@ -143,6 +143,16 @@ export default function Profile({
                   setEditProfile(false);
                   setUserRegistered(true);
                   setislogin(false);
+                  setUserdata((userdata) => ({
+                    ...userdata,
+                    name: "",
+                    firstName: "",
+                    email: "",
+                    tokenId: "",
+                    grade: "",
+                    college: "",
+                    regevents: [],
+                  }));
                   axios
                     .post(
                         "https://backendcepheus.cf/apiM2/logout",

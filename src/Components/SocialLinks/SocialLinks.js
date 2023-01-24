@@ -10,7 +10,7 @@ export default function SocialLinks(){
                 <a className="twitter" href="https://twitter.com/cepheus_iitgoa?lang=en" target="_blank"  title="Cepheus Twitter"><i class="fa-brands fa-twitter"></i></a>
             </div>
             <div className="location-link">
-                <a className="location" href="https://iitgoa.ac.in/wp-content/campus_map/" target="_blank" title="College Map"><i class="fa-solid fa-location-dot"></i></a>
+                <a className="location" href="https://goo.gl/maps/v6Azp69jC8G5VCkW6" target="_blank" title="College Map"><i class="fa-solid fa-location-dot"></i></a>
             </div>
         </div>
         
