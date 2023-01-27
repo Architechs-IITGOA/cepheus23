@@ -742,7 +742,7 @@ font-style: normal;
   margin-left: 2%;
 }
 .buttondiv{
-  width:290px
+  width:250px
 }
 .buttondiv:hover{
   scale:1.1;
@@ -838,7 +838,7 @@ font-style: normal;
   color:#acc3e8;
   font-family: SpaceBoards;
   margin-top:3%;
-  font-size:37px;
+  font-size:32px;
   margin-left:-25%;
 }
 #para{
@@ -1218,10 +1218,13 @@ font-style: normal;
     height:500px;
   }
   #sub-head{
+    width:150%;
+    margin-left: -25%;
+    /* padding-left:-50%; */
     color:#acc3e8;
     margin-top:-150px;
     font-size:18px;
-    margin-left:3%;
+    /* margin-left:3%; */
   }
   #para{
     color:white;
@@ -1454,7 +1457,7 @@ font-style: normal;
     color:#acc3e8;
     margin-top:-150px;
     font-size:18px;
-    margin-left:3%;
+    /* margin-left:3%; */
   }
   #para{
     color:white;

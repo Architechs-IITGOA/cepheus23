@@ -4,7 +4,7 @@ import './Events.css';
 // import im1 from './Events-Images/online.png'
 // import im2 from './Events-Images/offline.png'
 // import im3 from './Events-Images/talks.png'
-import im4 from './Events-Images/rulebook.png'
+import im4 from './Events-Images/button_final1.png'
 import MediaQuery from 'react-responsive';
 import { useState, useEffect, useRef } from 'react';
 // import './style.css';
@@ -439,12 +439,12 @@ class Events extends React.Component {
 			left1 : 'Sai Adarsh (8688530237)',
 			left2 : 'Abhinav Reddy (9392534843)',
 			id : 8,
-			name : 'Online Treasure Hunt',
+			name : 'Coder\'s Infinity War\n(Online Treasure Hunt)',
 			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/WEB_Online_Treasure_Hunt_4x_z92rog.webp',
 			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724106/cepheus23_posters/WEB_Online_Treasure_Hunt_4x_z92rog.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
-			para: 'This will be a 18-hour Treasure Hunt-style event with five rounds of various tasks depending on the participants\' coding and analytical skills. The contestants will receive points for their progress on problem statements in each round, and the competition will be held on a single platform. After 3-4 events, there will be some elimination based on the points earned, and the winner of the competition will be decided based on the highest number of points earned.',
+			para: 'Are you ready for the ultimate coding thrill ride? Join the 18-hour Treasure Hunt of Code where you\'ll tackle 5 rounds of pulse-pounding coding challenges. Put your skills to the test, earn points, and climb to the top of the leaderboard on a single platform. Outsmart the competition and survive eliminations to claim the ultimate prize as the champion coder.',
 			
 			
 			
@@ -938,9 +938,18 @@ class Events extends React.Component {
 						<br></br>
 						<center>
 						{/* <img src={im4}  className="events-rb first"></img>  */}
-						<div className='buttondiv' style={{display:"none"}} >
+						<a href="https://drive.google.com/file/d/1nwTWWTokmhP16mURLwLM6jnAXLiVFzZd/view?usp=sharing">
+						<MediaQuery minWidth={700}>
+						<div className='buttondiv' style={{display:"block",cursor:'pointer',marginTop:'-20px',marginLeft:'-80px'}} >
 							<img src={im4}  className="buttonimg"></img> 
 						</div>
+						</MediaQuery>
+						<MediaQuery maxWidth={700}>
+						<div className='buttondiv' style={{display:"block",cursor:'pointer',marginTop:'0px',marginLeft:'-5px'}} >
+							<img src={im4}  className="buttonimg"></img> 
+						</div>
+						</MediaQuery>
+						</a>
 						</center>
 					</div>
 					</div>
