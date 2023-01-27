@@ -22,11 +22,12 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     text-decoration: none;
+    width: max-content;
 }
 
 .social-links a:hover {
     /* background-color: #ffffff; */
-    transform: scale(1.05);
+    padding-left: 40px;
 }
 
 .social-links .fa-brands, .fa-location-dot {

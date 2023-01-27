@@ -24,7 +24,18 @@
 }
 .rocket {
   width: 25%;
+  animation: rocket-motion 1s infinite ease-in-out alternate;
 }
+
+@keyframes rocket-motion {
+  from {
+    transform: translate(0, -3%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
 .land {
   width: 100%;
   position: absolute;
@@ -67,7 +78,7 @@
   font-size: clamp(0.4em, 0.4rem + 2vw, 1.8rem);
   margin-left: 50px;
   margin-top: 20vw;
-  width: 70%;
+  width: 64%;
   z-index: 999999;
   text-align: left;
 }

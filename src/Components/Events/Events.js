@@ -938,7 +938,7 @@ class Events extends React.Component {
 						<br></br>
 						<center>
 						{/* <img src={im4}  className="events-rb first"></img>  */}
-						<a href="https://drive.google.com/file/d/1nwTWWTokmhP16mURLwLM6jnAXLiVFzZd/view?usp=sharing">
+						<a href="https://drive.google.com/file/d/1nwTWWTokmhP16mURLwLM6jnAXLiVFzZd/view?usp=sharing" target="_blank">
 						<MediaQuery minWidth={700}>
 						<div className='buttondiv' style={{display:"block",cursor:'pointer',marginTop:'-20px',marginLeft:'-80px'}} >
 							<img src={im4}  className="buttonimg"></img> 
