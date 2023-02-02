@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState, useRef, useEffect} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "./Contact.css";
@@ -21,14 +21,14 @@ const contactDetails = [
   },
   {
     name: "Atharva Bhanage",
-    role: "Coordinator1",
+    role: "Coordinator",
     email: "atharva.bhanage.20042@iitgoa.ac.in",
     phone: "8074292759",
     photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263710/chepheus/Atharva-Coordinator-8074292759_di3mex.webp"
   },
   {
     name: "Yuvraj Nagar",
-    role: "Coordinator2",
+    role: "Coordinator",
     email: "yuvraj.nagar.20031@iitgoa.ac.in",
     phone: "9770594125",
     photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673264740/chepheus/Yuvraj_ckifao.webp"
@@ -121,9 +121,29 @@ export default function Contact() {
     phone: "6263498532",
     photo: "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v1673263732/chepheus/Srajan_Chourasia-Overall_Coordinator-6263498532_kmulj1.webp"
   });
+  const [animate, setAnimate] = useState(false);
+	const targetRef = useRef(null);
+
+  useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const [entry] = entries;
+        // setAnimate(entry.isIntersecting);
+
+        if(entry.isIntersecting){
+          setAnimate(entry.isIntersecting);
+        }
+			},
+			{ root: null, rootMargin: '0px', threshold: 0.1 }
+		);
+		const target = targetRef.current;
+		if (target) observer.observe(target);
+		return () => {
+			if (target) observer.unobserve(target);
+		};
+	}, [targetRef]);
 
   const handleClick = (i) => {
-    console.log("isClicked");
     setDisplayData({
       name: contactDetails[i].name,
       role: contactDetails[i].role,
@@ -133,13 +153,13 @@ export default function Contact() {
     })
   }
   return(
-    <div class="contact-us" id="Contact">
+    <div class="contact-us" id="Contact"  ref={targetRef}>
       <h1 class="contact-heading">Contact Us</h1>
       <div class="contact-content">
-        <div class="contact-full-card">
+        <div className={animate ? "contact-full-card animate" : "contact-full-card"}>
           <MainCard data={displayData}/>
         </div>
-        <div class="contact-carousal">
+        <div className={animate ? "contact-carousal animate" : "contact-carousal"}>
           {contactDetails.map((item, i) => {
             return (
               <SideCard key={i} id={i} role={item.role} handleClick={handleClick} photo ={item.photo}/>

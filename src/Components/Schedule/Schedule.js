@@ -1,13 +1,37 @@
-import React from "react";
+// import React from "react";
+import React, {useState, useRef, useEffect} from "react";
 import "./Schedule.css";
 
+
+
 export default function Schedule() {
+  const [animate, setAnimate] = useState(false);
+	const targetRef = useRef(null);
+
+  useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const [entry] = entries;
+        // setAnimate(entry.isIntersecting);
+
+        if(entry.isIntersecting){
+          setAnimate(entry.isIntersecting);
+        }
+			},
+			{ root: null, rootMargin: '0px', threshold: 0.1 }
+		);
+		const target = targetRef.current;
+		if (target) observer.observe(target);
+		return () => {
+			if (target) observer.unobserve(target);
+		};
+	}, [targetRef]);
   return (
     <>
-      <div className="schedule" id="Schedule">
+      <div className="schedule" id="Schedule" >
         <div className="scheduleHead">Schedule</div>
-        <div className="scheduleCards">
-          <div className="scheduleCard feb8">
+        <div className="scheduleCards"  ref={targetRef}>
+          <div className={animate ? "scheduleCard feb8 animate" : "scheduleCard feb8"}>
             <p className="schedule-date">8 February</p>
             <div className="schedule-list">
                 <ul style={{width: 'fit-content'}}>
@@ -19,7 +43,7 @@ export default function Schedule() {
                 </ul>
             </div>
           </div>
-          <div className="scheduleCard feb9">
+          <div className={animate ? "scheduleCard feb9 animate" : "scheduleCard feb9"}>
             <p className="schedule-date">9 February</p>
             <div className="schedule-list">
                 <ul style={{width: 'fit-content'}}>
@@ -31,7 +55,7 @@ export default function Schedule() {
                 </ul>
             </div>
           </div>
-          <div className="scheduleCard feb10">
+          <div className={animate ? "scheduleCard feb10 animate" : "scheduleCard feb10"} >
             <p className="schedule-date">10 February</p>
             <div className="schedule-list">
                 <ul>
@@ -43,7 +67,7 @@ export default function Schedule() {
                 </ul>
             </div>
           </div>
-          <div className="scheduleCard feb11">
+          <div className={animate ? "scheduleCard feb11 animate" : "scheduleCard feb11"} >
             <p className="schedule-date">11 February</p>
             <div className="schedule-list">
                 <ul>
@@ -53,7 +77,7 @@ export default function Schedule() {
                 </ul>
             </div>
           </div>
-          <div className="scheduleCard feb12">
+          <div className={animate ? "scheduleCard feb12 animate" : "scheduleCard feb12"} >
             <p className="schedule-date">12 February</p>
             <div className="schedule-list">
                 <ul>

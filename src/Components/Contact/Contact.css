@@ -34,12 +34,19 @@
     /* margin-top: auto; */
     border-radius: 20px;
     margin-bottom: 4vh;
+    overflow-x: hidden;
 }
 
 .contact-full-card {
     flex: 1;
     display: flex;
     justify-content: center;
+    transform: translate(-100%, 0);
+    transition: all 0.4s;
+}
+
+.contact-full-card.animate {
+  transform: translate(0, 0);
 }
 
 .contact-carousal {
@@ -50,6 +57,12 @@
     overflow-y: scroll;
     overflow-x: hidden;
     height: 480px;
+    transform: translate(100%, 0);
+    transition: all 0.4s;
+}
+
+.contact-carousal.animate {
+  transform: translate(0,0);
 }
 
 .contact-carousal::-webkit-scrollbar{
@@ -59,8 +72,7 @@
 @media (max-width : 1110px){
     .contact-content{
         display: block;
-        height: 650px;
-
+        height: clamp(100px, max-content, 650px);
     }
     .contact-carousal{
         flex-direction: row;
@@ -68,7 +80,7 @@
         overflow-y: hidden;
         height: 120px;
         align-items: flex-end;
-    }
+    } 
 }
 
 @media (max-width: 900px){

@@ -1,9 +1,11 @@
-import "./Events.css";
 import React, { useState } from "react";
 import MediaQuery from "react-responsive";
+import { TailSpin } from  'react-loader-spinner';
 import { useEffect } from "react";
 // import axios from "axios";
 import axios from "axios";
+import "./Events.css";
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 axios.defaults.withCredentials = true;
 
 export default function Eventcard({
@@ -29,12 +31,14 @@ export default function Eventcard({
   // const [createTeamNameind, setCreateTeamNameind] = useState("");
   const [joinTeamCode, setJoinTeamCode] = useState("");
   const [display_team_code, setdisplay_team_code] = useState("");
+  const [regInProcess, setRegInProcess] = useState(false);
 
-  const handleTeamCreation = (e) => {
+  const handleTeamCreation = async (e) => {
     e.preventDefault();
+    setRegInProcess(true);
     setconfirm(true);
     let teamcode;
-    axios
+    await axios
       .post(
         "https://backendcepheus.cf/apiM2/createteam",
         {
@@ -43,10 +47,10 @@ export default function Eventcard({
         },
         { withCredentials: true }
       )
-      .then((res) => {
+      .then(async (res) => {
         teamcode = res.data.team_code;
         // success();
-        axios
+        await axios
           .post(
             "https://backendcepheus.cf/apiM2/regevent",
             {
@@ -55,43 +59,58 @@ export default function Eventcard({
             },
             { withCredentials: true }
           )
-          .then((res) => {
+          .then(async (res) => {
             console.log(res.data);
             setdisplay_team_code(teamcode);
             setdisplayteamcode(true);
-            axios
+            await axios
               .post(
                 "https://backendcepheus.cf/apiM2/getreg",
                 {},
                 { withCredentials: true }
               )
-              .then((res) => {
-                setUserdata((userdata) => ({
+              .then( async (res) => {
+                await setUserdata((userdata) => ({
                   ...userdata,
                   regevents: res.data.regevents,
                 }));
               })
               .catch((err) => {
                 console.log(err);
-                error(err.response.data.message);
+                try {
+                  error(err.response.data.message);
+                } catch {
+                  error_general();
+                }
               });
             success_createteam();
             // success();
           })
           .catch((err) => {
             console.log(err);
-            error(err.response.data.message);
+            try {
+              error(err.response.data.message);
+            } catch {
+              error_general();
+            }
           });
       })
       .catch((err) => {
         console.log(err);
-        error(err.response.data.message);
+        try {
+          error(err.response.data.message);
+        } catch {
+          error_general();
+        }
       });
+      setRegInProcess(false);
+      // setTimeout(() => {setRegInProcess(false)}, 10000);
   };
-  const handleTeamCreationind = (e) => {
+  const handleTeamCreationind = async (e) => {
     e.preventDefault();
     let teamcodeind;
-    axios
+    setRegInProcess(true);
+    await axios
       .post(
         "https://backendcepheus.cf/apiM2/createteam",
         {
@@ -100,11 +119,11 @@ export default function Eventcard({
         },
         { withCredentials: true }
       )
-      .then((res) => {
+      .then(async (res) => {
         teamcodeind = res.data.team_code;
 
         // success();
-        axios
+        await axios
           .post(
             "https://backendcepheus.cf/apiM2/regevent",
             {
@@ -113,11 +132,11 @@ export default function Eventcard({
             },
             { withCredentials: true }
           )
-          .then((res) => {
+          .then(async (res) => {
             console.log(res.data);
             success_regevent();
             setTimeout(() => {success_indregevent()}, 2000);
-            axios
+            await axios
               .post(
                 "https://backendcepheus.cf/apiM2/getreg",
                 {},
@@ -131,25 +150,40 @@ export default function Eventcard({
               })
               .catch((err) => {
                 console.log(err);
-                error(err.response.data.message);
+                try {
+                  error(err.response.data.message);
+                } catch {
+                  error_general();
+                }
               });
             // success();
           })
           .catch((err) => {
             console.log(err);
-            error(err.response.data.message);
+            try {
+              error(err.response.data.message);
+            } catch {
+              error_general();
+            }
           });
       })
       .catch((err) => {
         console.log(err);
-        error(err.response.data.message);
+        try {
+          error(err.response.data.message);
+        } catch {
+          error_general();
+        }
       });
+      setRegInProcess(false);
+      // setTimeout(() => {setRegInProcess(false)}, 10000);
   };
 
-  const handleJoinTeamCode = (e) => {
+  const handleJoinTeamCode = async (e) => {
     e.preventDefault();
     //   setconfirm(true);
-    axios
+    setRegInProcess(true);
+    await axios
       .post(
         "https://backendcepheus.cf/apiM2/regevent",
         {
@@ -158,9 +192,9 @@ export default function Eventcard({
         },
         { withCredentials: true }
       )
-      .then((res) => {
+      .then(async (res) => {
         console.log(res.data);
-        axios
+        await axios
           .post(
             "https://backendcepheus.cf/apiM2/getreg",
             {},
@@ -174,7 +208,11 @@ export default function Eventcard({
           })
           .catch((err) => {
             console.log(err);
-            error_general();
+            try {
+              error(err.response.data.message);
+            } catch {
+              error_general();
+            }
           });
         success_jointeam();
         success_indregevent();
@@ -182,8 +220,14 @@ export default function Eventcard({
       })
       .catch((err) => {
         console.log(err);
-        error(err.response.data.message);
+        try {
+          error(err.response.data.message);
+        } catch {
+          error_general();
+        }
       });
+      setRegInProcess(false);
+      // setTimeout(() => {setRegInProcess(false)}, 10000);
   };
 
   const register = (e) => {
@@ -289,8 +333,19 @@ export default function Eventcard({
                   </center>
                 </div>
                 <center>
-                  <button id="button-right" onClick={(e) => register(e)}>
-                    Register
+                  <button id="button-right" onClick={(e) => register(e)} disabled = {regInProcess}>
+                  {regInProcess? 
+                    <TailSpin
+                    height="30"
+                    width="30"
+                    // color="#fff"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{"width" : "100%", "text-align": "center"}}
+                    wrapperClass="reg-loader"
+                    visible={true}
+                  />
+                  : "Register"}
                   </button>
                 </center>
               </div>
@@ -364,8 +419,19 @@ export default function Eventcard({
               class={displayteamcode ? "input_inactive" : "input_active"}
             />
             <br></br>
-            <button id="reg_team1" onClick={(e) => handleTeamCreation(e)} class={displayteamcode ? "input_inactive" : "input_active"}>
-              Submit
+            <button id="reg_team1" onClick={(e) => handleTeamCreation(e)} class={displayteamcode ? "input_inactive" : "input_active"} disabled = {regInProcess}>
+                  {regInProcess? 
+                    <TailSpin
+                    height="30"
+                    width="30"
+                    // color="#fff"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{}}
+                    wrapperClass="reg-loader"
+                    visible={true}
+                  />
+                  : "Submit"}
             </button>
             <br />
             <br />
@@ -410,8 +476,19 @@ export default function Eventcard({
                 onChange={(e) => setJoinTeamCode(e.target.value)}
               />
               <br></br>
-              <button id="reg_team1" onClick={(e) => handleJoinTeamCode(e)}>
-                Submit
+              <button id="reg_team1" onClick={(e) => handleJoinTeamCode(e)} disabled = {regInProcess}>
+                  {regInProcess? 
+                    <TailSpin
+                    height="30"
+                    width="30"
+                    // color="#fff"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{}}
+                    wrapperClass="reg-loader"
+                    visible={true}
+                  />
+                  : "Submit"}
               </button>
             </div>
             <div className={confirm ? "create_active" : "create_inactive"}>
@@ -427,7 +504,19 @@ export default function Eventcard({
                 required
               />
               <br></br>
-              <button id="reg_team1">Submit</button>
+              <button id="reg_team1" disabled = {regInProcess}>
+              {regInProcess? 
+                <TailSpin
+                    height="30"
+                    width="30"
+                    // color="#fff"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{}}
+                    wrapperClass="reg-loader"
+                    visible={true}
+                  />
+                  : "Submit"}</button>
             </div>
           </div>
           {/* </form> */}

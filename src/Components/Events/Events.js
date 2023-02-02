@@ -13,7 +13,6 @@ import React from "react";
 
 
 
-
 const myStyle = {
     height:"100vh",
     // width:"100%",
@@ -137,6 +136,7 @@ const myStyle = {
 
 
 class Events extends React.Component {
+	
 	constructor(props){
 		super(props);
 		this.state = {clicked:false};
@@ -865,7 +865,6 @@ class Events extends React.Component {
 		
 		
 
-		  
 		  
 	
 		

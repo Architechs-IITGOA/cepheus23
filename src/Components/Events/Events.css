@@ -878,11 +878,15 @@ font-style: normal;
   /* transition: 0.2s; */
   box-shadow: 0 0 20px #fff;
 }
+
+.reg-loader {
+  padding-left: 40%;
+  align-items: center;
+}
+
 #close2{
   display: none;
 }
-
-
 
 
 @media screen and (max-width:1000px){

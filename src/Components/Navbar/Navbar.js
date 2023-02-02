@@ -24,7 +24,9 @@ export default function Navbar({
   success, reg_failed, error,
   setislogin,
   success_login,
-  error_general
+  error_general,
+  setTeamInfoPage,
+  setEditProfile
 }) {
   const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
@@ -138,6 +140,8 @@ export default function Navbar({
           onClick={() => {
             handleProfileClick()
             setMenuClicked(!isMenuClicked);
+            setEditProfile(false);
+            setTeamInfoPage(false);
           }}
         ></img>
         </div>

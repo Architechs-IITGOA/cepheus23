@@ -46,7 +46,8 @@ export default function Profile({
   isUserRegistered,
   setUserRegistered,
   setislogin,
-  error_general
+  error_general,
+  setTeamInfoPage
 }) {
   const clientId =
     "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
@@ -116,7 +117,7 @@ export default function Profile({
         </div>
         <div className="profile-buttons">
           <div>
-            <div>
+            <div className="buttons">
               <a
                 class="edit"
                 onClick={() => {
@@ -125,6 +126,15 @@ export default function Profile({
                 }}
               >
                 Edit Profile
+              </a>
+              <a
+                class="edit"
+                onClick={() => {
+                  setTeamInfoPage(true);
+                  setProfileClicked(false);
+                }}
+              >
+                Get Your Team Info
               </a>
               <GoogleLogout
                 render={(renderProps) => (

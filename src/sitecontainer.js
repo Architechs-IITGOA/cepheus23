@@ -13,6 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
 import SocialLinks from "./Components/SocialLinks/SocialLinks";
+import TeamInfo from "./Components/TeamInfo/TeamInfo";
 
 const link_initial =
   "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772";
@@ -74,6 +75,7 @@ const SiteContainer = () => {
   };
   const [success, setsuccess] = useState(false);
   const [isMenuClicked, setMenuClicked] = useState(false);
+  const [teamInfoPage, setTeamInfoPage] = useState(false);
 
   const handleBodyClick = () => {
     setProfileClicked(false);
@@ -104,6 +106,7 @@ const SiteContainer = () => {
   const reg_failed = (err) => toast.error(err[0].toUpperCase() + err.slice(1));
   const error_general = () => toast.success("Something went wrong. Please try again or refresh the page!");
   // const wrong_mail = () => toast.warning("Please enter a valid email");
+  const notRegistered = () => toast.error("You have not registered for this event");
   const error = (err) => toast.error(err[0].toUpperCase() + err.slice(1));
   return (
     <div baseurl>
@@ -124,6 +127,8 @@ const SiteContainer = () => {
           setislogin={setislogin}
           success_login={success_login}
           error_general={error_general}
+          setTeamInfoPage = {setTeamInfoPage}
+          setEditProfile={setEditProfile}
         />
         <Profile
           isProfileClicked={isProfileClicked}
@@ -138,6 +143,7 @@ const SiteContainer = () => {
           setUserRegistered={setUserRegistered}
           setislogin={setislogin}
           error_general={error_general}
+          setTeamInfoPage = {setTeamInfoPage}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
         {/* <EditProfile
@@ -190,6 +196,12 @@ const SiteContainer = () => {
         )}
       </div>
       <div onClick={() => handleBodyClick()}>
+        {teamInfoPage ? <TeamInfo
+          error = {error}
+          error_general = {error_general}
+          notRegistered = {notRegistered}
+          setTeamInfoPage = {setTeamInfoPage}
+        ></TeamInfo> : null}
         <Home />
         <About />
         <Events
