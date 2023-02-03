@@ -3,8 +3,9 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Events from "./Components/Events/Events";
+
 import Schedule from "./Components/Schedule/Schedule";
-// import Sponsors from "./Components/Sponsors/Sponsors";
+import Sponsors from "./Components/Sponsors/Sponsors";
 import Contact from "./Components/Contact/Contact";
 import Profile from "./Components/Profile/Profile";
 import RegistrationPage from "./Components/RegistrationPage/RegistrationPage";
@@ -217,7 +218,7 @@ const SiteContainer = () => {
           success_indregevent = {success_indregevent}
         />
         <Schedule />
-        {/* <Sponsors /> */}
+        <Sponsors />
         <Contact />
         <SocialLinks />
         <div className="copyright">Made with <p className="heart">❤️</p> by ArchiTechs</div>

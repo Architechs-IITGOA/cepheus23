@@ -110,7 +110,7 @@ export default function Navbar({
         <a href="#About">About</a>
         <a href="#Events">Events</a>
         <a href="#Schedule">Schedule</a>
-        {/* <a href="#Sponsors">Sponsors</a> */}
+        <a href="#Sponsors">Sponsors</a>
         <a href="#Contact">Contact</a>
         <div style={successor ? { display: "none" } : { display: "inline-flex" }}>
           <GoogleLogin

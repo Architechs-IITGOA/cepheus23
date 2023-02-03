@@ -8,6 +8,18 @@
 #landpage{
   margin-top: -6.2%;
 }
+
+.yes{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transform: translate(-100%, 0);
+  transition: all 0.4s;
+}
+.no{
+transform: translate(0, 0);
+transition: all 0.4s;
+}
  
 
 .events-logo {
@@ -112,7 +124,17 @@
 }
 
 .events .events-bg{
-  background-image: url("./Events-Images/final_bg_1_2.png");
+  background-image: url("./Events-Images/final_bg_1_2.jpeg");
+  /* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083349/cepheus23/events_page_fxkfcz.webp"); */
+  background-size: cover;
+  background-repeat: repeat-y;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+.events-bg123{
+  background-image: url("./Events-Images/final_bg_1_2.jpeg");
   /* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083349/cepheus23/events_page_fxkfcz.webp"); */
   background-size: cover;
   background-repeat: repeat-y;
@@ -682,7 +704,7 @@ transition:0.2s;
 }
 
 .events-bg1{
-background-image: url("./Events-Images/final_bg_1.png");
+background-image: url("./Events-Images/final_bg_1.jpeg");
 /* background-image: url("https://res.cloudinary.com/dntbu3vhr/image/upload/v1673083334/cepheus23/bg-mob_r6jnsf.webp"); */
   background-size: cover;
   background-repeat: repeat-y;
@@ -1069,10 +1091,10 @@ font-style: normal;
   }
   
   .events .events-bg{
-    background-image: url("./Events-Images/final_bg_1.png");
+    background-image: url("./Events-Images/final_bg_1.jpeg");
   }
   .events-bg1{
-    background-image: url("./Events-Images/final_bg_1.png");
+    background-image: url("./Events-Images/final_bg_1.jpeg");
   }
   .firstpagelist{
     margin-top: 15vh;
@@ -1306,10 +1328,10 @@ font-style: normal;
   }
   
   .events .events-bg{
-    background-image: url("./Events-Images/final_bg_1.png");
+    background-image: url("./Events-Images/final_bg_1.jpeg");
   }
   .events-bg1{
-    background-image: url("./Events-Images/final_bg_1.png");
+    background-image: url("./Events-Images/final_bg_1.jpeg");
   }
   .firstpagelist{
     margin-top: 15vh;

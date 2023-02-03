@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import Eventcard from './eventpage'
+import { Component, createRef } from 'react';
 import './Events.css';
 // import im1 from './Events-Images/online.png'
 // import im2 from './Events-Images/offline.png'
@@ -9,6 +10,8 @@ import MediaQuery from 'react-responsive';
 import { useState, useEffect, useRef } from 'react';
 // import './style.css';
 import React from "react";
+import useVH from 'react-viewport-height';
+import { withViewportHeight } from 'react-viewport-height';
 // import { render } from '@testing-library/react';
 
 
@@ -240,7 +243,7 @@ class Events extends React.Component {
 			this.setState(prevState => {
 			if (prevState.animstop==false&&prevState.animstop1==false){
 				let nextCountone = prevState.eventcaroone + 1;
-				if (nextCountone > 4) {
+				if (nextCountone > 3) {
 				nextCountone = 0;
 				}
 				return { eventcaroone: nextCountone };
@@ -262,11 +265,71 @@ class Events extends React.Component {
 	
 	  componentDidMount() {
 		this.intervalId = setInterval(this.incrementCount, 5000);
+		this.componentDidMountone();
+		this.componentDidMountthree();
 	  }
 	
 	  componentWillUnmount() {
 		clearInterval(this.intervalId);
+		this.componentWillUnmounttwo();
+		this.componentWillUnmountfour();
 	  }
+
+
+
+
+	  state = {
+		animate: false,
+	  };
+	
+	  targetRef = createRef();
+	  
+	  componentDidMountone() {
+		const observer = new IntersectionObserver(
+		  (entries) => {
+			const [entry] = entries;
+			if (entry.isIntersecting) {
+			  this.setState({ animate: entry.isIntersecting });
+			}
+		  },
+		  { root: null, rootMargin: '0px', threshold: 0.1 }
+		);
+		const target = this.targetRef.current;
+		if (target) observer.observe(target);
+	  }
+	
+	  componentWillUnmounttwo() {
+		const observer = new IntersectionObserver(
+		  (entries) => {
+			const [entry] = entries;
+			if (entry.isIntersecting) {
+			  this.setState({ animate: entry.isIntersecting });
+			}
+		  },
+		  { root: null, rootMargin: '0px', threshold: 0.1 }
+		);
+		const target = this.targetRef.current;
+		if (target) observer.unobserve(target);
+	  }
+
+
+
+	  state = {
+		viewportHeight: 0,
+	  };
+	
+	  componentDidMountthree() {
+		this.setState({ viewportHeight: window.innerHeight });
+		window.addEventListener('resize', this.updateViewportHeight);
+	  }
+	
+	  componentWillUnmountfour() {
+		window.removeEventListener('resize', this.updateViewportHeight);
+	  }
+	
+	  updateViewportHeight = () => {
+		this.setState({ viewportHeight: window.innerHeight });
+	  };
 	
 	
 	render(){
@@ -318,6 +381,8 @@ class Events extends React.Component {
 		}
 		
 
+		
+
 
 		const listData =[ {
 			teamsize: 2,
@@ -325,8 +390,8 @@ class Events extends React.Component {
 			left2 : 'Madhura Botave (8830846416)',
 			id : 1,
 			name : 'Lorem IIpsum',
-			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
-			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1673724098/cepheus23_posters/WEB_lorem_ispum_4x_a9yjry.webp',
+			source: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675401216/cepheus23_posters/LOREM_IPSUM_4x_husxdv.webp',
+			source1: 'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675401216/cepheus23_posters/LOREM_IPSUM_4x_husxdv.webp',
 			border: './border1.png',
 			exitsrc: './exit.png',
 			para: "If you think you have an eye for design, worry not we’ve got you! The Lorem Ipsum is a UI/UX Design Challenge for all you creative designers out there! As a part of this event, the participant must design a website using the provided content (text and images) and turn in their submissions before the clock runs out. Also do keep in mind, the website should revolve around the theme- ‘Multiverse’. We look forward to seeing your innovation in action."			
@@ -862,16 +927,25 @@ class Events extends React.Component {
 		
 		
 		
+
 		
 		
 
 		  
 	
 		
-		   
+		const { viewportHeight } = this.state;
+		console.log(viewportHeight);
+		var marg = 0;
+		if (viewportHeight>1109){
+			marg = viewportHeight*0.21;
+		}else{
+			marg = viewportHeight * 0.1;
+		}
+		
 		
 		return (
-			<div className="events" id="Events">
+			<div className="events" id="Events" ref={this.targetRef}>
 				
 				<div className="events-bg">
 					<br></br>
@@ -881,7 +955,8 @@ class Events extends React.Component {
 					<h1 className="myStyleh2" style={{fontFamily: 'SpaceBoards'}}>EveNts</h1>
 	
 					{/* <div className={clicked||clicked2||clicked3?'secondoff1':'firston1'}> */}
-					<div  className={clicked||clicked2||clicked3?'eventzoff100':'eventzon100'}>
+					<div className={this.state.animate ?  "no":'yes'} style={{marginTop:marg}} >
+					<div  className={clicked||clicked2||clicked3?'eventzoff100':'eventzon100'} >
 					<div className={clicked||clicked2||clicked3?'secondofffirst':'secondon'}>
 					<div className='setting' >
 						
@@ -950,6 +1025,7 @@ class Events extends React.Component {
 						</MediaQuery>
 						</a>
 						</center>
+					</div>
 					</div>
 					</div>
 					</div>
@@ -1085,7 +1161,7 @@ class Events extends React.Component {
 								<li className={eventcaroone==1?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:1,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
 								<li className={eventcaroone==2?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:2,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
 								<li className={eventcaroone==3?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:3,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
-								<li className={eventcaroone==4?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:4,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li>
+								{/* <li className={eventcaroone==4?"nav-dot is-active":"nav-dot"} onClick={()=> {this.setState({eventcaroone:4,reset:true,animstop1:true});setTimeout(()=>{willstop();},6000)}} ></li> */}
 								
 								</ul>
 	
@@ -1153,6 +1229,11 @@ class Events extends React.Component {
 									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
 									
 									</div></li>
+									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:22})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
+									<img draggable='false'  src={listData[22].source} style={{width:'105%',marginLeft:"-0%",marginTop:'-3%'}}></img>
+									<img draggable='false'  src='./border1.png' style={{width:'167%',marginLeft:"-26%",marginTop:'-125%'}}></img>
+									
+									</div></li>
 								</ul>
 								</section>
 								<section className={eventcaroone==3?"section is-active3 transition":"section transition"} id="section3">
@@ -1175,7 +1256,7 @@ class Events extends React.Component {
 									</div></li> */}
 								</ul>
 								</section>
-								<section className={eventcaroone==4?"section is-active4 transition":"section transition"} id="section3">
+								{/* <section className={eventcaroone==4?"section is-active4 transition":"section transition"} id="section3">
 								
 									<ul id="list2" >
 									<li ><div className='event'   onClick={()=> {this.setState({eventsevenoff:true});this.setState({eveno:22})}} onMouseOver={()=>{this.setState({animstop:true})}} onMouseOut={()=>{this.setState({animstop:false})}}  >
@@ -1185,7 +1266,7 @@ class Events extends React.Component {
 									</div></li>
 									
 								</ul>
-								</section>
+								</section> */}
 								
 								</main>
 	
@@ -1360,6 +1441,9 @@ class Events extends React.Component {
 	}
 	
 }	
+
+
+
 
 
 
