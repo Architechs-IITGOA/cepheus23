@@ -166,8 +166,8 @@ function App() {
 					<center>
 					<div>
 					<div>
-					<br></br>
-					<br></br>
+					{/* <br></br> */}
+					{/* <br></br> */}
 					<div id='container_main' className={animate ? 'sps2 animate' : 'sps2'} >
 						
 							
@@ -178,18 +178,25 @@ function App() {
 							<img src={sponsors_data[2].imsrc} id='img_spon_2' ></img>
 							</div>
 							</a>
-							<a href={sponsors_data[0].web} target="_blank">
+							{/* <a href={sponsors_data[0].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon_title'></img>
 							<h2 id='heading_box_mai' className='imp imp2' style={{textDecoration:'none'}}>{sponsors_data[0].role}</h2>
 							<img src={sponsors_data[0].imsrc} id='img_spon' ></img>
 							</div>
-							</a>
+							</a> */}
 							<a href={sponsors_data[1].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
 							<h2 id='heading_box' className='imp' style={{textDecoration:'none'}}>{sponsors_data[1].role}</h2>
 							<img src={sponsors_data[1].imsrc} id='img_spon_1' ></img>
+							</div>
+							</a>
+							<a href={sponsors_data[3].web} target="_blank">
+							<div>
+							<img src='./box_sponsors.png' id='box_spon'></img>
+							<h2 id='heading_box' className='imp' style={{textDecoration:'none'}}>{sponsors_data[3].role}</h2>
+							<img src={sponsors_data[3].imsrc} id='img_spon_1_ne'></img>
 							</div>
 							</a>
 							
@@ -201,13 +208,7 @@ function App() {
 					<div id='container_main_dupe' className={animate ? 'sps1 animate' : 'sps1'} >
 						
 							
-							<a href={sponsors_data[3].web} target="_blank">
-							<div>
-							<img src='./box_sponsors.png' id='box_spon'></img>
-							<h2 id='heading_box' className='imp' style={{textDecoration:'none'}}>{sponsors_data[3].role}</h2>
-							<img src={sponsors_data[3].imsrc} id='img_spon_1_ne'></img>
-							</div>
-							</a>
+							
 							
 							<a href={sponsors_data[4].web} target="_blank">
 							<div>
@@ -216,6 +217,7 @@ function App() {
 							<img src={sponsors_data[4].imsrc} id='img_spon_1_ne'></img>
 							</div>
 							</a>
+							
 							<a href={sponsors_data[5].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
@@ -223,6 +225,14 @@ function App() {
 							<img src={sponsors_data[5].imsrc} id='img_spon_1_ne'></img>
 							</div>
 							</a>
+							<a href={sponsors_data[15].web} target="_blank">
+							<div>
+							<img src='./box_sponsors.png' id='box_spon'></img>
+							<h2 id='heading_box' className='imp' style={{textDecoration:'none'}}>{sponsors_data[15].role}</h2>
+							<img src={sponsors_data[15].imsrc} id='img_spon_ne_eu'></img>
+							</div>
+							</a>
+							
 							
 						</div>
 						</div>
@@ -230,7 +240,7 @@ function App() {
 						{/* <br></br> */}
 						{/* <br></br> */}
 						<div id='mob_2' className={animate ? 'spsmob2 animate' : 'spsmob2'}>
-							<a href={sponsors_data[0].web} target="_blank">
+							{/* <a href={sponsors_data[0].web} target="_blank">
 							<div id='container_main_2' style={{marginBottom:'100px'}}>
 							<div>
 							
@@ -240,7 +250,7 @@ function App() {
 							
 							</div>
 							</div>
-							</a>
+							</a> */}
 							<div id='container_main_3'>
 							
 							<a href={sponsors_data[1].web} target="_blank">
@@ -266,16 +276,6 @@ function App() {
 							</div>
 							</div>
 							</a>
-							</div>
-						</div>
-						</div>
-						<div>
-							{/* <br></br> */}
-							<br></br>
-						<div id='mob_2' className={animate ? 'spsmob2 animate' : 'spsmob2'}>
-							
-							<div id='container_main_3'>
-							
 							<a href={sponsors_data[3].web} target="_blank">
 							<div id='container_main_2'>
 							
@@ -287,6 +287,17 @@ function App() {
 							</div>
 							</div>
 							</a>
+							</div>
+						</div>
+						</div>
+						<div>
+							{/* <br></br> */}
+							<br></br>
+						<div id='mob_2' className={animate ? 'spsmob2 animate' : 'spsmob2'}>
+							
+							<div id='container_main_3'>
+							
+							
 							<a href={sponsors_data[4].web} target="_blank">
 							<div id='container_main_2'>
 							
@@ -298,6 +309,7 @@ function App() {
 							</div>
 							</div>
 							</a>
+							
 							<a href={sponsors_data[5].web} target="_blank">
 							<div id='container_main_2'>
 							<div>
@@ -310,13 +322,36 @@ function App() {
 							</div>
 							</div>
 							</a>
+							<a href={sponsors_data[15].web} target="_blank">
+							<div id='container_main_2'>
+							<div>
+							{/* <div> */}
+							<img src='./box_sponsors.png' id='box_spon_sec'></img>
+							<h2 id='heading_box' className='imp' style={{textDecoration:'none'}}>{sponsors_data[15].role}</h2>
+							<img src={sponsors_data[15].imsrc} id='img_spon_ne_eu' ></img>
+							{/* <h2 id='heading_box'>TITLE SPONSOR</h2> */}
+							{/* </div> */}
 							</div>
+							</div>
+							</a>
+							
+							
+							</div>
+							<br></br>
+							<br></br>
+							<br></br>
+							<br></br>
+							<br></br>
+							<br></br>
+							<br></br>
 						</div>
+						
 						</div>
 						<div>
 						<br></br>
 						<br></br>
-						<div id='container1' className={animate ? 'sps animate' : 'sps'}>
+						
+						<div style={{marginTop:'-25vh'}} id='container1' className={animate ? 'sps animate' : 'sps'}>
 							<a href={sponsors_data[6].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
@@ -397,13 +432,13 @@ function App() {
 							<img src={sponsors_data[14].imsrc} id='img_spon_7_nef'></img>
 							</div>
 							</a>
-							<a href={sponsors_data[15].web} target="_blank">
+							{/* <a href={sponsors_data[15].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
 							<h2 id='heading_box' className='adjust' style={{textDecoration:'none'}}>{sponsors_data[15].role}</h2>
 							<img src={sponsors_data[15].imsrc} id='img_spon_8_nef'></img>
 							</div>
-							</a>
+							</a> */}
 							<a href={sponsors_data[16].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
