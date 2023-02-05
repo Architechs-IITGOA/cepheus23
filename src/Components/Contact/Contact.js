@@ -123,7 +123,7 @@ export default function Contact() {
   });
   const [animate, setAnimate] = useState(false);
 	const targetRef = useRef(null);
-
+  const [contactClick, setContactClick] = useState(true);
   useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -144,6 +144,7 @@ export default function Contact() {
 	}, [targetRef]);
 
   const handleClick = (i) => {
+    setContactClick(false);
     setDisplayData({
       name: contactDetails[i].name,
       role: contactDetails[i].role,
@@ -151,13 +152,14 @@ export default function Contact() {
       phone: contactDetails[i].phone,
       photo : contactDetails[i].photo,
     })
+    setTimeout(() => {setContactClick(true)}, 10);
   }
   return(
     <div class="contact-us" id="Contact"  ref={targetRef}>
       <h1 class="contact-heading">Contact Us</h1>
       <div class="contact-content">
         <div className={animate ? "contact-full-card animate" : "contact-full-card"}>
-          <MainCard data={displayData}/>
+          {contactClick ? <MainCard data={displayData}/> : null}
         </div>
         <div className={animate ? "contact-carousal animate" : "contact-carousal"}>
           {contactDetails.map((item, i) => {

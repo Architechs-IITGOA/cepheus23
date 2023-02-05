@@ -8,103 +8,103 @@ const sponsors_data=[
 	{
 	name:'',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429916/cepheus23_posters/sponsors/State_Bank_of_India.svg_fcglpj.png',
-	web:'',
+	web:'https://sbi.co.in/',
 	role:'TITLE SPONSOR',
 	},
 	{
 	name:'HPCL',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429916/cepheus23_posters/sponsors/Hindustan_Petroleum_Logo.svg_b7mmo6.png',
-	web:'',
+	web:'https://www.hindustanpetroleum.com/',
 	role:'CO SPONSOR',
 	},
 	{
 	name:'ATHER ENERGY',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429915/cepheus23_posters/sponsors/ather_svbwai.png',
-	web:'',
+	web:'https://www.atherenergy.com/',
 	role:'CO SPONSOR',
 	},
 	{
 	name:'SBI',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429916/cepheus23_posters/sponsors/State_Bank_of_India.svg_fcglpj.png',
-	web:'',
+	web:'https://sbi.co.in/',
 	role:'CO SPONSOR',
 	},
 	{
 	name:'GOA GOVERNMENT(IT DEPARTMENT)',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429877/cepheus23_posters/sponsors/goa_it_department_wln0f6.jpg',
-	web:'',
+	web:'https://www.dit.goa.gov.in/',
 	role:'PARTNER',
 	},
 	{
 	name:'IMS LEARNING',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429877/cepheus23_posters/sponsors/ims_learning_y0saoj.jpg',
-	web:'',
+	web:'https://www.imsindia.com/center/goa/',
 	role:'EDUCATION PARTNER',
 	},
 	{
 	name:'INTRAINZ',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429877/cepheus23_posters/sponsors/intrainz_z3wyv3.jpg',
-	web:'',
+	web:'https://intrainz.com/',
 	role:'EDUCATION PARTNER',
 	},
 	{
 	name:'RED BULL',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429879/cepheus23_posters/sponsors/redbull_lfmzx5.jpg',
-	web:'',
+	web:'https://www.redbull.com/in-en/',
 	role:'EXPERENTIAL PARTNER',
 	},
 	{
 	name:'LKAY',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429878/cepheus23_posters/sponsors/lkay_djw072.jpg',
-	web:'',
+	web:'#',
 	role:'FOOD PARTNER',
 	},
 	{
 	name:'LEVELUP GAMING',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429878/cepheus23_posters/sponsors/levelup_toqs53.jpg',
-	web:'',
+	web:'https://www.levelupgaming.ca/',
 	role:'GAMING PARTNER',
 	},
 	{
 	name:'WHITE HEAVEN ENTERTAINMENTS',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429879/cepheus23_posters/sponsors/white_heavens_lfepaz.jpg',
-	web:'',
+	web:'https://whiteheavenentertainments.in/',
 	role:'MUSIC PARTNER',
 	},
 	{
 	name:'INNOVIANS TECHNOLOGY',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429877/cepheus23_posters/sponsors/innovians_tech_valxef.jpg',
-	web:'',
+	web:'https://innovianstechnologies.com/',
 	role:'SUMMERTRAINING PARTNER',
 	},
 	{
 	name:'STOCKGRO',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429878/cepheus23_posters/sponsors/stockgro_gljegn.jpg',
-	web:'',
+	web:'https://www.stockgro.club/',
 	role:'EVENT PARTNER',
 	},
 	{
 	name:'STATWIG',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429878/cepheus23_posters/sponsors/statwig_o7cepy.jpg',
-	web:'',
+	web:'https://statwig.com/',
 	role:'EVENT SPONSOR',
 	},
 	{
 	name:'OSSEB',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429878/cepheus23_posters/sponsors/osseb_m8xanr.jpg',
-	web:'',
+	web:'https://osseb.com/',
 	role:'EVENT SPONSOR',
 	},
 	{
 	name:'YOUTH INCORPORATED',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429879/cepheus23_posters/sponsors/youth_incorporated_zgcihu.jpg',
-	web:'',
+	web:'https://youthincmag.com/',
 	role:'MEDIA PARTNER',
 	},
 	{
 	name:'ELITE UNIFAB',
 	imsrc:'https://res.cloudinary.com/dntbu3vhr/image/upload/c_scale,q_auto:eco,w_240/v1675429877/cepheus23_posters/sponsors/elite_unifab_oujquu.jpg',
-	web:'',
+	web:'#',
 	role:'MERCHANDISE SPONSOR',
 	},
 
@@ -161,7 +161,7 @@ function App() {
 				<br></br>
 				<br></br>
 				<br></br> */}
-				<h1 className='myStyl'>sponsors</h1>
+				<h1 className='myStyl'>Sponsors</h1>
 				<br></br>
 				<br></br>
 				<br></br>

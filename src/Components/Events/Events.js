@@ -10,8 +10,8 @@ import MediaQuery from 'react-responsive';
 import { useState, useEffect, useRef } from 'react';
 // import './style.css';
 import React from "react";
-import useVH from 'react-viewport-height';
-import { withViewportHeight } from 'react-viewport-height';
+// import useVH from 'react-viewport-height';
+// import { withViewportHeight } from 'react-viewport-height';
 // import { render } from '@testing-library/react';
 
 
@@ -55,6 +55,7 @@ const myStyle = {
   const elemStyle = {
     // hover:"scale(1.2)",
     backgroundImage:'url(./offline.png)',
+	transition: "all ease 0.3s"
 	// width:'45%',
 	// height:'2%',
   }

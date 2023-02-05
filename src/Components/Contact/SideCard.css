@@ -2,6 +2,11 @@
     display: flex;
     margin: 15px;
     cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.contact-side-card:hover {
+    transform: scale(1.05);
 }
 
 .side-card-border {
