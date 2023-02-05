@@ -90,7 +90,7 @@ export default function RegistrationPage({isUserRegistered, userdata, setUserReg
                 {/* <input type="number" name="grade" id="grade" placeholder="Enter your grade or program name here, e.g., BTech or 10th" required/><br /> */}
                 <label>Contact Number</label><br></br>
                 <input type="text" name="contact" id="contact" placeholder="Enter your contact number here" required/><br></br>
-                <small>By clicking on submit button you are afreeing our <a class="tnc-link" target="_blank" href="https://docs.google.com/document/d/1qXU5d1zNzGNyqzhW-15v2YwC3QSISnIWUD0CQvyv3u8/edit">Terms and Conditions</a></small>
+                <small>By clicking on submit button you are agreeing our <a class="tnc-link" target="_blank" href="https://docs.google.com/document/d/1qXU5d1zNzGNyqzhW-15v2YwC3QSISnIWUD0CQvyv3u8/edit">Terms and Conditions</a></small>
                 <button type="submit">Submit</button>
             </form>
         </div>

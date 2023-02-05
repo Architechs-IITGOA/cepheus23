@@ -130,6 +130,7 @@ const SiteContainer = () => {
           error_general={error_general}
           setTeamInfoPage = {setTeamInfoPage}
           setEditProfile={setEditProfile}
+          isUserRegistered = {isUserRegistered}
         />
         <Profile
           isProfileClicked={isProfileClicked}

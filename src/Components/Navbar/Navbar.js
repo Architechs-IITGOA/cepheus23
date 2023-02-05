@@ -26,7 +26,8 @@ export default function Navbar({
   success_login,
   error_general,
   setTeamInfoPage,
-  setEditProfile
+  setEditProfile,
+  isUserRegistered
 }) {
   const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
@@ -138,7 +139,9 @@ export default function Navbar({
           src={userdata.imgurl.substr(userdata.imgurl.length-4, userdata.imgurl.length-1)==="null"? "img/user_placeholder.png" : userdata.imgurl}
           alt="avatar"
           onClick={() => {
-            handleProfileClick()
+            if(isUserRegistered){
+              handleProfileClick();
+            }
             setMenuClicked(!isMenuClicked);
             setEditProfile(false);
             setTeamInfoPage(false);

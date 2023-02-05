@@ -161,7 +161,7 @@ function App() {
 				<br></br>
 				<br></br>
 				<br></br> */}
-				<h1 className='myStyl'>sponsors</h1>
+				<h1 className='myStyl'>Sponsors</h1>
 				<br></br>
 				<br></br>
 				<br></br>
