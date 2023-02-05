@@ -368,13 +368,13 @@ function App() {
 							<img src={sponsors_data[6].imsrc} id='img_spon_6'></img>
 							</div>
 							</a>
-							<a href={sponsors_data[7].web} target="_blank">
+							{/* <a href={sponsors_data[7].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
 							<h2 id='heading_box' className='adjust' style={{textDecoration:'none'}}>{sponsors_data[7].role}</h2>
 							<img src={sponsors_data[7].imsrc} id='img_spon_3_ne'></img>
 							</div>
-							</a>
+							</a> */}
 							<a href={sponsors_data[8].web} target="_blank">
 							<div>
 							<img src='./box_sponsors.png' id='box_spon'></img>
