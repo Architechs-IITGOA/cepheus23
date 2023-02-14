@@ -47,7 +47,8 @@ export default function Profile({
   setUserRegistered,
   setislogin,
   error_general,
-  setTeamInfoPage
+  setTeamInfoPage,
+  setShowQr
 }) {
   const clientId =
     "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
@@ -153,9 +154,11 @@ export default function Profile({
                   setEditProfile(false);
                   setUserRegistered(true);
                   setislogin(false);
+                  setShowQr(false);
                   setUserdata((userdata) => ({
                     ...userdata,
                     name: "",
+                    id: "",
                     firstName: "",
                     email: "",
                     tokenId: "",

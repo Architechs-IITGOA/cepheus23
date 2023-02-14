@@ -27,7 +27,8 @@ export default function Navbar({
   error_general,
   setTeamInfoPage,
   setEditProfile,
-  isUserRegistered
+  isUserRegistered, 
+  setShowQr
 }) {
   const clientId = "218396342180-14tf81vkmg8a2iu06831pp8prl1k1669.apps.googleusercontent.com";
 
@@ -56,11 +57,13 @@ export default function Navbar({
     {withCredentials: true})
     .then((res) => {
       success_login();
+      console.log(res);
       if(!res.data.registered){
         setUserRegistered(false);
       } else {
         setUserdata((userdata) => ({
           ...userdata,
+          id: res.data.id,
           name: res.data.user_name,
           college: res.data.college,
           grade: res.data.grade,
@@ -90,13 +93,17 @@ export default function Navbar({
     // setsuccess(true);
   };
   const responseGoogle1 = (response) => {
-    error_general();
     console.log(response);
+    if(response.details){
+      error(response.details + " Please enable the cookies and try again.");
+    } else {
+      error_general();
+    }
     auth_failure();
     // setsuccess(false);
   };
   return (
-    <div className="navbar">
+    <div className="navbar" onClick={() => setShowQr(false)}>
       <div class="navbar-logo">
         <img src="img/cepheus_logo.jfif" alt=""></img>
         <h2>CEPHEUS</h2>

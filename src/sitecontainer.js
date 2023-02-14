@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./sitecontainer.css";
 import SocialLinks from "./Components/SocialLinks/SocialLinks";
 import TeamInfo from "./Components/TeamInfo/TeamInfo";
+import QrCode from "./Components/qrcode/qrcode";
 
 const link_initial =
   "https://res.cloudinary.com/dhtb16f8u/image/upload/c_scale,q_auto:eco,w_240/v16736772";
@@ -64,6 +65,8 @@ const SiteContainer = () => {
   const [isProfileClicked, setProfileClicked] = useState(false);
   const [isUserRegistered, setUserRegistered] = useState(true);
   const [isEditProfile, setEditProfile] = useState(false);
+  const [showQr, setShowQr] = useState(false);
+  const [showQrButton, setShowQrButton] = useState(false);
   const [userdata, setUserdata] = useState({
     name: "",
     firstName: "",
@@ -131,6 +134,7 @@ const SiteContainer = () => {
           setTeamInfoPage = {setTeamInfoPage}
           setEditProfile={setEditProfile}
           isUserRegistered = {isUserRegistered}
+          setShowQr = {setShowQr}
         />
         <Profile
           isProfileClicked={isProfileClicked}
@@ -146,6 +150,7 @@ const SiteContainer = () => {
           setislogin={setislogin}
           error_general={error_general}
           setTeamInfoPage = {setTeamInfoPage}
+          setShowQr = {setShowQr}
         />
         {/* <RegistrationPage userdata={userdata}/> */}
         {/* <EditProfile
@@ -196,8 +201,10 @@ const SiteContainer = () => {
             error_general={error_general}
           />
         )}
+        {showQr ? <QrCode userdata={userdata} setShowQr ={setShowQr}/> : null}
+        <SocialLinks setShowQr = {setShowQr} showQr={showQr} islogin={islogin} isUserRegistered = {isUserRegistered}/>
       </div>
-      <div onClick={() => handleBodyClick()}>
+      <div onClick={() => {handleBodyClick();setShowQr(false)}}>
         {teamInfoPage ? <TeamInfo
           error = {error}
           error_general = {error_general}
@@ -221,7 +228,6 @@ const SiteContainer = () => {
         <Schedule />
         <Sponsors />
         <Contact />
-        <SocialLinks />
         <div className="copyright">Made with <p className="heart">❤️</p> by ArchiTechs</div>
       </div>
     </div>

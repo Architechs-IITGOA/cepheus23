@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-.social-links a {
+.social-links a, .social-links p {
     /* background-color: #ffffff99; */
     /* border-radius: 50px; */
     margin: 10px;
@@ -40,12 +40,12 @@
     }
 }
 
-.social-links a:hover {
+.social-links a:hover, .social-links p:hover {
     /* background-color: #ffffff; */
     padding-left: 40px;
 }
 
-.social-links .fa-brands, .fa-location-dot {
+.social-links .fa-brands, .fa-location-dot, .fa-qrcode {
     font-size: 22px;
     background-color: #ffffff;
     padding: 10px;
@@ -77,9 +77,9 @@
     color: #1DA1F2 ;
 }
 
-.location-link {
+.location-link, .qr-code {
     position: fixed;
-    bottom: 2%;
+    bottom: 12px;
     margin: 10px;
     right: 20px;
     color: #822F2B;
@@ -88,6 +88,11 @@
     transition: all 0.2s;
     /* text-shadow: 2px 2px #00000099; */
     animation: location-anm 0.4s 1;
+}
+
+.qr-code {
+    bottom: 80px;
+    height: auto;
 }
 
 @keyframes location-anm {
@@ -103,12 +108,17 @@
     
 }
 
-.location-link a {
+.location-link a, .qr-code p {
     text-decoration: none;
     animation: location-anm 0.4s 1;
 }
 
-.location-link a .fa-solid {
+.qr-code p {
+    margin: 0;
+    color: #000;
+}
+
+.location-link a .fa-solid, .qr-code p .fa-solid {
     height: 50px;
     width: 50px;
     font-size: 30px;
@@ -116,17 +126,20 @@
     animation: location-anm 0.4s 1;
 }
 
-.location-link a .fa-solid:hover {
+.location-link a .fa-solid:hover, .qr-code p .fa-solid:hover {
     background-color: #ffffff99;
 }
 
 
 
 .location-link:hover{
-    bottom: 2.3%;
+    bottom: 16px;
+}
+.qr-code:hover {
+    bottom: 84px;
 }
 
-.location-link i {
+.location-link i, .qr-code i {
     margin: 4px;
     animation: location-anm 0.4s 1;
 }
